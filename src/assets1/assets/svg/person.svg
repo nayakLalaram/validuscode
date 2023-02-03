@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="39.49" height="41.472" viewBox="0 0 39.49 41.472">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Union_21" data-name="Union 21" d="M4.937,35.618A4.942,4.942,0,0,1,0,30.683V22.167a6.632,6.632,0,0,1,6.625-6.626h4.156a1.186,1.186,0,0,1,1.172,1.368l-1.4,9.1L12.68,28.04l2.13-2.031-1.4-9.1a1.186,1.186,0,0,1,1.172-1.368h4.156a6.631,6.631,0,0,1,6.625,6.626v8.516a4.941,4.941,0,0,1-4.935,4.935ZM2.375,22.167v8.516a2.564,2.564,0,0,0,2.562,2.56H20.425a2.563,2.563,0,0,0,2.56-2.56V22.167a4.256,4.256,0,0,0-4.25-4.251H15.964L17.25,26.26A1.192,1.192,0,0,1,16.9,27.3l-3.4,3.242a1.188,1.188,0,0,1-1.639,0L8.465,27.3a1.183,1.183,0,0,1-.353-1.04L9.4,17.917H6.625A4.255,4.255,0,0,0,2.375,22.167ZM5.452,7.229a7.229,7.229,0,1,1,7.228,7.229A7.236,7.236,0,0,1,5.452,7.229Zm2.375,0A4.854,4.854,0,1,0,12.68,2.375,4.859,4.859,0,0,0,7.826,7.229Z" fill="#d1d1d1"/>
+    </clipPath>
+  </defs>
+  <g id="Group_37514" data-name="Group 37514" transform="translate(-1048 -167)">
+    <g id="Ellipse_293" data-name="Ellipse 293" transform="translate(1048 167)" fill="#e4e4e4" stroke="#d1d1d1" stroke-width="2">
+      <circle cx="19.745" cy="19.745" r="19.745" stroke="none"/>
+      <circle cx="19.745" cy="19.745" r="18.745" fill="none"/>
+    </g>
+    <g id="Mask_Group_1" data-name="Mask Group 1" transform="translate(1054.979 172.854)" clip-path="url(#clip-path)">
+      <circle id="Ellipse_292" data-name="Ellipse 292" cx="19.745" cy="19.745" r="19.745" transform="translate(-6.979 -5.854)" fill="#d1d1d1"/>
+    </g>
+  </g>
+</svg>

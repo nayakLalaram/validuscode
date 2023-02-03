@@ -1,0 +1,60 @@
+.border-leniorgradient {
+  height: 5px;
+  background: linear-gradient(
+      90deg,
+      rgba(149, 13, 208, 1) 0%,
+      rgba(134, 51, 218, 1) 27%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(88, 177, 255, 1) 68%,
+      rgba(112, 111, 235, 1) 100%
+    )
+    0% 0% no-repeat padding-box;
+}
+.table_header {
+  color: #000000;
+  border-color: rgba(149, 13, 208, 1);
+  border-bottom-width: 5px;
+}
+.bg-foreground {
+  background-color: #f9f9f9;
+}
+.btn_submit {
+  background: linear-gradient(180deg, #950dd0 0%, #8633da 100%);
+  border-radius: 23px;
+}
+
+.textbox {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.border-vilot {
+  border-color: #9900cc;
+  border-width: 2px;
+}
+
+.bg-lenier-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(149, 13, 208, 1) 0%,
+    rgba(134, 51, 218, 1) 100%
+  );
+}
+.table_head_ {
+  color: #000000;
+  border-color: rgba(149, 13, 208, 1);
+  border-bottom-width: 5px;
+}
+.mr-top-5 {
+  margin-top: 5%;
+}
+.card_new {
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #272d3b33;
+  border-radius: 9px;
+  opacity: 1;
+}
+
+table {
+  overflow: hidden !important;
+}

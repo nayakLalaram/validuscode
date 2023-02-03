@@ -1,0 +1,8 @@
+@font-face {
+    font-family: commuters;
+    src: url(../../asset1/assets/fonts/Fontspring-DEMO-commuterssans-regular.otf);
+}
+.footer_txt{
+    font-family: commuters;
+    color:black;
+}

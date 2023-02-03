@@ -1,0 +1,110 @@
+ /* :host{
+    background: var(--toolbar-background);
+    box-sizing: border-box;
+    color: var(--toolbar-color);
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    z-index: var(--toolbar-z-index);
+  } */
+  
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Nunito+Sans&display=swap');
+
+  .toolbar{
+    height: var(--toolbar-height);
+  }
+  
+  a{
+    color: var(--toolbar-color);
+    text-decoration: none;
+  }
+  .bg-vilotate{
+    background-color: #8633DA14;
+    color: #950DD0;
+  }
+  
+  .bg-vilotate-dark{
+    background-color: #950DD0;
+  }
+  
+  .Btn{
+    background-color: #FFFFFF;
+  
+    justify-content: center;
+  }
+
+  
+  
+  
+  .label-server{
+    font-size: 10px;
+  }
+  
+  .Btn:hover.b1{
+    background-color: #f87404;
+    color: #FFFFFF;
+  }
+  .Btn:hover.b2{
+    background-color: #00BA00;
+    color: #FFFFFF;
+  }
+  .Btn:hover.b3{
+    background-color: #006ADF;
+    color: #FFFFFF;
+  }
+  .Btn:hover.b4{
+    background-color: #950DD0;
+    color: #FFFFFF;
+  }
+  .border-addmoney{
+    border: 1px solid rgba(142, 31, 213, 0.53);
+    opacity: 1;
+  }
+  .shadow-toolbar{
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      box-shadow: 0px 3px 6px #00000012;
+      opacity: 1;
+  }
+   .font-f{
+    /* / font-family:commuters-sans-regular , sans-serif; / */
+    font-family: 'Inter', sans-serif;
+     }
+  
+/* .fontw{
+    font-weight: 400!important;
+  }  
+    */
+  .border-b{
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: 4rem;
+  position: fixed;
+  }
+
+  .b1:hover{
+    background-color: #f87404;
+    color: #FFFFFF;
+  }
+  .b2:hover{
+    background-color: #00BA00;
+    color: #FFFFFF;
+  }
+  .b3:hover{
+    background-color: #006ADF;
+    color: #FFFFFF;
+  }
+  .b4:hover{
+    background-color: #950DD0;
+    color: #FFFFFF;
+  }
+
+ .topup_btn {
+  background-color: #f5effc;
+ }

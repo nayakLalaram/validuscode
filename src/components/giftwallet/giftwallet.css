@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Nunito+Sans&display=swap');
+
+
+.transferbtn{
+    background:  linear-gradient(180deg, rgba(149, 13, 208, 1) 0%, rgba(134, 51, 218, 1) 100%) !important ;
+}
+
+.bg-vilotate{
+    background-color: #8633DA14;
+    color: #950DD0;
+
+  }
+  .text-green{
+    color:rgba(23, 199, 10, 1) ;
+  }
+  .overflow-auto-tbl {
+  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .content-value{
+    content:\0027 ;
+  }
+  .border_botton{
+    border-color:rgba(142, 31, 213, 0.53) ;
+  }
+  .table_border{
+    color:#000000 ;border-color: rgba(149, 13, 208, 1);border-bottom-width: 5px;
+  }
+
+  .font-f{
+    font-family: 'Inter', sans-serif;
+    
+
+  }
+
+  input{
+    outline: none !important;
+  }
+  .border-b{
+      /* width: 100%; */
+      /* max-width: 80%; */
+      /* margin-left: auto; */
+      display: flex;
+      align-items: center;
+      /* gap: 1rem; */
+      /* min-height: 4rem; */
+      border: none;
+      margin-top: 20px;
+      
+      
+  }
+  .tabletr:hover{
+   border-bottom: 3px solid rgb(233, 233, 233)  ;
+  }
+  .addbtn{
+    padding-top: 0px !important;
+    padding-bottom: 0px!important;
+  }

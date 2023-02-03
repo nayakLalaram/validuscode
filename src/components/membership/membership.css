@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Nunito+Sans&display=swap');
+
+.bg-card{
+    background:  transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+   height: 180;
+   
+}
+
+
+
+.bg-current-mem{
+    background:  transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+   
+   
+}
+
+.border-current-m{
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+
+
+
+
+.height_in{
+    margin-bottom: -4rem;
+    
+}
+
+/* .margin_card{
+
+    margin-top: 0px;
+} */
+
+.font-small{
+    font-size: 13px;
+}
+
+.bg-vilet{
+   background: transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+}
+
+.border-vilet{
+  color:#706FEB ;
+  border: 1px solid #706FEB;
+}
+
+
+
+.bg-line{
+    background: linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% ;
+}
+
+.vertical-line{
+    width: 1.3px; /* Line width */
+    background-color: #B58C45; /* Line color */
+    height: 100%; /* Override in-line if you want specific height. */
+    float: left; /* Causes the line to float to left of content. 
+      You can instead use position:absolute or display:inline-block
+      if this fits better with your design */
+  }
+  .circle_card{
+    width: 32.5px;
+        
+          height: 32.5px;
+          border-radius: 50%;
+        
+         
+          opacity: 1;
+  }
+  .text-golden {
+    color: #B58C45;
+    font-weight:bold;
+  }
+
+
+
+.circle-color1card{
+    background: #a59f81;
+}
+.circle-color2card{
+    background: #68a7e4;
+}
+.circle-color3card{
+    background: #B58C45;
+    
+}
+.circle-color2card{
+  background: #68a7e4;
+}
+
+
+
+.circle-h-w{
+  height: 35px;width: 35px;
+}
+
+.card-margin-t{
+  margin-top: 10%;
+}
+.dashed-border{
+  border:.03px dashed rgba(0, 0, 0, .2);opacity:.5 
+}
+
+
+  
+
+.ruler{
+  margin:20px 0px;
+
+  height:20px;
+  width:100%;
+  display:flex;
+  justify-content:center
+}
+.ruler-cell{
+  position:relative;
+  height:100%;
+  width:calc(100% - 20px);
+  /* border-left:1px solid #B58C45; */
+  /* border-right:1px solid #B58C45; */
+  background-repeat:no-repeat;
+  background-size:
+    100% 9px,
+    1px 8px,
+    1px 8px,
+    1px 8px,
+    1px 8px;
+  background-position:
+    0% center,
+    20% center,
+    40% center,
+    60% center,
+    80% center;
+  background-image: linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) ;
+     /* linear-gradient(rgb(239, 11, 11), rgb(240, 13, 13)), */
+     /* linear-gradient(gray, gray), */
+     /* linear-gradient(gray, gray), */
+     /* linear-gradient(gray, gray), */
+     /* linear-gradient(gray, gray); */
+}
+.ruler-cell span{
+  position:relative;
+  top:15px;
+  font-size:12px;
+  text-align:center;
+}
+.zero{
+    margin-top: 5px;
+  left:0;
+  transform:translateX(-50%);
+  display:none;
+  font-size: 10;
+}
+.number{
+    /* margin-top: 40px; */
+  right:0px;
+  transform:translateX(50%);
+  font-size: 10;
+}
+.ruler-cell:first-child .zero{
+  display:block;
+}
+@font-face {
+    font-family: commuter;
+    src: url(../../assets1/assets/fonts/commuterssans-semibold.otf);
+
+    /* src: url(../../asset1/assets/fonts/commuterssans-semibold.otf); */
+}
+.font-f{
+    font-family: 'Inter', sans-serif;
+    /* font-weight: 600; */
+    
+
+  }
+  .btnhover:hover{
+    background: transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+   color: white;
+}
+ 

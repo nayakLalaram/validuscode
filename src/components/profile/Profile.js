@@ -1,0 +1,43 @@
+import React from 'react'
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "../profile/Profile.css"
+import ActivityTable from './tabs/ActivityTable';
+import InforMation from './tabs/InforMation';
+import PasswordPage from './tabs/PasswordPage';
+import Header from '../common/Header' 
+import Navigation from '../common/Navigation' 
+
+const Profile = () => {
+  return (
+    <>
+
+    <Header />
+    <Navigation />
+    <div className='sm: ml-[280px] mt-[70px]'>
+        <div className="">
+        <Tabs className="">
+          <TabList className="new_tabs border-b-[1px] border-[#00000033] profile_page">
+            <Tab>PERSONAL INFORMATION</Tab>
+            <Tab>DIRECT BONUS</Tab>
+            <Tab>NETWORK BONUS</Tab>
+            
+          </TabList>
+
+          <TabPanel>
+           <InforMation/>
+          </TabPanel>
+          <TabPanel>
+            <PasswordPage/>
+          </TabPanel>
+          <TabPanel>
+         <ActivityTable/>
+          </TabPanel>
+          
+        </Tabs>
+      </div>
+    </div>
+    </>
+  )
+}
+
+export default Profile;

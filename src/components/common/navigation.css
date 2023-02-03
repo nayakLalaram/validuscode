@@ -1,0 +1,75 @@
+div#drawer-navigation {
+    width: 17rem !important;
+}
+a:hover{
+/* background-color: #7f3fd6; */
+}
+.navigation_img {
+    position: fixed;
+    top:0rem;
+    left: 0rem;
+    width: 100%;
+    max-width: 17rem !important;
+    background-color: white;
+    z-index: 999;
+    
+}
+.navigation_img > img{
+    padding-left: 1.8rem;
+    padding-bottom: 10px;
+    width: 255px;
+    padding-top: 0.71rem;
+
+   
+
+
+
+
+
+
+
+}
+ul  li  a  span{
+/* font-size: 14px; */
+font: normal normal 600 14px/20px commuters-sens;
+font-weight: bolder !important;
+}
+.li:hover{
+    
+    color: white;
+    background: linear-gradient(180deg, #9900CC 0%, #57B3FF 100%);
+}
+.a:hover{
+
+    color: white;
+    background: linear-gradient(180deg, #9900CC 0%, #57B3FF 100%);
+}
+.li:hover img {
+    
+filter: brightness(0) invert(1);
+}
+.sidebar{
+    top: 4rem !important;
+}
+
+@font-face {
+    font-family: commuters-sens;
+    src: url(../../assets1/assets/fonts/commuterssans-bold.otf);
+
+    /* src: url(../../assets1/assets/fonts/commuterssans-semibold.otf); */
+}
+#drawer-navigation:hover{
+    overflow-y: auto;
+}
+/* div#drawer-navigation {
+    width: 18rem !important;
+} */
+.drop-shadow-md {
+    --tw-drop-shadow: drop-shadow(0 1px 0px rgb(0 0 0 / 0.07)) drop-shadow(0 0px 0px rgb(0 0 0 / 0.06)) !important;
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+  div#drawer-navigation {
+    /* border-right-color: red; */
+    border-style: dotted;
+    border-right: 1px solid #523f690f;
+}

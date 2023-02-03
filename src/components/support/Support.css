@@ -1,0 +1,25 @@
+.rounded-full{
+    border-radius: 23px;
+}
+
+.bg-lenier-gradient{
+    background:  linear-gradient(180deg, rgba(149, 13, 208, 1) 0%, rgba(134, 51, 218, 1) 100%) ;
+}
+.bg-foreground{
+    background: rgba(249, 249, 249, 1) 0% 0% no-repeat padding-box;
+border: 1px solid rgba(209, 209, 209, 1);
+}
+.overflow-auto-tbl{
+    overflow-wrap: break-word;
+
+    
+     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.table-border{
+    color:#000000 ;border-color: rgba(149, 13, 208, 1);border-bottom-width: 5px;
+}
+.my_psoition{
+    position: unset !important;
+}

@@ -1,0 +1,44 @@
+div#drawer-navigation {
+    width: 17.1rem !important;
+}
+a:hover{
+background-color: #7f3fd6;
+}
+.navigation_img {
+    position: absolute;
+    top:1rem;
+    left: 0rem;
+    width: 100%;
+    max-width: 17rem !important;
+}
+.navigation_img > img{
+    padding-left: 1.8rem;
+    padding-bottom: 10px;
+    width: 255px;
+
+}
+ul  li  a  span{
+/* / font-size: 14px; / */
+font: normal normal 600 14px/20px commuters-sens;
+font-weight: bolder !important;
+}
+/* li:hover{
+    
+    color: white;
+    background: linear-gradient(180deg, #9900CC 0%, #57B3FF 100%);
+} */
+a:hover{
+
+    color: white;
+    background: linear-gradient(180deg, #9900CC 0%, #57B3FF 100%);
+}
+.sidebar{
+    top: 4rem !important;
+}
+
+@font-face {
+    font-family: commuters-sens;
+    src: url(../../../assets1/assets/fonts/commuterssans-bold.otf);
+
+    /* / src: url(../../asset1/assets/fonts/commuterssans-semibold.otf); / */
+}
