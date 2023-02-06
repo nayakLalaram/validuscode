@@ -8,7 +8,7 @@ import reward_svg from "../../../assets1/assets/svg/reward.svg";
 const Blocks = () => {
   return (
     <div className="">
-      <div className="grid grid-cols-4 gap-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
         <div className=" pt-3 group  bottom-2 border-[1px] hover:border-[#8633DA] pl-4 pb-2 h-[210px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
           <div>
             <img className="h-[28px] w-auto" alt="block img" src={wallet_svg} />

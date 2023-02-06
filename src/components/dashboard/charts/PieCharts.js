@@ -25,7 +25,7 @@ const PieCharts = () => {
 
   return (
     <div className="myCards card_new pb-4">
-      <div className="flex items-center justify-between px-8 pt-8 mb-5 ">
+      <div className="flex items-center justify-between sm:px-8 px-5 pt-8 mb-5 ">
         <h2 className="font_f text-black uppercase font-bold text-sm">
           LIFETIME EARNING
         </h2>
@@ -48,7 +48,7 @@ const PieCharts = () => {
         </svg>
       </div>
       <div className="bg-menu_bor h-[1px] max-w-full"></div>
-      <div id="chart" className="my-16">
+      <div id="chart" className="sm:my-16 my-4">
         <ReactApexChart
           options={state.options}
           series={state.series}

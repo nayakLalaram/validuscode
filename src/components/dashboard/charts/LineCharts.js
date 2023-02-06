@@ -74,22 +74,18 @@ const LineCharts = () => {
   ];
   return (
     <div>
-      <div className="card">
-        <div className="border-b py-4 px-6 flex items-center">
-          <h2 className="font-size-16   font-f-bold font-bold font-color flex-auto">
-            NETWORK STATS
-          </h2>
-        </div>
+      <div className="card ">
+        <div className="border-b py-4 px-6 flex items-center"></div>
 
         <div className="pt-3 pb-1 pr-6"></div>
       </div>
 
-      <div className="mt-1 flex flex-col md:flex-row md:items-start">
+      <div className="mt-1 flex flex-col md:flex-row md:items-start ">
         <div className="flex-auto">
           <div className="card">
             <div className="bg-[#272d3b08]">
-              <div className=" px-gutter   grid grid-cols-1 sm:grid-cols-2 gap-4 ">
-                <div className="py-3 ml-8 flex ">
+              <div className=" px-gutter   grid grid-cols-2 sm:grid-cols-2 gap-4 ">
+                <div className="py-3 sm:ml-8 ml-5 flex ">
                   <h2
                     className="font-size-16 
            font-color   font-f-bold font-semibold text-left font_f text-base"
@@ -111,7 +107,7 @@ const LineCharts = () => {
                 return (
                   <div
                     id={items.id}
-                    className="px-gutter my-2 grid grid-cols-1 sm:grid-cols-3 gap-4 px-5 myhoverdot"
+                    className="px-gutter my-2 grid grid-cols-3 sm:grid-cols-3 sm:gap-4 gap-2 px-5 myhoverdot"
                   >
                     <div className="py-3 flex items-center">
                       <div>
@@ -154,7 +150,7 @@ const LineCharts = () => {
                     key={items.id}
                     className="border-dashed  border-b-2 border-[#00000033] last_border"
                   >
-                    <div className=" bordered   px-gutter py-3 grid grid-cols-1 sm:grid-cols-3 ml-6 gap-4 border-dashed  pb-3 ">
+                    <div className=" bordered   px-gutter py-3 grid grid-cols-3 sm:grid-cols-3 sm:ml-6 ml-5 gap-4 border-dashed  pb-3 ">
                       <div className="py-3 flex items-center">
                         <div>
                           <p className="font-size-18 m-0  flex-auto font_f font-semibold text-[18px] font-weight-600 font-color">

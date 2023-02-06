@@ -46,7 +46,7 @@ const ActivityTable = () => {
   ];
   return (
     <div className="card_new">
-      <div className="flex items-center justify-between px-8 pt-8 mb-5">
+      <div className="flex items-center justify-between md:px-8 px-5 pt-8 mb-5">
         <h2 className=" text-black uppercase font-bold text-[14px]">
           LATEST ACTIVITY
         </h2>

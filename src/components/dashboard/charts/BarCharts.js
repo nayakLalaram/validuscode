@@ -66,7 +66,7 @@ const BarCharts = () => {
   };
   return (
     <div className="py-2 mt-4">
-      <h2 className="font_f font-semibold text-sm px-6">NETWORK STATS</h2>
+      <h2 className="font_f font-semibold text-sm sm:px-6 px-5">NETWORK STATS</h2>
       <Chart
         options={state.plotOptions}
         series={state.series}

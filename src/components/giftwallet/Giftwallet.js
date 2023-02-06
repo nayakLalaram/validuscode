@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 import "../giftwallet/giftwallet.css";
 
@@ -233,7 +233,7 @@ function Giftwallet() {
               </mat-icon>
               <input
                 //  [formControl]="searchCtrl"
-                className="px-4  border-0 outline-none w-full bg-transparent font-f text-[14px]  "
+                className="px-4  border-0 outline-none w-full bg-transparent font-f py-2 text-[14px]  "
                 placeholder="Search..."
                 type="search"
               />

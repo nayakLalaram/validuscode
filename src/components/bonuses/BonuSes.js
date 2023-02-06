@@ -8,12 +8,12 @@ import NetworkBonus from "./tabs/NetworkBonus";
 import MatrixTable from "./tabs/tables/MatrixTable";
 import PassiveTable from "./tabs/tables/PassiveTable";
 import Header from "../common/Headers";
-import Navigation from "../common/sidebar/Sidebar";
+import Navigation from "../common/Navigation";
 const BonuSes = () => {
   return (
     <> 
-    <Header />
-  <Navigation />
+    <Header/>
+  <Navigation/>
     <div className="sm:ml-[270px] mt-[70px] ">
       <div className=" ml-5">
         <Tabs className="myalltabs">

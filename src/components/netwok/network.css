@@ -163,6 +163,7 @@ h1 {
 .react-tabs__tab{
     color: rgb(97, 96, 96);
     outline: none !important;
+    border: none;
 }
 
 .mat-ink-bar {

@@ -49,7 +49,7 @@ const Header = () => {
     <>
    
     <div>
-      <div>
+      <div className="hidden sm:block">
         <div
           //   [classNameName.container]="isVerticalLayout$ | async"
           className="shadow-toolbar toolbar w-full  flex items-center border-b" 

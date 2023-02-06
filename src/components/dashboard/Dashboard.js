@@ -16,11 +16,11 @@ const Dashboard = () => {
 
    <Header/>
    <Navigation/>
-    <div className="pt-6 sm: ml-[292px] mt-[70px]">
-      <div className="flex justify-between">
-        <div className="w-[70%]">
+    <div className="pt-6 md:ml-[292px]  sm:mt-[70px]">
+      <div className="sm:flex justify-between">
+        <div className="lg:w-[70%] md:w-[100%] w-[100%]">
           <Blocks />
-          <div className="grid grid-cols-2 gap-2 ">
+          <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 ">
             <div>
               <PieCharts />
             </div>
@@ -31,7 +31,7 @@ const Dashboard = () => {
           <BarCharts />
           <LineCharts />
         </div>
-        <div className="w-[28%] mr-2">
+        <div className="sm:w-[28%] mr-2">
           <div className="small_box flex items-center px-8 ">
             <h2 className="font_f text-[12px] font-semibold">Your Sponsor:</h2>
             <div className="bg-[#853fd5] h-8 w-8 rounded-full mx-5"></div>

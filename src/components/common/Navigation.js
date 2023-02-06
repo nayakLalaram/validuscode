@@ -19,7 +19,7 @@ function Navigation() {
   const [show, setShow] = useState(true);
   return (
     <>
-      <div>
+      <div className="   md:hidden lg:block  hidden">
         <div className="shadow navigation_img drop-shadow-md  py-[10px]  ">
           <img src={logoimg} alt="" className="  select-none " />
         </div>
