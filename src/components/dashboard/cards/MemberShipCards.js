@@ -270,7 +270,7 @@ const MemberShipCards = () => {
         </div>
 
         <div className="flex px-4 py-2">
-          <div className="bg-white h-10 rounded-full  px-4 max-w-[250px] flex-auto flex items-center border border-gray-300">
+          <div className="bg-white h-8 rounded-full  px-4 max-w-[250px] flex-auto flex items-center border border-gray-300">
             <input
               className="px-4 py-2 border-0 outline-none w-full bg-transparent font-f  font-color"
               value="https://app.teamvalidus.com/auth/signup/aus8"
@@ -278,7 +278,7 @@ const MemberShipCards = () => {
             />
           </div>
 
-          <div className=" ml-2 rounded-full h-9 w-14 flex items-center justify-center text-primary my_bggradiant">
+          <div className=" ml-2 rounded-full h-8 w-14 flex items-center justify-center text-primary my_bggradiant">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -311,23 +311,23 @@ const MemberShipCards = () => {
             New Member
           </h4>
         </div>
-        <div className="flex w-full  items-center justify-between px-4 mt-2">
+        <div className="flex w-full  items-center justify-between px-4">
           <button className="border border-light w-full  rounded-full mr-2 flex  justify-between px-4 py-2">
             <img className="mt-2" src={arrow_bottom} />
-            <span className="text-white ">Far Left</span>
+            <span className="text-white text-sm">Far Left</span>
           </button>
-          <button className="border border-white items-center w-full rounded-full ml-2 flex  justify-between  px-4 py-2">
-            <span className="text-white">Far Right</span>
+          <button className="border border-white items-center w-full rounded-full ml-2 flex  justify-between  px-2 py-2">
+            <span className="text-white text-sm">Far Right</span>
             <img className="mt-2" src={right_bottom} />
           </button>
         </div>
       </div>
       <div className="mt-2 card">
         <div className=" py-1   items-center justify-center">
-          <div className="px-6 py-4 flex flex-col gap-4">
-            <div className="flex items-center    py-1">
+          <div className=" py-4 flex flex-col gap-4 border-b-[1px] border-[#707070] border-opacity-5">
+            <div className="flex items-center py-1 px-6 ">
               <div className="flex-auto">
-                <h2 className="text-left font-size-14 font_f text-sm  font-bold  font-f-bold font-color flex-auto uppercase ">
+                <h2 className="text-left text-[14px]  font_f text-xs  font-semibold  font-color flex-auto uppercase ">
                   {" "}
                   Direct Sponsor List
                 </h2>
@@ -340,16 +340,16 @@ const MemberShipCards = () => {
           </div>
         </div>
 
-        <div className="px-6 py-4 pb-2 flex flex-col gap-4">
+        <div className="px-6 pb-2 flex flex-col gap-4">
           <div>
-            <hr width="100%" color="#FFFFFF" size="1" />
+           
             {sopnsers.map((item) => {
               return (
                 <div className="flex items-center mt-4 justify-center pt-2 border-dashed py-2 pb-3 border-b-2 border-[#00000033] last_border">
-                  <div className="circle  ltr:mr-3 rtl:ml-3 flex-none "> </div>
+                  <div className="bg-[#8633DA] rounded-full h-8 w-8 ltr:mr-3 rtl:ml-3 flex-none "> </div>
 
                   <div className="flex-auto">
-                    <h4 className="body-2 m-0  font-f font-weight-600 font-color mx-4">
+                    <h4 className="body-2 m-0  text-[14px] font-semibold font-color mx-4">
                       {item.text}
                     </h4>
                   </div>

@@ -10,7 +10,7 @@ import { FaChevronRight } from "react-icons/fa";
 import "../transcation/membership.css";
 
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 
 function Transaction() {

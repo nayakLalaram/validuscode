@@ -4,7 +4,7 @@ import NetworkTree from "./Networktree";
 import '../netwok/network.css'
 // import DounloadTV from "./Downloadtvdetail";
 import TotalRank from "./Totalrank";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 
 function Newtork() {

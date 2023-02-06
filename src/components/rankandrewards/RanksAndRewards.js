@@ -18,7 +18,7 @@ import maskgrouo from "../../assets1/assets/ranking/Mask-Group-4.png";
 
 import "../rankandrewards/rankandrewards.css";
 import { type } from "@testing-library/user-event/dist/type";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 
 function RanksRewards() {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 import Compliance from "./Compliance";
 

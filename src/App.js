@@ -14,7 +14,6 @@ import Login from './components/login2/login'
 import BonuSes from "./components/bonuses/BonuSes";
 import Wallet from "./components/wallet/Wallet";
 import Support  from "./components/support/Support";
-import Sidebar from "./components/common/Sidebar";
 function App() {
   return (
     <div>
@@ -34,7 +33,6 @@ function App() {
             <Route path="/bonuses" element={<BonuSes />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/support" element={<Support />} />
-            <Route path="/sidebar" element={<Sidebar />} />
           </Routes>
         </>
       </Router>

@@ -4,7 +4,7 @@ import "../profile/Profile.css"
 import ActivityTable from './tabs/ActivityTable';
 import InforMation from './tabs/InforMation';
 import PasswordPage from './tabs/PasswordPage';
-import Header from '../common/Header' 
+import Header from '../common/Headers' 
 import Navigation from '../common/Navigation' 
 
 const Profile = () => {

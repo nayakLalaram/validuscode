@@ -7,7 +7,7 @@ import DirectBonus from "./tabs/DirectBonus";
 import NetworkBonus from "./tabs/NetworkBonus";
 import MatrixTable from "./tabs/tables/MatrixTable";
 import PassiveTable from "./tabs/tables/PassiveTable";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/sidebar/Sidebar";
 const BonuSes = () => {
   return (

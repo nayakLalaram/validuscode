@@ -8,7 +8,7 @@ import card5 from "../../assets1/assets/membership/card5.png";
 import card6 from "../../assets1/assets/membership/card6.png";
 import card7 from "../../assets1/assets/membership/card7.png";
 import card8 from "../../assets1/assets/membership/card8.png";
-import Header from "../common/Header";
+import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 
 function Membership() {

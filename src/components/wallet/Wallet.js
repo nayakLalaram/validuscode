@@ -101,9 +101,9 @@ const Wallet = () => {
             return (
               <div id={title.id} className="">
                 <div className=" pt-3 group  bottom-2 border-2 hover:border-[#8633DA] pl-4 pb-2 h-[200px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
-                  <div className=" mt-4 mb-2">
+                  <div className="  mb-2">
                     <h2 className="font_f font-bold">{title.header}</h2>
-                    <div className="flex py-6">
+                    <div className="flex pt-6">
                       <h2 className=" font-weight-600 font_f font-size-32 font-color text-black font-extrabold text-3xl ">
                         {title.coins}
                       </h2>
@@ -112,7 +112,7 @@ const Wallet = () => {
                       </div>
                     </div>
                   </div>
-                  <h3 className=" font-f-bold font-normal font_f font-color text-xs  font-size-16 m-0 ">
+                  <h3 className=" font-normal font_f font-color text-xs m-0 ">
                     {title.cash}
                   </h3>
                   <div className="flex">

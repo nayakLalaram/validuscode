@@ -1,6 +1,6 @@
 import React from "react";
 import "../support/Support.css";
-import Header from '../common/Header' 
+import Header from '../common/Headers' 
 import Navigation from '../common/Navigation' 
 const Support = () => {
   const table = [
