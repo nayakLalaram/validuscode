@@ -154,7 +154,7 @@ const LineCharts = () => {
                     key={items.id}
                     className="border-dashed  border-b-2 border-[#00000033] last_border"
                   >
-                    <div className=" bordered   px-gutter py-4 grid grid-cols-1 sm:grid-cols-3 ml-6 gap-4 border-dashed  pb-3 ">
+                    <div className=" bordered   px-gutter py-3 grid grid-cols-1 sm:grid-cols-3 ml-6 gap-4 border-dashed  pb-3 ">
                       <div className="py-3 flex items-center">
                         <div>
                           <p className="font-size-18 m-0  flex-auto font_f font-semibold text-[18px] font-weight-600 font-color">
@@ -165,7 +165,7 @@ const LineCharts = () => {
 
                       <div className="py-3 flex items-center">
                         <div>
-                          <p className=" font-size-18 m-0 font_f text-xl font-f-bold font-semibold font-color uppercase">
+                          <p className=" font-size-18 m-0 font_f text-[20px] font-f-bold font-semibold font-color uppercase">
                             {items.surname}
                           </p>
                         </div>

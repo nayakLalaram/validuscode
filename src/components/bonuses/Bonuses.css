@@ -245,7 +245,7 @@ opacity: 1;
     position: relative;
 }
 
-.react-tabs__tab--selected:before {
+.myalltabs .react-tabs__tab--selected:before {
     position: absolute;
     content: '';
     height: 10px;
@@ -283,7 +283,7 @@ opacity: 1;
     .react-tabs__tab{
       color: #666666;
     }
-.react-tabs__tab.react-tabs__tab--selected{
+ .myalltabs .react-tabs__tab.react-tabs__tab--selected{
 color: black !important;
 }
 .last_border:last-child{

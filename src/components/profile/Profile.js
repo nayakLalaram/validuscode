@@ -13,7 +13,7 @@ const Profile = () => {
 
     <Header />
     <Navigation />
-    <div className='sm: ml-[280px] mt-[70px]'>
+    <div className='sm: ml-[270px] mt-[70px]'>
         <div className="">
         <Tabs className="">
           <TabList className="new_tabs border-b-[1px] border-[#00000033] profile_page">

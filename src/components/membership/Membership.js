@@ -213,162 +213,149 @@ function Membership() {
 
   return (
     <>
-      <Header  />
+      <Header />
       <Navigation />
 
-     <div className="sm:ml-[290px]  mt-[70px]">
-      <>
-    
-      
-        <div>
-          <h2 className=" pt-4 pl-10  text-[18px] font-f font-bold  font-color uppercase ">
-            Membership Tier
-          </h2>
-        </div>
-        <div className=" p-gutter my-6 ">
-          <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 flex items-center justify-center">
-            <div className=" sm:col-span-1  border-current-m    w-full  card">
-              <div className="bg-current-mem border-current-m h-12 px-2 w-full flex items-center justify-center text-[13px] py-2 font-f font-bold text-white">
-                <span>CURRENT MEMBERSHIPS</span>
-              </div>
-              <div className="w-full px-2 flex items-center justify-center h-12 text-[13px] py-2 font-f  font-bold font-color">
-                <span> V100,V500</span>
-              </div>
-            </div>
-            <div className=" sm:col-span-3 ruler relative w-full">
-             
-                <div  className="ruler-cell flex ">
-                {mylist.array_gen.map((items, i) => (
-                    <>
-                  <div key={i} className=" circle-h-w relative  flex item-center justify-end   relative ">
-                    <div
-                      className={
-                        (i + 1 == 4
-                          ? "circle-color1"
-                          : i + 1 == 18
-                          ? "circle-color2"
-                          : i+1==30 ?"circle-color3"
-                          : i+1==45 ?"circle-color3" :
-                          i+1==60 ?"circle-color3" :
-                          'circle-color') +
-                        "card circle_card  absolute flex justify-center text-white items-center font-f text-[12px] bottom-2 flex "
-                      }
-                    >
-                      {mylist.isInclude(i + 1) ? i + 1 : ""}
-                    </div>
-          
-                  </div>
-                  {/* <span className="zero font-f font-color ml-1">0</span> */}
-                  <span
-                    className="number font-f font-color"
-                  >
-                    {(i + 1) % 10 == 0 && !mylist.isInclude(i + 1) ? i + 1 : ""}
-                  </span>
-                  </>
-                            ))}
-                </div>
-         
-            </div>
+      <div className="sm:ml-[290px]  mt-[70px]">
+        <>
+          <div>
+            <h2 className=" pt-4 pl-10  text-[18px] font-f font-bold  font-color uppercase ">
+              Membership Tier
+            </h2>
           </div>
-        </div>
-      </>
-
-      <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
-        {array_membership.map((items, index) => (
-          <div
-            //    *ngFor="let items of array_membership"
-            //   (mouseenter)="showButton = true" (mouseleave)="showButton = false"
-            className="card bg-overall-height  pb-2 relative hover:shadow-lg trans-shadow flex flex-col items-left border-t "
-            key={index}
-          >
-            {/* <div className="" > */}
-            <div className="bg-card  mb-2 justify-center pt-4  ">
-              <h2 className=" font-f  text-[13px]  text-center text-white ">
-                {" "}
-                {items.value}
-              </h2>
-              <div className="height_in">
-                <img
-                  src={items.image}
-                  style={{ height: "70%", width: "100%" }}
-                />
+          <div className=" p-gutter my-6 ">
+            <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 items-center justify-center">
+              <div className=" sm:col-span-1  border-current-m    w-full  card">
+                <div className="bg-current-mem border-current-m h-12 px-2 w-full flex items-center justify-center text-[13px] py-2 font-f font-bold text-white">
+                  <span>CURRENT MEMBERSHIPS</span>
+                </div>
+                <div className="w-full px-2 flex items-center justify-center h-12 text-[13px] py-2 font-f  font-bold font-color">
+                  <span> V100,V500</span>
+                </div>
               </div>
-            </div>
-
-            <div className="card-margin-t">
-              <div className=" px-6  pt-12 margin_card flex flex-col gap-4 ">
-                <div
-                  // *ngFor="let item of items.membership;let i=index;"
-                  className=""
-                >
-                  {items.membership.map((value, index) => (
-                    // <div>
+              <div className=" sm:col-span-3 ruler relative w-full">
+                <div className="ruler-cell flex ">
+                  {mylist.array_gen.map((items, i) => (
                     <>
-                    {
-                      index!=0 && 
-                      <hr
-                        //   *ngIf="i!=0"
-                        width="100%"
-                        className="dashed-border"
-                        color="#FFFFFF"
-                        size="1"
-                        key={index}
-                      />
-
-                    }
-                      
-                      <div className="flex items-center py-2">
+                      <div
+                        key={i}
+                        className=" circle-h-w   flex item-center justify-end   relative "
+                      >
                         <div
-                          //  @fadeInRight
-                          className="flex-auto"
+                          className={
+                            (i + 1 == 4
+                              ? "circle-color1"
+                              : i + 1 == 18
+                              ? "circle-color2"
+                              : i + 1 == 30
+                              ? "circle-color3"
+                              : i + 1 == 45
+                              ? "circle-color3"
+                              : i + 1 == 60
+                              ? "circle-color3"
+                              : "circle-color") +
+                            "card circle_card  absolute  justify-center text-white items-center font-f text-[12px] bottom-2 flex "
+                          }
                         >
-                          <h4 className="font-semibold text-[13px] font-f leading-snug ">
-                            {value.text}
-                          </h4>
-                        </div>
-
-                        <div>
-                          <h4 className=" font-semibold text-[13px] font-f  ">
-                            {value.value}
-                          </h4>
+                          {mylist.isInclude(i + 1) ? i + 1 : ""}
                         </div>
                       </div>
-                      <hr
-                        //   *ngIf="i+1==items.membership.length"
-                        width="100%"
-                        className="dashed-border"
-                        color="#FFFFFF"
-                        size="1"
-                      />
-
-                      {/* </div> */}
+                      <span className="number font-f font-color">
+                        {(i + 1) % 10 == 0 && !mylist.isInclude(i + 1)
+                          ? i + 1
+                          : ""}
+                      </span>
                     </>
                   ))}
-                  <h4 className="  w-25 py-4 px-2 text-center  text-[13px] font-f font-semibold leading-5">
-                    Note: levels go from 1 to 8 — [1] V Mastery Level 1 [2]
-                    Price of respective Membership [3] Weekly Loyalty Points
-                  </h4>
-                  <button
-                    onMouseEnter={items.mouse_point == true}
-                    onMouseLeave={items.mouse_point == false}
-                    className={
-                      items.mouse_point
-                        ? "bg-vilet text-white"
-                        : "border-vilet px-1    mb-6 pb-2 rounded-full text-[16px] uppercase font-f-bold font-bold btnhover"
-                    }
-                    //       className=" btnhover
-                    // mx-2 px-2 my-6 py-2 rounded-full text-[16px] uppercase font-f-bold font-bold "
-                    type="button"
-                  >
-                    Purchase Membership <br /> {items.purchase_amount}
-                  </button>
                 </div>
               </div>
             </div>
-            {/* </div> */}
           </div>
-        ))}
-      </div>
+        </>
+
+        <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2">
+          {array_membership.map((items, index) => (
+            <div
+        
+              className="card bg-overall-height  pb-2 relative hover:shadow-lg trans-shadow flex flex-col items-left border-t "
+              key={index}
+            >
+              <div className="bg-card  mb-2 justify-center pt-4  ">
+                <h2 className=" font-f  text-[13px]  text-center text-white ">
+                  {" "}
+                  {items.value}
+                </h2>
+                <div className="height_in">
+                  <img
+                    src={items.image}
+                    style={{ height: "70%", width: "100%" }}
+                  />
+                </div>
+              </div>
+
+              <div className="card-margin-t">
+                <div className=" px-6  pt-12 margin_card flex flex-col gap-4 ">
+                  <div
+                    className=""
+                  >
+                    {items.membership.map((value, index) => (
+                      <>
+                        {index != 0 && (
+                          <hr
+                            width="100%"
+                            className="dashed-border"
+                            color="#FFFFFF"
+                            size="1"
+                            key={index}
+                          />
+                        )}
+
+                        <div className="flex items-center py-2">
+                          <div
+                            className="flex-auto"
+                          >
+                            <h4 className="font-semibold text-[13px] font-f leading-snug ">
+                              {value.text}
+                            </h4>
+                          </div>
+
+                          <div>
+                            <h4 className=" font-semibold text-[13px] font-f  ">
+                              {value.value}
+                            </h4>
+                          </div>
+                        </div>
+                        <hr
+                          width="100%"
+                          className="dashed-border"
+                          color="#FFFFFF"
+                          size="1"
+                        />
+
+                      </>
+                    ))}
+                    <h4 className="  w-25 py-4 px-2 text-center  text-[13px] font-f font-semibold leading-5">
+                      Note: levels go from 1 to 8 — [1] V Mastery Level 1 [2]
+                      Price of respective Membership [3] Weekly Loyalty Points
+                    </h4>
+                    <button
+                      onMouseEnter={items.mouse_point == true}
+                      onMouseLeave={items.mouse_point == false}
+                      className={
+                        items.mouse_point
+                          ? "bg-vilet text-white"
+                          : "border-vilet px-1    mb-6 pb-2 rounded-full text-[16px] uppercase font-f-bold font-bold btnhover"
+                      }
+                      type="button"
+                    >
+                      Purchase Membership <br /> {items.purchase_amount}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

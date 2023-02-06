@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../common/Headers";
+import Navigation from "../common/Navigation";
 import "../wallet/Wallet.css";
 const Wallet = () => {
   const blocks = [
@@ -91,7 +93,9 @@ const Wallet = () => {
   ];
   return (
     <div>
-      <div className="py-8">
+      <Header/>
+      <Navigation/>
+      <div className="py-8 ml-[280px] mt-[70px]">
         <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 mb-2 mx-2">
           {blocks.map((title) => {
             return (

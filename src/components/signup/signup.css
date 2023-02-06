@@ -1,0 +1,98 @@
+
+
+
+.-mt-30{
+
+    /* margin-top: 20%; */
+}
+
+.btn_sign_in{
+   background: linear-gradient(180deg, #950DD0 0%, #8633DA 100%);border-radius: 23px;
+  
+}
+.bg-image{
+   padding-top: 2.5%;
+   height: 48%;
+}
+
+
+
+
+.CaptchBox{
+   background:#cc9966;
+   /* // height: 60px; */
+  
+   
+   font-size: 39px;
+   /* font-family:shadow_font,sans-serif; */
+   font-family:myFirstFont, sans-serif;
+
+
+
+}
+
+.mat-label{
+   font-size: 13px;font-weight: 600;
+}
+.textbox{
+   color: rgba(0, 0, 0, .7);
+}
+.text-header{
+  color: #000000;font-size :36px;
+   letter-spacing: 10.15px;
+   font: normal normal bolder 36px/45px commuters-sans-bold;
+   margin-top: 23px;
+
+}
+
+.appicon{
+   height:50px ;
+   margin-top:42px;}
+.login-card{
+   border-radius: 37px; 
+}
+
+.screen-zoom{
+   zoom: 95%;
+}
+
+.bgimg{
+   background-image: url(../../assets1/assets/img/backgroun_image.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 350px;
+}
+
+.rgb{
+   color:  rgba(0, 0, 0, .6);
+
+}
+@font-face {
+   font-family: myFirstFont;
+   src: url('../../assets1/assets/fonts/Shadow-7WdR.ttf');
+ }
+ @font-face {
+   font-family: commuters-sans-bold;
+   src: url('../../assets1/assets/fonts/commuterssans-semibold.otf');
+ }
+
+ .logincs{
+   font-family:commuters-sans-bold;
+   font-size: 10px;
+   font-weight: bolder !important;
+   cursor: pointer;
+   
+ }
+ .fmailyf{
+   font-family:commuters-sans-bold;
+
+ }
+
+ .color_underline{
+    color: #785AE6;
+    text-decoration: underline;
+ }
+ input::placeholder {
+ font-size: 14px;
+}

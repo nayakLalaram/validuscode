@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../Common/Header";
-import Navigation from "../Common/Navigation";
-import "../GiftWallet/giftwallet.css";
+import Header from "../common/Header";
+import Navigation from "../common/Navigation";
+import "../giftwallet/giftwallet.css";
 
 function Giftwallet() {
   let gift_wallet = [
@@ -253,7 +253,7 @@ function Giftwallet() {
               <tr>
                 {gift_wallet.map((items) => (
                   <>
-                    <td className=" font-bold border-b  font-f text-[14px]  font-color">
+                    <td className=" font-bold border-b  font-f text-[14px] py-2 font-color">
                       {" "}
                       {items.label}
                     </td>
@@ -270,8 +270,8 @@ function Giftwallet() {
 
             <tbody>
               {aioTableData.map((items) => (
-                <tr className="tabletr">
-                  <td className=" border-b  font-f text-[14px]  font-color">
+                <tr className="tabletr  my-2 py-2">
+                  <td className=" border-b  font-f text-[14px] py-2  font-color">
                     {" "}
                     {items.date_time}
                   </td>

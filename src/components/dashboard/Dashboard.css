@@ -169,6 +169,7 @@ background-color: white;
 }
 .bg-menu_bor{
   background-color: #707070;
+opacity: 0.2;
   height: 1px;
 }
 .dashed{

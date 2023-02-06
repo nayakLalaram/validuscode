@@ -8,7 +8,7 @@ const RankCards = () => {
       <div className="card mb-2 card1 group h1-card1 mt-20">
         <div className=" flex relative">
           <div className="pt-4 pl-4 text-primary-contrast flex-auto">
-            <h2 className="font-size-14 m-0 w-5 font-f font-weight-600 font_f text-white text-sm font-semibold">
+            <h2 className="font-size-14 m-0 w-5 font-f font-weight-600  text-white text-xs font-semibold">
               CURRENT RANK
             </h2>
           </div>
@@ -24,7 +24,7 @@ const RankCards = () => {
               CROWN DIAMOND
             </h2>
 
-            <h2 className=" font-size-10 hidden group-hover:block  font_f font-weight-600 font-semibold text-white text-xs">
+            <h2 className=" font-size-10 hidden group-hover:block  font_f font-weight-600 font-semibold text-white text-[10px] mt-2">
               Sept, 22. 2022
             </h2>
           </div>

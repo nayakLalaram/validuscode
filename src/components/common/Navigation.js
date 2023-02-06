@@ -20,7 +20,7 @@ function Navigation() {
   return (
     <>
       <div>
-        <div className="shadow navigation_img drop-shadow-md  pb-2  ">
+        <div className="shadow navigation_img drop-shadow-md  py-[10px]  ">
           <img src={logoimg} alt="" className="  select-none " />
         </div>
 
@@ -64,7 +64,7 @@ function Navigation() {
               </li>
               <li className="li">
                 <a
-                  href=""
+                  href="/wallet"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={wallet} alt="" />
@@ -86,7 +86,7 @@ function Navigation() {
               </li>
               <li className="li">
                 <a
-                  href="#"
+                  href="/bonuses"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={bonuseslogo} alt="" />
@@ -126,7 +126,7 @@ function Navigation() {
               </li>
               <li className="li">
                 <a
-                  href="#"
+                  href="/profile"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={profilelogo} alt="" />
@@ -135,7 +135,7 @@ function Navigation() {
               </li>
               <li className="li">
                 <a
-                  href="#"
+                  href="/support"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={supportlogo} alt="" />
@@ -155,7 +155,7 @@ function Navigation() {
               </li>
               <li className="li">
                 <a
-                  href="#"
+                  href="/"
                   className=" a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={bonuseslogo} alt="" />

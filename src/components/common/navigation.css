@@ -1,5 +1,5 @@
 div#drawer-navigation {
-    width: 17rem !important;
+    width: 16rem !important;
 }
 a:hover{
 /* background-color: #7f3fd6; */
@@ -9,7 +9,7 @@ a:hover{
     top:0rem;
     left: 0rem;
     width: 100%;
-    max-width: 17rem !important;
+    max-width: 16rem !important;
     background-color: white;
     z-index: 999;
     

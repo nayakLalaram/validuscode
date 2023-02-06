@@ -1,0 +1,31 @@
+
+.react-horizontal-scrolling-menu--wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px !important;
+}
+.mat-ink-bar{
+    display: none;
+}
+.react-tabs__tab--selected{
+    outline: none !important;
+}
+.react-horizontal-scrolling-menu--scroll-container {
+    display: flex;
+    height: max-content;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.react-horizontal-scrolling-menu--inner-wrapper {
+    display: flex;
+    overflow-y: hidden;
+    align-items: center;
+}
+.react-horizontal-scrolling-menu--arrow-right {
+    display: flex;
+    margin-left: 10px;
+    /* box-shadow: 0px 0px 15px 0px gray; */
+}

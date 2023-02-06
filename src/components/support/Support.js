@@ -1,5 +1,7 @@
 import React from "react";
 import "../support/Support.css";
+import Header from '../common/Header' 
+import Navigation from '../common/Navigation' 
 const Support = () => {
   const table = [
     {
@@ -23,7 +25,9 @@ const Support = () => {
   ];
   return (
     <div>
-      <div className="pt-4">
+ <Header />
+    <Navigation />
+    <div className='sm: ml-[270px] mt-[70px]'>
         <div className="px-gutter">
           <div className="mt-3">
             <div className="py-5 border-b flex items-center justify-center my_psoition">
@@ -170,7 +174,7 @@ const Support = () => {
             <ul className="inline-flex items-center -space-x-px">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white  rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   <span className="sr-only">Previous</span>
@@ -191,7 +195,7 @@ const Support = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="block px-3 py-2 leading-tight text-gray-500 bg-white  rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
                 >
                   <span className="sr-only">Next</span>

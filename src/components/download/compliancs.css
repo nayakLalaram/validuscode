@@ -1,0 +1,55 @@
+.bg-card{
+   
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+   height: 80;
+}
+.height_in{
+    margin-bottom: -4rem;
+    
+}
+/* 
+.margin_card{
+
+    margin-top: 0px;
+} */
+
+.font-small{
+    font-size: 13px;
+}
+
+.bg-vilet{
+   background: transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+}
+
+.border-vilet{
+ 
+  color:#706FEB ;
+  border: 1px solid #706FEB;
+}
+
+
+.border-button{
+    color:#FFFFFF ;
+    border: .5px solid #FFFFFF;
+  }
+  .text-black{
+    color:#000000 
+  }
+
+  .text-primary{
+    color: rgba(0, 0, 0, 1);
+  }
+
+  .cards:hover{
+    color: white;
+    background: transparent linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) 0% 0% no-repeat padding-box;
+  
+  }
+  .cards:hover img.clr{
+    filter: brightness(0) invert(1);
+  }
+  .cards:hover .download_btn{
+    border-radius: 20px;
+    border: 1px solid white;
+  }

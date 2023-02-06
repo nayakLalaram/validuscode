@@ -25,8 +25,8 @@ const PieCharts = () => {
 
   return (
     <div className="myCards card_new pb-4">
-      <div className="flex items-center justify-between px-8 pt-8 mb-6 ">
-        <h2 className="font_f text-black uppercase font-bold text-base">
+      <div className="flex items-center justify-between px-8 pt-8 mb-5 ">
+        <h2 className="font_f text-black uppercase font-bold text-sm">
           LIFETIME EARNING
         </h2>
         <svg
@@ -47,7 +47,7 @@ const PieCharts = () => {
           ></polyline>
         </svg>
       </div>
-      <div className="bg-menu_bor h-[1px] max-w-sm"></div>
+      <div className="bg-menu_bor h-[1px] max-w-full"></div>
       <div id="chart" className="my-16">
         <ReactApexChart
           options={state.options}

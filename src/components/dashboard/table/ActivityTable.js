@@ -46,8 +46,8 @@ const ActivityTable = () => {
   ];
   return (
     <div className="card_new">
-      <div className="flex items-center justify-between px-8 pt-8 mb-6">
-        <h2 className="font_f text-black uppercase font-bold text-sm">
+      <div className="flex items-center justify-between px-8 pt-8 mb-5">
+        <h2 className=" text-black uppercase font-bold text-[14px]">
           LATEST ACTIVITY
         </h2>
         <svg
@@ -77,14 +77,15 @@ const ActivityTable = () => {
                 id={items.id}
                 className="flex justify-between border-dashed py-2 pb-3 border-b-2 border-[#00000033] last_border"
               >
+                
                 <div className="flex items-center ">
-                  <img src={person_svg} className="h-8"></img>
-                  <h2 className="font_f font-bold text-black text-sm mx-2">
+                  <img src={person_svg} className="h-7"></img>
+                  <h2 className="font_f font-bold text-black text-xs mx-2">
                     {items.name}
                   </h2>
                 </div>
 
-                <h2 className="font_f font-bold text-black text-sm">
+                <h2 className="font_f font-bold text-black text-xs">
                   {items.version}
                 </h2>
               </li>

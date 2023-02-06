@@ -1,25 +1,25 @@
 import React from "react";
-import image1 from "../../asset1/assets/ranking/gold-coin1.png";
-import image2 from "../../asset1/assets/ranking/rank-png/02.png";
-import image3 from "../../asset1/assets/ranking/gold-coin3.svg";
-import image4 from "../../asset1/assets/ranking/gold-coin4.svg";
-import image5 from "../../asset1/assets/ranking/gold-coin5.svg";
-import image6 from "../../asset1/assets/ranking/gold-coin6.svg";
-import image7 from "../../asset1/assets/ranking/gold-coin7.svg";
-import image8 from "../../asset1/assets/ranking/gold_coin8.png";
+import image1 from "../../assets1/assets/ranking/gold-coin1.png";
+import image2 from "../../assets1/assets/ranking/rank-png/02.png";
+import image3 from "../../assets1/assets/ranking/gold-coin3.svg";
+import image4 from "../../assets1/assets/ranking/gold-coin4.svg";
+import image5 from "../../assets1/assets/ranking/gold-coin5.svg";
+import image6 from "../../assets1/assets/ranking/gold-coin6.svg";
+import image7 from "../../assets1/assets/ranking/gold-coin7.svg";
+import image8 from "../../assets1/assets/ranking/gold_coin8.png";
 
-import watch from "../../asset1/assets/ranking/1_watch.png";
-import phone from "../../asset1/assets/ranking/2_phone.png";
-import laptop from "../../asset1/assets/ranking/4_laptop.png";
-import gol from "../../asset1/assets/ranking/5_gol.png";
-import roles from "../../asset1/assets/ranking/6_rolex.png";
-import car from "../../asset1/assets/ranking/car.png";
-import maskgrouo from "../../asset1/assets/ranking/Mask-Group-4.png";
+import watch from "../../assets1/assets/ranking/1_watch.png";
+import phone from "../../assets1/assets/ranking/2_phone.png";
+import laptop from "../../assets1/assets/ranking/4_laptop.png";
+import gol from "../../assets1/assets/ranking/5_gol.png";
+import roles from "../../assets1/assets/ranking/6_rolex.png";
+import car from "../../assets1/assets/ranking/car.png";
+import maskgrouo from "../../assets1/assets/ranking/Mask-Group-4.png";
 
-import "../Rankandrewards/rankandrewards.css";
+import "../rankandrewards/rankandrewards.css";
 import { type } from "@testing-library/user-event/dist/type";
-import Header from "../Common/Header";
-import Navigation from "../Common/Navigation";
+import Header from "../common/Header";
+import Navigation from "../common/Navigation";
 
 function RanksRewards() {
   let array_mar_top = [
