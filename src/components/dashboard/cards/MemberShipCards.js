@@ -5,7 +5,7 @@ import icon_card from "../../../assets1/assets/svg/More-Button.svg";
 import arrow_bottom from "../../../assets1/assets/svg/arrow-bottom-left.svg";
 import right_bottom from "../../../assets1/assets/svg/arrow-bottom-right.svg";
 import cross_button from "../../../assets1/assets/img/delete-button.png";
-
+import cheked_button from "../../../assets1/assets/img/checked.png";
 const MemberShipCards = () => {
   const sopnsers = [
     {
@@ -29,6 +29,23 @@ const MemberShipCards = () => {
       text: "hhhq001",
     },
   ];
+  const activity = [
+    {
+      id:0,
+      text:"Active 1L and 1R",
+      svg:cross_button,
+    },
+    {
+      id:1,
+      text:"Left only Downline TV Required/Total 5000/49,050 Points",
+      svg:cheked_button,
+    },
+    {
+      id:2,
+      text:"Right only Downline TV Required/Points",
+      svg:cheked_button,
+    },
+  ]
   return (
     <div className="dark:border-gray-700">
       <div className="">
@@ -44,70 +61,18 @@ const MemberShipCards = () => {
               <div cla color="#FFFFFF" size="1">
                 <div className="flex items-center  px-2 py-2 ">
                   <ul>
-                    <li className="flex items-center justify-between  border-dashed py-2 pb-3 border-b-2 border-[#00000033] dotted-border">
-                      <h2 className=" py-2 text-center text-[14px] m-0  font-semibold  font-color ">
-                        {" "}
-                        Active 1L and 1R{" "}
-                      </h2>
-                    <img src={cross_button} className="h-4 mr-4"/>
-                    </li>
-                    <li className="flex items-center justify-between  border-dashed py-2 pb-3 border-b-2 border-[#00000033]">
+                    {
+                     activity.map((arr) =>{
+                      return  <li id={arr.id} className="flex items-center justify-between  border-dotted py-2 pb-3 border-b-2 border-[#00000033] dotted-border">
                       <h2 className=" py-2 text-start text-[14px] m-0  font-semibold  font-color ">
-                        {" "}
-                        Left only Downline TV Required/Total 5000/49,050 Points
+                      {arr.text}
                       </h2>
-                      <div>
-                        <div  className="bg-[#00ba00] h-4 w-4 rounded-full mr-4 flex items-center justify-center">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                       
-                        width="12"
-                        height="12"
-                        fill="#ffffff"
-                        viewBox="0 0 256 256"
-                      >
-                        <rect width="256" height="256" fill="none"></rect>
-                        <polyline
-                          points="216 72 104 184 48 128"
-                          fill="none"
-                          stroke="#ffffff"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="24"
-                        ></polyline>
-                      </svg>
-                        </div>
-                      </div>
-                    
+                    <img src={arr.svg} className="h-4 mr-4"/>
                     </li>
-                    <li className="flex items-center justify-between  border-dashed py-2 pb-3 ">
-                      <h2 className=" py-2 text-start text-[14px] m-0  font-semibold  font-color ">
-                        {" "}
-                        Right only Downline TV Required/Points
-                      </h2>
-                      <div>
-                        <div  className="bg-[#00ba00] h-4 w-4 rounded-full mr-4 flex items-center justify-center">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                       
-                        width="12"
-                        height="12"
-                        fill="#ffffff"
-                        viewBox="0 0 256 256"
-                      >
-                        <rect width="256" height="256" fill="none"></rect>
-                        <polyline
-                          points="216 72 104 184 48 128"
-                          fill="none"
-                          stroke="#ffffff"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="24"
-                        ></polyline>
-                      </svg>
-                        </div>
-                      </div>
-                    </li>
+                     }) 
+                    }
+                   
+                   
                   </ul>
                 </div>
               </div>
@@ -138,8 +103,8 @@ const MemberShipCards = () => {
         </div>
 
         <div className="card">
-          <div className="flex items-center justify-between px-8 pt-8 mb-6 border-b-[1px] border-[#707070] pb-4">
-            <h2 className="font_f text-black uppercase font-bold text-sm ">
+          <div className="flex items-center justify-between px-8 pt-8 mb-6 border-b-[1px] border-[#707070] border-opacity-20 pb-4">
+            <h2 className="font_f text-black  font-bold text-sm">
               Matrix Bonus
             </h2>
             <svg
@@ -162,8 +127,8 @@ const MemberShipCards = () => {
           </div>
 
           <div className=" flex justify-center">
-            <h2 className="font_f font-bold text-xl">230</h2>
-            <span className="font_f font-semibold px-2 text-sm">Points</span>
+            <h2 className="font_f font-bold text-[22px]">230</h2>
+            <span className="font_f font-semibold px-2 opacity-50 text-xs">Points</span>
           </div>
           <div className="px-gutter grid grid-cols-1 sm:grid-cols-1 gap-4">
             <div className=" flex flex-col gap-4 ">
@@ -194,7 +159,7 @@ const MemberShipCards = () => {
                         </div>
                       </div>
                      
-                      <h2 className=" py-2  text-xs m-0 text-start  font_f font-bold font-color ">
+                      <h2 className=" py-2  text-[12px] m-0 text-start  font_f font-bold font-color ">
                         You must have an active v5000 or above membership
                       </h2>
                     </li>
@@ -222,12 +187,12 @@ const MemberShipCards = () => {
                         </div>
                       </div>
                      
-                      <h2 className=" py-2  text-xs m-0 text-start  font_f font-bold font-color ">
-                        You must have an active v5000 or above membership
+                      <h2 className="  m-0 text-start text-[12px]  font_f font-bold font-color ">
+                      You must directly sponsor 15000 or <br></br> above
                       </h2>
                     </li>
                    
-                    <p className="text-[10px] font_f ">
+                    <p className="text-[10px] font_f font-normal ">
                       * To qualify for the matrix bonus, you need to meet the
                       conditions above
                     </p>
@@ -241,18 +206,20 @@ const MemberShipCards = () => {
 
       <div className="card  card2  mt-2 py-4">
         <div className="py-2 mt-1  items-center justify-center">
-          <div className="pl-6  flex flex-col gap-4">
+          <div className=" flex flex-col gap-4">
             <div className="flex items-center justify-between     ">
-              <div className="flex ">
-                <h2 className="  text-left   mr-20 font_f text-[14px] font-weight-600  text-white ">
+              <div className="flex px-10 justify-between">
+                <h2 className="  text-left font_f text-[14px] font-weight-600 pr-0   text-white ">
                   REFERRAL LINK
                 </h2>
+                <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
                   height="18"
                   fill="#ffffff"
                   viewBox="0 0 256 256"
+                  className="ml-14"
                 >
                   <rect width="256" height="256" fill="none"></rect>
                   <polyline
@@ -264,6 +231,7 @@ const MemberShipCards = () => {
                     stroke-width="24"
                   ></polyline>
                 </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -327,13 +295,13 @@ const MemberShipCards = () => {
           <div className=" py-4 flex flex-col gap-4 border-b-[1px] border-[#707070] border-opacity-5">
             <div className="flex items-center py-1 px-6 ">
               <div className="flex-auto">
-                <h2 className="text-left text-[14px]  font_f text-xs  font-semibold  font-color flex-auto uppercase ">
+                <h2 className="text-left text-[12px]  font_f text-xs  font-semibold  font-color flex-auto uppercase ">
                   {" "}
                   Direct Sponsor List
                 </h2>
               </div>
 
-              <h2 className=" font-size-14 font_f  font-color font-normal text-sm  ">
+              <h2 className=" font-size-14 font_f  font-color font-normal text-xs">
                 <u>View all</u>
               </h2>
             </div>
@@ -345,7 +313,7 @@ const MemberShipCards = () => {
            
             {sopnsers.map((item) => {
               return (
-                <div className="flex items-center mt-4 justify-center pt-2 border-dashed py-2 pb-3 border-b-2 border-[#00000033] last_border">
+                <div className="flex items-center mt-4 justify-center pt-2 border-dotted py-2 pb-3 border-b-2 border-[#00000033] last_border">
                   <div className="bg-[#8633DA] rounded-full h-8 w-8 ltr:mr-3 rtl:ml-3 flex-none "> </div>
 
                   <div className="flex-auto">

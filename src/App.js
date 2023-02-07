@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route}  from 'react-router-dom'
-import Navbar from "./components/common/Sidebar";
 import Dashboard from "./components/dashboard/Dashboard";
 import Membership from "./components/membership/Membership";
 import Profile from "./components/profile/Profile";
@@ -14,7 +13,6 @@ import Login from './components/login2/login'
 import BonuSes from "./components/bonuses/BonuSes";
 import Wallet from "./components/wallet/Wallet";
 import Support  from "./components/support/Support";
-import { Nav } from "./components/common/kitwin/Nav";
 function App() {
   return (
     <div>
@@ -34,7 +32,6 @@ function App() {
             <Route path="/bonuses" element={<BonuSes />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/support" element={<Support />} />
-            <Route path="/navbar" element={<Nav />} />
           </Routes>
         </>
       </Router>

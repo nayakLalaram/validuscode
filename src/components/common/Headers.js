@@ -7,7 +7,6 @@ import { CiLock } from "react-icons/ci";
 import right from "../../assets1/assets/svg/right.svg";
 import userimg from "../../assets1/assets/img/user.png";
 import "./headerr.css";
-import { AiOutlineMenu } from "react-icons/ai";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 

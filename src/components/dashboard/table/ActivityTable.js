@@ -75,7 +75,7 @@ const ActivityTable = () => {
             return (
               <li
                 id={items.id}
-                className="flex justify-between border-dashed py-2 pb-3 border-b-2 border-[#00000033] last_border"
+                className="flex justify-between border-dotted py-2 pb-3 border-b-2 border-[#808080] border-opacity-50 last_border"
               >
                 
                 <div className="flex items-center ">
