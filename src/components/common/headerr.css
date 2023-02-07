@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nanum+Pen+Script&family=Nunito+Sans&display=swap');
+
 :host {
   background: var(--toolbar-background);
   box-sizing: border-box;
@@ -31,6 +33,12 @@ a {
   justify-content: center;
 }
 
+
+.font-f{
+  font-family: 'Inter', sans-serif;
+  
+
+}
 
 
 
@@ -290,17 +298,16 @@ a {
   margin-top: 0px !important;
 }
   
-
-@media screen and (max-width:900px) {
-  /* / main menu btn    */
+@media screen and (max-width:1000px) {
+  /* main menu btn   */
  .menu_btn{
    display: block !important ;
  }
-  /* / all Header  / */
+  /* all Header  */
  .hheadersss{
    left: 0rem !important ; width: 100% !important;
  }
-  /* / btn points   / */
+  /* btn points   */
  .Btn{
    display: none !important ;
  }
@@ -308,5 +315,3 @@ a {
  display: none;
 }
 }
-
-

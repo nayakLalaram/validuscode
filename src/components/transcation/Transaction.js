@@ -25,7 +25,7 @@ function Transaction() {
     <>
       <Header />
       <Navigation />
-      <div className="sm:ml-[290px] mt-[90px] bg-white ">
+      <div className="lg:ml-[290px] mt-[90px] bg-white ">
         <Tabs className="vex-tabs">
           <ScrollMenu
             style={{ marginRight: "30px" }}

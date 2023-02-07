@@ -14,7 +14,7 @@ function Download() {
   
     <Header/>
     <Navigation />
-  <div className="sm:ml-[300px] mt-[100px] bg-white ">
+  <div className="lg:ml-[300px] mt-[100px] bg-white ">
   <Tabs  className="vex-tabs">
     <TabList className="flex gap-10 font-bold mb-6 ">
       <Tab>COMPLIANCE <br />

@@ -276,7 +276,7 @@ $line-color: #000000;
 
 
 hr {
-  margin: 70px 0;
+  /* margin: 70px 0; */
   border: none;
   height: 1px;
   /* background-color: red;  */

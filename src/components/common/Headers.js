@@ -7,12 +7,15 @@ import { CiLock } from "react-icons/ci";
 import right from "../../assets1/assets/svg/right.svg";
 import userimg from "../../assets1/assets/img/user.png";
 import "./headerr.css";
+import { AiOutlineMenu } from "react-icons/ai";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const [openprofile, setOpenprofile] = useState(false);        
+  const [openprofile, setOpenprofile] = useState(false);
   const [hidesetting, setHidesetting] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const opens = () => {
     setOpen(true);
   };
@@ -49,10 +52,10 @@ const Header = () => {
   return (
     <>
       <div>
-        <div className="  ">
+        <div className="">
           <div
             //   [classNameName.container]="isVerticalLayout$ | async"
-            className="shadow-toolbar toolbar w-full  flex items-center border-b  hheadersss"
+            className=" drop-shadow-md hheadersss shadow-toolbar toolbar w-full  flex items-center border-b"
             style={{
               minHeight: "4rem",
               width: "calc(100% - 16rem)",
@@ -62,18 +65,15 @@ const Header = () => {
               zIndex: "9999",
             }}
           >
-             <button
-          className="menu_btn"
+            <button
+              className="menu_btn"
               // onClick={openSidenav}
-            //  [className.hidden]="!mobileQuery"
-            type="button"
-            style={{ display :'none' , 
-            
-          }}
-
-          > 
-          < AiOutlineMenu className="ml-3" />
-          </button>
+              //  [className.hidden]="!mobileQuery"
+              type="button"
+              style={{ display: "none" }}
+            >
+              <AiOutlineMenu className="ml-3" />
+            </button>
 
             <div className="ml-2 " style={{ width: "100%", maxWidth: "200px" }}>
               <div className=" ">
@@ -106,7 +106,7 @@ const Header = () => {
                         {open && (
                           <span
                             style={{ fontSize: "9px" }}
-                            className=" font-f "
+                            className=" font-f text-white "
                           >
                             {item.label}
                           </span>
@@ -118,7 +118,7 @@ const Header = () => {
                           <div className="text-[22px  ] font-f ">
                             {valueSplit1(item.value)}
                           </div>
-                          <div className=" text-[10px]   font-f font-weight-600">
+                          <div className=" text-[10px] mt-1   font-f font-semibold">
                             &nbsp; Points
                           </div>
                         </div>
@@ -132,7 +132,7 @@ const Header = () => {
             <div className=" flex items-center ">
               <div className="px-2 mr-2">
                 <button
-                  className="top_btn text-[12px] px-6 py-2 rounded-full bg-vilotate border border-addmoney font-f text-center"
+                  className=" top_btn text-[12px] px-6 py-2 rounded-full bg-vilotate border border-addmoney font-f text-center"
                   type="button"
                   style={{
                     width: "100%",
@@ -148,8 +148,13 @@ const Header = () => {
                   className="userimg mat-ripple flex items-center rounded cursor-pointer relative trans-ease-out select-none py-1 pr-1 pl-1 hover\:bg-hover "
                   onClick={handleclose}
                 >
-                  <div>
-                    <img src={userimg} alt="" className="h-7 " style={{width:"11rem"}}/>
+                  <div className="bg-[#fff]" >
+                    <img
+                      src={userimg}
+                      alt=""
+                      className=" rounded-full  h-7 "
+                      style={{ minWidth: "3rem" }}
+                    />
                   </div>
                   <div className=" body-1 ltr\:mr-3 rtl\:ml-3 hidden.sm\:block font-bold font-f text-[16px]">
                     AUSB
@@ -205,22 +210,15 @@ const Header = () => {
                         data-tooltip-target="tooltip-left"
                         data-tooltip-placement="left"
                       >
-                        <div
-                          id="tooltip-left"
-                          role="tooltip"
-                          className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
-                        >
-                          Setting
-                          <div className="tooltip-arrow" data-popper-arrow>
-                            Setting
-                          </div>
-                        </div>
+                    
+
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="25"
                           height="25"
                           fill="#ffffff"
                           viewBox="0 0 256 256"
+                          id="not-clickable"
                         >
                           <rect width="256" height="256" fill="none"></rect>
                           <circle
@@ -242,6 +240,9 @@ const Header = () => {
                             strokeWidth="16"
                           ></path>
                         </svg>
+                        <Tooltip anchorId="not-clickable" place="left">
+                          <button>Setting</button>
+                        </Tooltip>
                         <mat-icon
                           className="notifications-header-icon"
                           svgIcon="mat:settings"
@@ -249,13 +250,20 @@ const Header = () => {
                       </button>
                     </div>
 
-                    <div className="dropdown-footer flex items-center justify-between  py-3">
+                    <Tooltip anchorId="my_status"  place="top" className="flex items-center justify-center  " 
+                    style={{ backgroundColor: "white", color: "#000" }} >
+                    <img src={right} alt="" style={{ width: "16px" }} />
+                      <button className="text-black font-f  text-[14px] mx-2 py-2 ">online</button>
+                    </Tooltip>
+                    <div className="dropdown-footer flex items-center justify-between p-3 ">
                       <button
-                        className="dropdown-footer-select flex items-center justify-center px-6 py-2 rounded-full"
+                        className="dropdown-footer-select flex items-center justify-center px-6 py-4 rounded-full"
                         mat-button
                         type="button"
+                        style={{ paddingLeft: "1.5rem" }}
+                        id="my_status"
                       >
-                        <img src={right} alt="" style={{ width: "18px" }} />  
+                        <img src={right} alt="" style={{ width: "16px" }} />
                         <span className="ml-2 font-f  text-[14px] pr-1  ">
                           online{" "}
                         </span>
@@ -323,148 +331,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-        {/* <div class=" lg:hidden mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-          <div class="relative  grid items-center grid-cols-2 lg:grid-cols-3">
-            <a
-              href="/"
-              aria-label="Company"
-              title="Company"
-              class="inline-flex items-center lg:mx-auto"
-            >
-              <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                Companydcxzfs
-              </span>
-            </a>
-
-            <div class="ml-auto lg:hidden">
-              <button
-                aria-label="Open Menu"
-                title="Open Menu"
-                class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50"
-                onClick={() => setIsMenuOpen(true)}
-              >
-                <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"
-                  />
-                  <path
-                    fill="currentColor"
-                    d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"
-                  />
-                </svg>
-              </button>
-              {isMenuOpen && (
-                <div class="absolute top-0 left-0 w-full">
-                  <div class="p-5 bg-white border rounded shadow-sm">
-                    <div class="flex items-center justify-between mb-4">
-                      <div>
-                        <a
-                          href="/"
-                          aria-label="Company"
-                          title="Company"
-                          class="inline-flex items-center"
-                        >
-                          <svg
-                            class="w-8 text-deep-purple-accent-400"
-                            viewBox="0 0 24 24"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeMiterlimit="10"
-                            stroke="currentColor"
-                            fill="none"
-                          >
-                            <rect x="3" y="1" width="7" height="12" />
-                            <rect x="3" y="17" width="7" height="6" />
-                            <rect x="14" y="1" width="7" height="6" />
-                            <rect x="14" y="11" width="7" height="12" />
-                          </svg>
-                          <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                            Company
-                          </span>
-                        </a>
-                      </div>
-                      <div>
-                        <button
-                          aria-label="Close Menu"
-                          title="Close Menu"
-                          class="p-2 -mt-2 -mr-2 transition duration-200 rounded hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                            <path
-                              fill="currentColor"
-                              d="M19.7,4.3c-0.4-0.4-1-0.4-1.4,0L12,10.6L5.7,4.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l6.3,6.3l-6.3,6.3 c-0.4,0.4-0.4,1,0,1.4C4.5,19.9,4.7,20,5,20s0.5-0.1,0.7-0.3l6.3-6.3l6.3,6.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L13.4,12l6.3-6.3C20.1,5.3,20.1,4.7,19.7,4.3z"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <nav>
-                      <ul class="space-y-4">
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Product
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Our product"
-                            title="Our product"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Features
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Product pricing"
-                            title="Product pricing"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Pricing
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            aria-label="Sign in"
-                            title="Sign in"
-                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                          >
-                            Sign in
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="/"
-                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                            aria-label="Sign up"
-                            title="Sign up"
-                          >
-                            Sign up
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div> */}
       </div>
     </>
   );

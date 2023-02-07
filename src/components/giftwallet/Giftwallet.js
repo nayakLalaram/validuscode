@@ -120,7 +120,7 @@ function Giftwallet() {
     <>
       <Header  />  
     <Navigation />
-      <div className="sm:ml-[290px] mt-[50px]">
+      <div className=" mt-[50px] lg:ml-[290px] ">
         <div className="pt-4">
           {/* <vex-page-layout> */}
           {/* <vex-page-layout-content> */}
@@ -241,8 +241,8 @@ function Giftwallet() {
 
             <span className="flex-1"></span>
           </div>
-
-          <table
+    <div className="overflow-x-auto" >
+    <table
             // @stagger
             //  [dataSource]="dataSource"
             className="w-full ml-5"
@@ -317,6 +317,8 @@ function Giftwallet() {
               ))}
             </tbody>
           </table>
+    </div>
+         
 
           <mat-paginator
             // [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize"
