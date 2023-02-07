@@ -265,7 +265,7 @@ function RanksRewards() {
     <>
     <Header/>
     <Navigation />
-      <div className="sm:ml-[270px] mt-[70px] ">
+      <div className="lg:ml-[270px] mt-[70px] ">
         <div >
           <h2 className=" pt-4 pl-6 m-5 font-f text-[18px] font-f font-semibold font-color">
             RANKS & REWARDS

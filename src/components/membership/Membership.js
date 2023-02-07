@@ -216,7 +216,7 @@ function Membership() {
       <Header />
       <Navigation />
 
-      <div className="sm:ml-[290px]  mt-[70px]">
+      <div className="lg:ml-[290px]  mt-[70px]">
         <>
           <div>
             <h2 className=" pt-4 pl-10  text-[18px] font-f font-bold  font-color uppercase ">

@@ -14,7 +14,7 @@ const BonuSes = () => {
     <> 
     <Header/>
   <Navigation/>
-    <div className="sm:ml-[270px] mt-[70px] ">
+    <div className="lg:ml-[270px] mt-[70px] ">
       <div className=" ml-5">
         <Tabs className="myalltabs">
           <TabList className="new_tabs border-b-[1px] border-[#00000033]">
