@@ -26,14 +26,14 @@ const DirectBonus = () => {
         <div className="  px-2 flex items-center justify-center">
           <img src={profile_svg} alt="mtimg"/>
         </div>
-        <h2 className="font-size-16 font-f font-color text-center font-weight-600  m-0 ">
+        <h2 className="font-size-16 text-sm font-f font-color text-center font-weight-600  m-0 ">
           AU8
         </h2>
         <div className="mx-5">
           <div className="w-full justify-center   overflow-auto flex flex-col md:flex-row sm:mr-6 ">
             <div className="justify-start mr-1">
               {" "}
-              <h2 className="font-size-19 text-[19px] font-f font_f font-color text-center mr-4  m-0 ">
+              <h2 className="font-size-19 text-[17px] font-f font_f font-color text-center mr-4  m-0 ">
                 LEFT
               </h2>
             </div>
@@ -46,10 +46,10 @@ const DirectBonus = () => {
                       id={item.id}
                       className="last_border   flex items-center justify-between py-[18px] border-b-[1px] border-[#e5e7eb]  px-5"
                     >
-                      <p className="m-0 body-1 font-size-16 font-f font-color text-center font-weight-600">
+                      <p className="m-0 body-1 text-sm font-size-16 font-f font-color text-center font-weight-600">
                         {item.text}
                       </p>
-                      <p className="m-0 font-size-16 font-f font-color text-right font-bold font-weight-800 ">
+                      <p className="m-0 font-size-16 text-sm font-f font-color text-right font-bold font-weight-800 ">
                         {item.value}
                       </p>
                     </div>
@@ -63,10 +63,10 @@ const DirectBonus = () => {
                 {directbonus.map((item) => {
                   return (
                     <div className="flex last_border   items-center justify-between py-[18px] px-5 border-b-[1px] border-[#e5e7eb]">
-                      <p className="m-0 body-1 font-size-16 font-f font-color text-center font-weight-600">
+                      <p className="m-0 body-1 text-sm font-size-16 font-f font-color text-center font-weight-600">
                         {item.value}
                       </p>
-                      <p className="m-0 font-size-16 font-f font-color text-center font-weight-600">
+                      <p className="m-0 font-size-16 text-sm font-f font-color text-center font-weight-600">
                         {item.text}
                       </p>
                     </div>
@@ -74,7 +74,7 @@ const DirectBonus = () => {
                 })}
               </div>
             </div>
-            <h2 className="ml-4 font-size-19 font_f text-[19px]  font-color text-center  ">
+            <h2 className="ml-4 font-size-19 font_f text-[17px]  font-color text-center  ">
               RIGHT
             </h2>
           </div>

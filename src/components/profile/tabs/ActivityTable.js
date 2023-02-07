@@ -46,7 +46,7 @@ const ActivityTable = () => {
     },
   ];
   return (
-    <div className="shadow-md rounded-md">
+    <div className="shadow-md rounded-md sm:mx-10">
       <div className="flex  justify-end mx-6 mt-10">
         <div className="bg-foreground rounded-full  px-4 max-w-[300px] my-5  flex items-center border border-gray-300 ">
           <input
@@ -87,13 +87,13 @@ const ActivityTable = () => {
           </svg>
         </div>
       </div>
-      <div className="">
-        <table class="table-fixed my_table ">
+      <div className="overflow-x-scrol w-full">
+        <table class="sm:table-fixed my_table l">
           <thead className="border-t-[#00000033] border-b-[#9626cb] border-b-[5px]  border-t-[1px] justify-between h-[52px] ">
             <tr className="t">
-              <th className="text-center font_f">Name</th>
-              <th className="text-center font_f ">Description</th>
-              <th className="text-center font_f">Timestamp</th>
+              <th className="text-center font_f text-sm">Name</th>
+              <th className="text-center font_f text-sm">Description</th>
+              <th className="text-center font_f  text-sm">Timestamp</th>
             </tr>
           </thead>
 
@@ -107,10 +107,10 @@ const ActivityTable = () => {
                   <td className="text-center font_f font-normal text-base">
                     {item.mamberid}
                   </td>
-                  <td className="font_f text-center  font-normal text-base">
+                  <td className="font_f text-center  font-normal text-sm">
                     {item.mamberdate}
                   </td>
-                  <td className="font_f text-center font-normal text-base">
+                  <td className="font_f text-center font-normal text-sm">
                     {item.rate}
                   </td>
                 </tr>

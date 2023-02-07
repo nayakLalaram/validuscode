@@ -172,15 +172,15 @@ const Reward = () => {
   return (
     <div>
       <div className="py-10 bg-white drop-shadow-md rounded-lg">
-        <div className="flex m-5">
+        <div className="sm:flex sm:m-5">
           <div className="border-r  max-w-[100%]  ">
             <div className="py-6 flex mx-4">
-              <h2 className=" font-weight-800 font-bold text-sm font_f   m-0 w-5 ">
+              <h2 className=" font-weight-800 font-semibold text-[14px] font_f   m-0 w-5 ">
                 Membership Tier
               </h2>
 
               <div className="m-0 ml-20 flex ">
-                <div className="font-weight-600 font-bold text-[31px] font_f font-size-32 font-f font-color m-0  ">
+                <div className="font-weight-600 font-extrabold text-[31px]  font-size-32 font-f font-color m-0  ">
                   2,550
                 </div>
                 <div className="font-weight-600 font-semibold text-xs font_f  font-size-12 font-f font-color -mt-1  pl-1">
@@ -190,7 +190,7 @@ const Reward = () => {
             </div>
             <div className="bg-[#e5e7eb] h-[1px] w-60 mt-3"></div>
             <div className="py-8  flex mx-4 ">
-              <h2 className=" font-weight-800 font-bold text-sm font_f   m-0 w-5 ">
+              <h2 className=" font-weight-800 font-semibold text-[14px] font_f   m-0 w-5 ">
                 Total Earned Till Date
               </h2>
 
@@ -205,7 +205,7 @@ const Reward = () => {
             </div>
           </div>
 
-          <div className="px-6 w-full ">
+          <div className="sm:px-6 w-full ">
             <div className=" py-4 px-2 flex items-center">
               <h2 className="font-size-16 font-weight-600 font-f font-color  m-0">
                 REWARDS STATS

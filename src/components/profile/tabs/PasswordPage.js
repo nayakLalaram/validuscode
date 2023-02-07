@@ -4,8 +4,8 @@ import authecated_svg from "../../../assets1/assets/svg/authentication.svg";
 
 const PasswordPage = () => {
   return (
-    <div>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 shadow-md py-8 my-8 px-6">
+    <div className="sm:mx-10">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 shadow-md py-8 my-8 px-6 ">
         <div className="sm:col-span-1 border-r  justify-center">
           <div className="  mat-label w-full font-weight-600 font-f font-color ">
             Two Factor Authentification
@@ -159,7 +159,7 @@ const PasswordPage = () => {
             </button>
           </div>
 
-          <div className="flex-auto ml-[280px] py-2">
+          <div className="flex-auto sm:ml-[280px] py-2">
             <div className="text-start  ml-3 font_f text-[10px] font-normal">
               CONFIRM NEW PASSWORD
             </div>

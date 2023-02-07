@@ -27,11 +27,11 @@ const Support = () => {
     <div>
  <Header />
     <Navigation />
-    <div className='sm: ml-[270px] mt-[70px]'>
+    <div className='lg:ml-[270px] mt-[70px]'>
         <div className="px-gutter">
-          <div className="mt-3">
-            <div className="py-5 border-b flex items-center justify-center my_psoition">
-              <h2 className=" text-[18px] font_f font-color text-center  font-weight-600 m-0 ">
+          <div className="sm:mt-3 ">
+            <div className="lg:py-5 pt-12 lg:pt-14 sm:pb-0 pb-3 border-b flex items-center justify-center my_psoition">
+              <h2 className=" sm:text-[18px] text-sm font_f font-color text-center  font-weight-600 m-0 ">
                 RAISE A SUPPORT REQUEST
               </h2>
             </div>
@@ -43,9 +43,9 @@ const Support = () => {
                 Subject
               </div>
               <div className="flex justify-center">
-                <div className="mt-2 bg-foreground rounded-full px-4 max-w-[625px] flex-auto flex items-center border border-gray-300">
+                <div className="mt-2 bg-foreground rounded-full px-4 sm:max-w-[625px]  sm:flex-auto flex items-center border border-gray-300">
                   <input
-                    className="textbox  px-4 py-2 border-0 outline-none font_f w-full bg-transparent placeholder:text-sm"
+                    className="textbox  sm:px-4 py-1 border-0 outline-none font_f sm:w-full w-[70%]  bg-transparent placeholder:text-sm"
                     value=""
                     placeholder=" Subject"
                     type="text"
@@ -61,7 +61,7 @@ const Support = () => {
                 </div>
               </div>
               <div className="flex justify-center">
-                <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[620px] flex-auto flex items-center border border-gray-300">
+                <div className="mt-2 bg-foreground sm:rounded-full rounded-[24px]  px-4 sm:max-w-[620px] sm:flex-auto flex items-center border border-gray-300">
                   <input
                     className="textbox font_f px-4 py-2 border-0 outline-none w-full bg-transparent text-sm  h-[6.875rem]"
                     value=""
@@ -72,7 +72,7 @@ const Support = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-2 mt-4 py-2">
+          <div className="flex items-center justify-center gap-2 sm:mt-4 mt-2 py-2">
             <button
               mat-raised-button
               className="w-[116px] mt-7 bg-lenier-gradient text-white  font_f text-[10px] font-normal rounded-full flex items-center justify-center"

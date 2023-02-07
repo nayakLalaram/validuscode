@@ -64,12 +64,12 @@ function MatrixTable() {
             <table class="table-fixed">
               <thead className="border-t-[#00000033] border-b-[#9626cb] border-b-[5px] border-t-[1px] justify-between h-[52px] ">
                 <tr className="">
-                  <th className="text-start font_f">Created Date</th>
-                  <th className="text-start font_f ">Members</th>
-                  <th className="text-start font_f">Rewards per Person</th>
-                  <th className="text-start font_f">Active 70%</th>
-                  <th className="text-start font_f">Passive 30%</th>
-                  <th className="text-start font_f">Matrix Bonus</th>
+                  <th className="text-start font_f text-sm">Created Date</th>
+                  <th className="text-start font_f text-sm ">Members</th>
+                  <th className="text-start font_f text-sm">Rewards per Person</th>
+                  <th className="text-start font_f text-sm">Active 70%</th>
+                  <th className="text-start font_f text-sm">Passive 30%</th>
+                  <th className="text-start font_f text-sm">Matrix Bonus</th>
                 </tr>
               </thead>
 
@@ -80,31 +80,31 @@ function MatrixTable() {
                       id={item.id}
                       className="border-[#00000033] border-y-[1px] justify-between h-[48px] hover:bg-[#0000000a]"
                     >
-                      <td className="text-start font_f font-normal text-base">
+                      <td className="text-start font_f font-normal text-sm">
                         {item.mamberid}
                       </td>
-                      <td className="font_f text-start  font-normal text-base">
+                      <td className="font_f text-start  font-normal text-sm">
                         {item.mamberdate}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.rate}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.date}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.percent}
                       </td>
-                      <td className="font_f text-start font-normal text-base ">
+                      <td className="font_f text-start font-normal text-sm ">
                         {item.admin}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.released}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.passive}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.recieved}
                       </td>
                     </tr>

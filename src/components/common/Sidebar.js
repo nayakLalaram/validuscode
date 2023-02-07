@@ -342,22 +342,13 @@ const Sidebar = () => {
           <img src={logoimg} alt="" className="  select-none " />
         </div>
 
-        {/* toggle button of sidebar navigation commented */}
-        {/* 
-<div className="text-center">
-   <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 pl-3 .5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
-   Show navigation
-   </button>
-</div> */}
+      
 
         <div
           id="drawer-navigation"
           className="fixed sidebar left-0 z-40 h-screen    transition-transform bg-white w-120  "
         >
-          {/* // sidebar hide and show class Commented
-// tabIndex="-1" aria-labelledby="drawer-navigation-label"  aria-modal="true"
-// className="-translate-x-full " */}
-
+       
           <div className=" overflow-y-auto">
             <ul className="space-y-2">
               <li className="li">

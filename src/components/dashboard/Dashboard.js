@@ -16,8 +16,8 @@ const Dashboard = () => {
 
    <Header/>
    <Navigation/>
-    <div className="pt-6 md:ml-[292px]  sm:mt-[70px]">
-      <div className="sm:flex justify-between">
+    <div className="pt-6 lg:ml-[292px] mt-16 mx-1 sm:mx-0  sm:mt-[70px]">
+      <div className="lg:flex justify-between">
         <div className="lg:w-[70%] md:w-[100%] w-[100%]">
           <Blocks />
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 ">

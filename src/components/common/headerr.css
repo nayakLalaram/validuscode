@@ -290,3 +290,23 @@ a {
   margin-top: 0px !important;
 }
   
+
+@media screen and (max-width:900px) {
+  /* / main menu btn    */
+ .menu_btn{
+   display: block !important ;
+ }
+  /* / all Header  / */
+ .hheadersss{
+   left: 0rem !important ; width: 100% !important;
+ }
+  /* / btn points   / */
+ .Btn{
+   display: none !important ;
+ }
+.top_btn{
+ display: none;
+}
+}
+
+

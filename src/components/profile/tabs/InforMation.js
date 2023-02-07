@@ -5,14 +5,14 @@ import Profile_img2 from "../../../assets1/assets/img/profile-image2.svg";
 const InforMation = () => {
   return (
     <div>
-      <div className="p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-9 gap-1 py-12 shadow-md my-4 px-12">
+      <div className="p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-9 gap-1 sm:py-12 py-8 shadow-md my-4 sm:px-12 px-8">
         <div className="sm:col-span-2">
-          <div className=" my-2   w-full font-weight-600 font_f font-color text-sm font-semibold">
+          <div className=" my-2   w-full font-weight-600 font_f font-color text-xs font-semibold">
             User Details
           </div>
           <div className="border-r flex px-6 justify-center items-center ">
             <button
-              className=" upload  text-white px-6 py-1 rounded-full "
+              className=" upload  text-white px-6 py-1 rounded-full text-sm"
               type="button"
             >
               upload
@@ -83,15 +83,15 @@ const InforMation = () => {
           </div>
         </div>
 
-        <div className="sm:col-span-2 pt-20  ">
-          <div className=" mt-8">
-            <div className="flex justify-center  item-center gap-1">
-              <u className="text-left mt-2  font_f text-[10px] font-normal">
+        <div className="sm:col-span-2 sm:pt-20   ">
+          <div className="sm:mt-8">
+            <div className="sm:flex justify-center  item-center gap-1">
+              <u className="text-left mt-2  font_f text-[10px] font-normal px-5 sm:px-0">
                 Change Email
               </u>
               <button
                 mat-raised-button
-                className=" w-full  bg-lenier-gradient text-white px-10 font_f text-[10px] font-normal rounded-full flex items-center justify-center"
+                className=" sm:w-full w-[81%] sm:ml-0 ml-6  bg-lenier-gradient text-white sm:px-10 font_f text-[10px] font-normal rounded-full flex items-center justify-center"
                 type="button"
               >
                 <svg
@@ -136,7 +136,7 @@ const InforMation = () => {
             <div>
               <div className="border-r flex  card-Idproof px-10 justify-center items-center  py-10 ">
                 <button
-                  className=" upload  text-white px-6 py-1 rounded-full"
+                  className=" upload text-sm text-white px-6 py-1 rounded-full"
                   type="button"
                 >
                   upload
@@ -150,14 +150,14 @@ const InforMation = () => {
             <div>
               <div className="border-r ml-2 card-Idproof flex justify-center items-center  py-10 px-10">
                 <button
-                  className=" upload  text-white px-6 py-1 rounded-full "
+                  className=" upload  text-white text-sm px-6 py-1 rounded-full "
                   type="button"
                 >
                   upload
                 </button>
                 <img src={Profile_img2} className="h-[70px] w-auto" />
               </div>
-              <div className="text-center mt-2 ml-3 font-f font-color font-size-13 ">
+              <div className="text-center text-[13px] font-semibold mt-2 ml-3 font-f font-color font-size-13 ">
                 ID back Image
               </div>
             </div>

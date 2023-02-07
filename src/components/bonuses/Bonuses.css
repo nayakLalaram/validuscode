@@ -249,7 +249,7 @@ opacity: 1;
     position: absolute;
     content: '';
     height: 10px;
-    width: 180px;
+    width: 100%;
     background: red;
     background: transparent linear-gradient(90deg, #9900CC 0%, #57B3FF 100%) 0% 0% no-repeat padding-box;
     height: 6px;
@@ -289,3 +289,44 @@ color: black !important;
 .last_border:last-child{
   border: none;
 }
+/* mobile view start */
+@media only screen and (max-width: 600px) {
+  .new_tabs{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    overflow-x: scroll;
+  }
+  .myalltabs .react-tabs__tab.react-tabs__tab--selected {
+    color: black !important;
+    width: 100%;
+    white-space: nowrap;
+  }
+  .new_tabs li {
+    border: none;
+    font-weight: 600;
+    font-family: "inter", 'sans-sarif';
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    max-width: 100% !important;
+    /* border-bottom: #00BA00 3px solid; */
+    white-space: nowrap;
+}
+.new_tabs li{
+  
+  border: none;
+  font-weight: 600;
+  font-family: "inter", 'sans-sarif';
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
+  max-width: 190px;
+  /* border-bottom: #00BA00 3px solid; */
+}
+}
+/* mobile view end */

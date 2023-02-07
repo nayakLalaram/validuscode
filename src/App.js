@@ -14,6 +14,7 @@ import Login from './components/login2/login'
 import BonuSes from "./components/bonuses/BonuSes";
 import Wallet from "./components/wallet/Wallet";
 import Support  from "./components/support/Support";
+import { Nav } from "./components/common/kitwin/Nav";
 function App() {
   return (
     <div>
@@ -33,6 +34,7 @@ function App() {
             <Route path="/bonuses" element={<BonuSes />} />
             <Route path="/wallet" element={<Wallet />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/navbar" element={<Nav />} />
           </Routes>
         </>
       </Router>

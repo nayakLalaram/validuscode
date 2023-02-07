@@ -95,29 +95,29 @@ const Wallet = () => {
     <div>
       <Header/>
       <Navigation/>
-      <div className="py-8 ml-[280px] mt-[70px]">
-        <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 mb-2 mx-2">
+      <div className="py-8 lg:ml-[280px] mt-[70px] sm:pr-5 sm:pl-6 pr-2 pl-2">
+        <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[6px] mb-2">
           {blocks.map((title) => {
             return (
               <div id={title.id} className="">
-                <div className=" pt-3 group  bottom-2 border-2 hover:border-[#8633DA] pl-4 pb-2 h-[200px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
+                <div className=" pt-3 group  bottom-2  hover:border-[#8633DA] border-[1px] pl-4 pb-2 h-[200px] rounded-lg  relative hover:shadow-lg  flex flex-col items-left ">
                   <div className="  mb-2">
-                    <h2 className="font_f font-bold">{title.header}</h2>
+                    <h2 className="font_f text-sm font-semibold">{title.header}</h2>
                     <div className="flex pt-6">
-                      <h2 className=" font-weight-600 font_f font-size-32 font-color text-black font-extrabold text-3xl ">
+                      <h2 className=" font-weight-600  font-size-32 font-color text-black font-extrabold text-[30px] ">
                         {title.coins}
                       </h2>
-                      <div className=" font-weight-600  -mt-2 font_f text-base font-semibold font-size-14  font-color">
+                      <div className=" font-weight-600  -mt-2 font_f  font-semibold font-size-14 text-sm  font-color">
                         {title.points}
                       </div>
                     </div>
                   </div>
-                  <h3 className=" font-normal font_f font-color text-xs m-0 ">
+                  <h3 className=" font-normal font_f font-color text-[12px] m-0 ">
                     {title.cash}
                   </h3>
                   <div className="flex">
                     <button
-                      className="absolute bottom-3 right-3 h-10 w-10 group-hover:bg-[#8633DA] rounded-full flex justify-center items-center  shadow-xl btn_color"
+                      className="absolute bottom-3 right-3 h-[40px] w-[40px] group-hover:bg-[#950dd0] rounded-full flex justify-center items-center  shadow-xl btn_color"
                       color="primary"
                       type="button"
                     >
@@ -167,16 +167,16 @@ const Wallet = () => {
         </div>
 
         <div className="mr-top-5">
-          <div className="card overflow-hidden pb-16 pt-8">
+          <div className="card overflow-hidden pb-16 pt-8" style={{background:"#FFFFFF 0% 0% no-repeat padding-box", boxShadow:"0px 3px 6px #272D3B12", border:"none", borderRadius:"9px", opacity:1}}>
             <div className="px-6 h-16  sticky left-0 flex items-center">
               <h2 className="title my-0 ltr:pr-4 rtl:pl-4 ltr:mr-4 rtl:ml-4 ltr:border-r rtl:border-l hidden sm:block flex-none">
-                <span className=" font-size-22 text-[22px] font_f font-f-bold font-bold font-color">
+                <span className=" font-size-22 text-[22px] font_f font-f-bold font-semibold text-black font-color">
                   ACTIVE & PASSIVE WALLET HISTORY
                 </span>
               </h2>
-              <div className="bg-foreground rounded-full  px-4 max-w-[300px] flex-auto flex items-center border border-gray-300 mx-12">
+              <div className="bg-foreground rounded-full  px-4 lg:max-w-[300px] flex-auto flex items-center border border-gray-300 lg:mx-12 mx-4">
                 <input
-                  className="px-4  py-[6px] border-0 outline-none w-full bg-transparent placeholder:text-sm placeholder:px-3"
+                  className="px-4  lg:py-[6px] py-1 border-0 outline-none w-full bg-transparent placeholder:text-xs placeholder:px-3"
                   placeholder="Search..."
                   type="search"
                 />
@@ -186,7 +186,7 @@ const Wallet = () => {
                   height="14"
                   fill="#727272"
                   viewBox="0 0 256 256"
-                  className="relative right-[250px]"
+                  className="relative lg:right-[250px]"
                 >
                   <rect width="256" height="256" fill="none"></rect>
                   <circle
@@ -214,15 +214,15 @@ const Wallet = () => {
               </div>
               <span className="flex-1"></span>
             </div>
-            <div>
-              <table class="table-fixed w-full ml-5 ">
+            <div className="overflow-x-auto">
+              <table class="w-full ">
                 <thead className="border-[#00000033]  border-y-[1px] justify-between h-[52px] ">
                   <tr className="px-4">
-                    <th className="text-start font_f">Date</th>
-                    <th className="text-start font_f">Active Wallet</th>
-                    <th className="text-start font_f">Passive Wallet</th>
-                    <th className="text-start font_f">Total</th>
-                    <th className="text-start font_f">Description</th>
+                    <th className="text-start font_f font-bold text-sm lg:px-6 px-3">Date</th>
+                    <th className="text-start font_f font-bold text-sm">Active Wallet</th>
+                    <th className="text-start font_f font-bold text-sm">Passive Wallet</th>
+                    <th className="text-start font_f font-bold text-sm">Total</th>
+                    <th className="text-start font_f font-bold text-sm">Description</th>
                   </tr>
                 </thead>
                 {table.map((tables) => {
@@ -232,19 +232,19 @@ const Wallet = () => {
                         className="border-[#00000033
 ]   border-y-[1px] justify-between h-[52px] hover:bg-[#0000000a]"
                       >
-                        <td className="text-start font_f font-normal text-base">
+                        <td className="text-start font_f font-normal text-sm lg:px-6 px-3">
                           {tables.date}
                         </td>
-                        <td className="font_f font-normal text-base">
+                        <td className="font_f font-normal text-sm">
                           {tables.Wallet}
                         </td>
-                        <td className="font_f font-normal text-base">
+                        <td className="font_f font-normal text-sm">
                           {tables.passive}
                         </td>
-                        <td className="font_f font-normal text-base">
+                        <td className="font_f font-normal text-sm">
                           {tables.Total}
                         </td>
-                        <td className="font_f font-normal text-base">
+                        <td className="font_f font-normal text-sm">
                           {tables.bonus}
                         </td>
                       </tr>

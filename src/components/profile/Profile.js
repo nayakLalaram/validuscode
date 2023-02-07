@@ -13,13 +13,14 @@ const Profile = () => {
 
     <Header />
     <Navigation />
-    <div className='sm: ml-[270px] mt-[70px]'>
+    <div className='lg:ml-[270px] mt-[70px]'>
         <div className="">
         <Tabs className="">
           <TabList className="new_tabs border-b-[1px] border-[#00000033] profile_page">
             <Tab>PERSONAL INFORMATION</Tab>
-            <Tab>DIRECT BONUS</Tab>
-            <Tab>NETWORK BONUS</Tab>
+            <Tab>
+PASSWORD & 2FA</Tab>
+            <Tab>ACTIVITY LOG</Tab>
             
           </TabList>
 

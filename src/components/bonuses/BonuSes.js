@@ -14,10 +14,10 @@ const BonuSes = () => {
     <> 
     <Header/>
   <Navigation/>
-    <div className="sm:ml-[270px] mt-[70px] ">
-      <div className=" ml-5">
-        <Tabs className="myalltabs">
-          <TabList className="new_tabs border-b-[1px] border-[#00000033]">
+    <div className="lg:ml-[270px] mt-[70px] ">
+      <div className=" sm:ml-5">
+        <Tabs className="myalltabs sm:mx-5 mx-2" style={{background:"#FFFFFF 0% 0% no-repeat padding-box", boxShadow:"0px 3px 6px #272D3B12", border:"none", borderRadius:"9px", opacity:1}}>
+          <TabList className="new_tabs border-b-[1px] border-[#00000033] pt-3">
             <Tab>REWARDS</Tab>
             <Tab>DIRECT BONUS</Tab>
             <Tab>NETWORK BONUS</Tab>
