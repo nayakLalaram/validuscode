@@ -135,7 +135,7 @@ function Deposit(){
               </mat-icon>
               <input
                 //  [formControl]="searchCtrl"
-                className="p-1 pl-4  border-0 outline-none w-full bg-transparent font-f text-[14px]   "
+                className="p-1 pl-4  py-2 border-0 outline-none w-full bg-transparent font-f text-[14px]   "
                 placeholder="Search..."
                 type="search"
               />
@@ -146,8 +146,8 @@ function Deposit(){
     
               <div className="w-full max-w-full">
   <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-    <div className="table-responsive"  >
-      <table className="table table-flush   "style={{    width: '100%'}}
+    <div className="table-responsive "  >
+      <table className="table table-flush     "style={{    width: '100%'}}
        >
         <thead className="thead-light">
           <tr style={{ borderBottom :'4px  solid #941acb' }} className=" " >

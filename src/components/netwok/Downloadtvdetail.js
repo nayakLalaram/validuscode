@@ -1,6 +1,6 @@
 import React from "react";
-import "../netwok/totalrank.css";
-function TotalRank() {
+import '../netwok/downloadtv.css'
+function DounloadTV() {
   let tableheader = [
     {
       label: "Transaction ID",
@@ -116,7 +116,30 @@ function TotalRank() {
       description: "100 TV Added from Ceylan22",
       date: "31/10/2022 12:22",
     },
-   
+    // {
+    //     transaction_id: "635fbdebfe8bad00e19",
+    //     left: "0",
+    //     left_tv_balance: "49050",
+    //     current_left_tv: "-",
+    //     right: "100",
+    //     right_tv_balance: "115900",
+    //     current_right_tv: "66850",
+    //     description: "100 TV Added from Ceylan22",
+    //     date: "31/10/2022 12:22"
+
+    // },
+    // {
+    //     transaction_id: "635fbdebfe8bad00e19",
+    //     left: "0",
+    //     left_tv_balance: "49050",
+    //     current_left_tv: "-",
+    //     right: "100",
+    //     right_tv_balance: "115900",
+    //     current_right_tv: "66850",
+    //     description: "100 TV Added from Ceylan22",
+    //     date: "31/10/2022 12:22"
+
+    // }
   ];
 
   return (
@@ -136,8 +159,8 @@ function TotalRank() {
                 ></i>
               </mat-icon>
               <input
-              
-                className="p-1 pl-4 py-2 border-0 outline-none w-full bg-transparent font-f text-[14px]   "
+      
+                className=" py-2 border-0 outline-none w-full bg-transparent font-f text-[14px] p-1  pl-4   "
                 placeholder="Search..."
                 type="search"
               />
@@ -210,7 +233,7 @@ function TotalRank() {
           <ul className="inline-flex items-center -space-x-px">
             <li>
               <a
-                href="/"
+                href="#"
                 className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white  rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 <span className="sr-only">Previous</span>
@@ -222,16 +245,16 @@ function TotalRank() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </a>
             </li>
             <li>
               <a
-                href="/"
+                href="#"
                 className="block px-3 py-2 leading-tight text-gray-500 bg-white  rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
               >
                 <span className="sr-only">Next</span>
@@ -243,9 +266,9 @@ function TotalRank() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
               </a>
@@ -256,4 +279,4 @@ function TotalRank() {
     </>
   );
 }
-export default TotalRank;
+export default DounloadTV;

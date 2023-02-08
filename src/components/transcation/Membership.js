@@ -134,7 +134,7 @@ function Membership() {
                 ></i>
               </mat-icon>
               <input
-                className="p-1 pl-4  border-0 outline-none w-full bg-transparent font-f text-[14px]   "
+                className="p-1 pl-4 py-2 border-0 outline-none w-full bg-transparent font-f text-[14px]   "
                 placeholder="Search..."
                 type="search"
               />
