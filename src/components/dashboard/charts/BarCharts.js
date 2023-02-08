@@ -11,15 +11,15 @@ const BarCharts = () => {
         name: "Revenue",
         data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
       },
-      {
-        name: "Free Cash Flow",
-        data: [35, 41, 36, 26, 45, 48, 52, 53, 41],
-      },
+      
     ],
     chart: {
       type: "bar",
       height: 350,
     },
+  
+     
+    
     plotOptions: {
       bar: {
         horizontal: false,
@@ -54,6 +54,7 @@ const BarCharts = () => {
       },
     },
     fill: {
+      colors: ['#1A73E8', '#B32824', '#000000'],
       opacity: 1,
     },
     tooltip: {
@@ -73,6 +74,7 @@ const BarCharts = () => {
         type="bar"
         dataLabels={state.dataLabels}
         xaxis={state.xaxis}
+      
       />
     </div>
   );

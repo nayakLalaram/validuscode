@@ -25,7 +25,7 @@ const PieCharts = () => {
 
   return (
     <div className="myCards card_new pb-4">
-      <div className="flex items-center justify-between sm:px-8 px-5 pt-8 mb-5 ">
+      <div className="flex items-center justify-between sm:px-8 px-5 pt-5 mb-5 ">
         <h2 className="font_f text-black uppercase font-bold text-sm">
           LIFETIME EARNING
         </h2>

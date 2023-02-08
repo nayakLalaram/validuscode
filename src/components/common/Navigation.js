@@ -13,6 +13,7 @@ import downloadlogo from "../../assets1/assets/side_nav_icon-black/download.svg"
 import supportlogo from "../../assets1/assets/side_nav_icon-black/support.svg";
 import profilelogo from "../../assets1/assets/side_nav_icon-black/user.svg";
 import wallet from "../../assets1/assets/side_nav_icon-black/wallet.svg";
+import { Link } from "react-router-dom";
 
 
 function Navigation() {
@@ -43,126 +44,122 @@ function Navigation() {
           <div className=" overflow-y-auto">
             <ul className="space-y-2">
               <li className="li">
-                <a
-                  href="/dashboard"
-                  className="a flex items-center py-4 pl-3 pt-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  <img src={dashboardlogo} alt="" />
-                  <span className="ml-5">DASHBOARD</span>
-                </a>
-              </li>
-              <li className="li">
-                <a
-                  href="/membership"
+              <Link to='/dashboard'    className="a flex items-center py-4 pl-3 pt-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
+              <img src={dashboardlogo} alt="" />
+              <span className="ml-5">DASHBOARD</span>
+              </Link>
+   </li>
+   <li className="li">
+              <Link to="/membership"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={Membership} alt="" />
                   <span className="flex-1 ml-5 text-left whitespace-nowrap">
                     MEMBERSHIP
                   </span>
-                </a>
+                  </Link>
               </li>
               <li className="li">
-                <a
-                  href="/wallet"
+                <Link
+                  to="/wallet"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={wallet} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">
                     WALLET
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/giftwallet"
+                <Link
+                  to="/giftwallet"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={giftwaleetlogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">
                     GIFT WALLET
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/bonuses"
+                <Link
+                  to="/bonuses"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={bonuseslogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">BONUSES</span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="network"
+                <Link
+                to="/network"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={networklogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">NETWORK</span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="transaction"
+                <Link
+                  to="/transaction"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={transation} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">
                     TRANSACTION
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="ranks&rewards"
+                <Link
+                  to="/ranks&rewards"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={ranks} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">
                     RANK & REWARDS
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/profile"
+                <Link
+                   to="/profile"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={profilelogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">PROFILE</span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/support"
+                <Link
+                  to="/support"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={supportlogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">SUPPORT</span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/download"
+                <Link
+                  to="/download"
                   className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={downloadlogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap font-extrabold ">
                     DOWNLOAD
                   </span>
-                </a>
+                </Link>
               </li>
               <li className="li">
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className=" a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <img src={bonuseslogo} alt="" />
                   <span className="flex-1 ml-5 whitespace-nowrap">
                     V-MASTERY
                   </span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

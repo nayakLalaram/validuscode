@@ -114,12 +114,12 @@ const Support = () => {
             <table class="table-fixed">
               <thead className="border-t-[#00000033] border-b-[#9626cb] border-b-[5px] border-t-[1px] justify-between h-[52px] ">
                 <tr className="">
-                  <th className="text-start font_f">Support ID</th>
-                  <th className="text-start font_f ">Raised On</th>
-                  <th className="text-start font_f">Subject</th>
-                  <th className="text-start font_f">Message</th>
-                  <th className="text-start font_f">Message</th>
-                  <th className="text-start font_f">Status</th>
+                  <th className="text-start text-[16px] font-semibold font_f">Support ID</th>
+                  <th className="text-start text-[16px] font-semibold font_f ">Raised On</th>
+                  <th className="text-start text-[16px] font-semibold font_f">Subject</th>
+                  <th className="text-start text-[16px] font-semibold font_f">Message</th>
+                  <th className="text-start text-[16px] font-semibold font_f">Message</th>
+                  <th className="text-start text-[16px] font-semibold font_f">Status</th>
                 </tr>
               </thead>
 
@@ -130,31 +130,31 @@ const Support = () => {
                       id={item.id}
                       className="border-[#00000033] border-y-[1px] justify-between h-[48px] hover:bg-[#0000000a]"
                     >
-                      <td className="text-start font_f font-normal text-base">
+                      <td className="text-start font_f font-normal text-sm">
                         {item.mamberid}
                       </td>
-                      <td className="font_f text-start  font-normal text-base">
+                      <td className="font_f text-start  font-normal text-sm">
                         {item.mamberdate}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.rate}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.date}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.percent}
                       </td>
-                      <td className="font_f text-start font-normal text-base ">
+                      <td className="font_f text-start font-normal text-sm ">
                         {item.admin}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.released}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.passive}
                       </td>
-                      <td className="font_f text-start font-normal text-base">
+                      <td className="font_f text-start font-normal text-sm">
                         {item.recieved}
                       </td>
                     </tr>
