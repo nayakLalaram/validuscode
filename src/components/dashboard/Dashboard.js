@@ -11,17 +11,17 @@ import Navigation from "../common/Navigation";
 import Header from '../common/Headers'
 
 const Dashboard = () => {
-  return (
+  return (                                                                              
     <>
 
    <Header/>
    <Navigation/>
-    <div className="pt-6 lg:ml-[292px] mt-16 mx-1 sm:mx-0  sm:mt-[70px]">
+    <div className="pt-6 lg:ml-[294px] mt-16 mx-1 sm:mx-0  sm:mt-[80px]">
       <div className="lg:flex justify-between">
         <div className="lg:w-[70%] md:w-[100%] w-[100%]">
           <Blocks />
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-2 ">
-            <div>
+            <div className="">
               <PieCharts />
             </div>
             <div>
@@ -31,7 +31,7 @@ const Dashboard = () => {
           <BarCharts />
           <LineCharts />
         </div>
-        <div className="sm:w-[28%] mr-2">
+       < div className="lg:w-[28%] mr-[6px]">
           <div className="small_box flex items-center px-8 ">
             <h2 className="font_f text-[12px] font-semibold">Your Sponsor:</h2>
             <div className="bg-[#853fd5] h-8 w-8 rounded-full mx-5"></div>

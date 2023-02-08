@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../dashboard/Dashboard.css";
 import credit_card from "../../../assets1/assets/img/credit_card.png";
 import icon_card from "../../../assets1/assets/svg/More-Button.svg";
@@ -7,6 +7,7 @@ import right_bottom from "../../../assets1/assets/svg/arrow-bottom-right.svg";
 import cross_button from "../../../assets1/assets/img/delete-button.png";
 import cheked_button from "../../../assets1/assets/img/checked.png";
 const MemberShipCards = () => {
+  const [show, setShow] = useState(true);
   const sopnsers = [
     {
       id: 0,
@@ -67,7 +68,7 @@ const MemberShipCards = () => {
                       <h2 className=" py-2 text-start text-[14px] m-0  font-semibold  font-color ">
                       {arr.text}
                       </h2>
-                    <img src={arr.svg} className="h-4 mr-4"/>
+                    <img src={arr.svg} alt="img" className="h-4 mr-4"/>
                     </li>
                      }) 
                     }
@@ -81,19 +82,19 @@ const MemberShipCards = () => {
         </div>
 
         <div className="card   card1 h2-card1  mt-2 px-2 py-2">
-          <div className=" flex items-center justify-center mt-2">
+          <div className=" flex items-center justify-center group mt-2">
             <div className=" text-primary-contrast ">
               <h2 className="text-[13px] font-semibold  text-white font_f pr-2  font-f font-weight-600 uppercase flex-auto">
                 Active Membership
               </h2>
             </div>
 
-            <div className=" justify-center   flex item-center max-w-[209px] max-h-[146px]">
-              <img className="w-full h-[56] object-contain" src={credit_card} alt="my table"/>
+            <div className=" justify-center flex item-center max-w-[209px] max-h-[146px]">
+              <img className="w-full h-[56] group-hover:h-24 object-contain" src={credit_card} alt="my table"/>
             </div>
 
             <button
-              className="    mr-5 item-center justify-center"
+              className=" mr-5 item-center justify-center"
               color="primary"
               type="button"
             >
@@ -107,12 +108,14 @@ const MemberShipCards = () => {
             <h2 className="font_f text-black  font-bold text-sm">
               Matrix Bonus
             </h2>
+            <button onClick={()=>setShow(!show)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
               height="22"
               fill="#6e6e6e"
               viewBox="0 0 256 256"
+              className={show ? "rotate-270" :"rotate-180"}
             >
               <rect width="256" height="256" fill="none"></rect>
               <polyline
@@ -124,83 +127,91 @@ const MemberShipCards = () => {
                 stroke-width="24"
               ></polyline>
             </svg>
+            </button>
+           
           </div>
+{
+    show && <div>
 
-          <div className=" flex justify-center">
-            <h2 className="font_f font-bold text-[22px]">230</h2>
-            <span className="font_f font-semibold px-2 opacity-50 text-xs">Points</span>
-          </div>
-          <div className="px-gutter grid grid-cols-1 sm:grid-cols-1 gap-4">
-            <div className=" flex flex-col gap-4 ">
-              <div width="100%" color="#FFFFFF" size="1">
-                <div className="flex items-center  px-2 py-2 ">
-                  <ul>
-                    <li className="flex items-center  py-2 pb-3 ">
-                      <div>
-                        <div   className="bg-[#00ba00] h-4 w-4 rounded-full mb-4 mr-2 flex items-center justify-center">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                      
-                        width="14"
-                        height="14"
-                        fill="#ffffff"
-                        viewBox="0 0 256 256"
-                      >
-                        <rect width="256" height="256" fill="none"></rect>
-                        <polyline
-                          points="216 72 104 184 48 128"
-                          fill="none"
-                          stroke="#ffffff"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="24"
-                        ></polyline>
-                      </svg>
-                        </div>
-                      </div>
-                     
-                      <h2 className=" py-2  text-[12px] m-0 text-start  font_f font-bold font-color ">
-                        You must have an active v5000 or above membership
-                      </h2>
-                    </li>
-                    <li className="flex items-center  py-2 pb-3 ">
-                      <div>
-                        <div   className="bg-[#00ba00] h-4 w-4 rounded-full mb-4 mr-2 flex items-center justify-center">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                      
-                        width="14"
-                        height="14"
-                        fill="#ffffff"
-                        viewBox="0 0 256 256"
-                      >
-                        <rect width="256" height="256" fill="none"></rect>
-                        <polyline
-                          points="216 72 104 184 48 128"
-                          fill="none"
-                          stroke="#ffffff"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="24"
-                        ></polyline>
-                      </svg>
-                        </div>
-                      </div>
-                     
-                      <h2 className="  m-0 text-start text-[12px]  font_f font-bold font-color ">
-                      You must directly sponsor 15000 or <br></br> above
-                      </h2>
-                    </li>
-                   
-                    <p className="text-[10px] font_f font-normal ">
-                      * To qualify for the matrix bonus, you need to meet the
-                      conditions above
-                    </p>
-                  </ul>
+
+    <div className=" flex justify-center">
+      <h2 className="font_f font-bold text-[22px]">230</h2>
+      <span className="font_f font-semibold px-2 opacity-50 text-xs">Points</span>
+    </div>
+    <div className="px-gutter grid grid-cols-1 sm:grid-cols-1 gap-4">
+      <div className=" flex flex-col gap-4 ">
+        <div width="100%" color="#FFFFFF" size="1">
+          <div className="flex items-center  px-2 py-2 ">
+            <ul>
+              <li className="flex items-center  py-2 pb-3 ">
+                <div>
+                  <div   className="bg-[#00ba00] h-4 w-4 rounded-full mb-4 mr-2 flex items-center justify-center">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                
+                  width="14"
+                  height="14"
+                  fill="#ffffff"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <polyline
+                    points="216 72 104 184 48 128"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="24"
+                  ></polyline>
+                </svg>
+                  </div>
                 </div>
-              </div>
-            </div>
+               
+                <h2 className=" py-2  text-[12px] m-0 text-start  font_f font-bold font-color ">
+                  You must have an active v5000 or above membership
+                </h2>
+              </li>
+              <li className="flex items-center  py-2 pb-3 ">
+                <div>
+                  <div   className="bg-[#00ba00] h-4 w-4 rounded-full mb-4 mr-2 flex items-center justify-center">
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                
+                  width="14"
+                  height="14"
+                  fill="#ffffff"
+                  viewBox="0 0 256 256"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <polyline
+                    points="216 72 104 184 48 128"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="24"
+                  ></polyline>
+                </svg>
+                  </div>
+                </div>
+               
+                <h2 className="  m-0 text-start text-[12px]  font_f font-bold font-color ">
+                You must directly sponsor 15000 or <br></br> above
+                </h2>
+              </li>
+             
+              <p className="text-[10px] font_f font-normal ">
+                * To qualify for the matrix bonus, you need to meet the
+                conditions above
+              </p>
+            </ul>
           </div>
+        </div>
+      </div>
+    </div>
+    </div>
+}
+
         </div>
       </div>
 
@@ -281,12 +292,12 @@ const MemberShipCards = () => {
         </div>
         <div className="flex w-full  items-center justify-between px-4">
           <button className="border border-light w-full  rounded-full mr-2 flex  justify-between px-4 py-2">
-            <img className="mt-2" src={arrow_bottom} />
+            <img className="mt-2" src={arrow_bottom} alt="myImg"/>
             <span className="text-white text-sm">Far Left</span>
           </button>
           <button className="border border-white items-center w-full rounded-full ml-2 flex  justify-between  px-2 py-2">
             <span className="text-white text-sm">Far Right</span>
-            <img className="mt-2" src={right_bottom} />
+            <img className="mt-2" src={right_bottom} alt="my right bottom"/>
           </button>
         </div>
       </div>

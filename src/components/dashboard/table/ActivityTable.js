@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import person_svg from "../../../assets1/assets/svg/person.svg";
 
 const ActivityTable = () => {
+  const [show, setShow] = useState(true);
   const Activity = [
     {
       id: 1,
@@ -50,12 +51,14 @@ const ActivityTable = () => {
         <h2 className=" text-black uppercase font-bold text-[14px]">
           LATEST ACTIVITY
         </h2>
+        <button onClick={()=>setShow(!show)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
           height="22"
           fill="#6e6e6e"
           viewBox="0 0 256 256"
+          className={show ? "rotate-270" :"rotate-180"}
         >
           <rect width="256" height="256" fill="none"></rect>
           <polyline
@@ -67,9 +70,11 @@ const ActivityTable = () => {
             stroke-width="24"
           ></polyline>
         </svg>
+        </button>
       </div>
       <div className="bg-menu_bor h-[1px] max-w-sm"></div>
-      <div>
+      {
+        show && <div>
         <ul className="mx-5 pb-1">
           {Activity.map((items) => {
             return (
@@ -79,7 +84,7 @@ const ActivityTable = () => {
               >
                 
                 <div className="flex items-center ">
-                  <img src={person_svg} className="h-7"></img>
+                  <img src={person_svg} alt="activety table" className="h-7"></img>
                   <h2 className="font_f font-bold text-black text-xs mx-2">
                     {items.name}
                   </h2>
@@ -93,6 +98,8 @@ const ActivityTable = () => {
           })}
         </ul>
       </div>
+      }
+      
     </div>
   );
 };

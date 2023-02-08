@@ -148,7 +148,7 @@ const LineCharts = () => {
                 return (
                   <div
                     key={items.id}
-                    className="border-dashed  border-b-2 border-[#00000033] last_border"
+                    className="border-dotted  border-b-2 border-[#00000033] last_border"
                   >
                     <div className=" bordered   px-gutter py-3 grid grid-cols-3 sm:grid-cols-3 sm:ml-6 ml-5 gap-4 border-dashed  pb-3 ">
                       <div className="py-3 flex items-center">

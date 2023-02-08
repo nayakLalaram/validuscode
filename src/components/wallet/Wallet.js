@@ -4,7 +4,6 @@ import Navigation from "../common/Navigation";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../wallet/Wallet.css";
 
-import CashTabs from "./tabs/CashTabs";
 const Wallet = () => {
   const blocks = [
     {
@@ -546,13 +545,15 @@ const Wallet = () => {
                       <div className="text-left mt-2 ml-3 text-[10px] font-weight-600  font-f font-color ">
                         RECEIVABLE AMOUNT
                       </div>
-                      <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                      <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
                         <select
                           className="textbox font-f text-[16px] px-4 py-[6px] border-0 outline-none w-full bg-transparent "
                           placeholder=" receivable amount"
                           type="text"
                         >
-                          <option className="text-[10px]">receivable amount</option>
+                          <option className="text-[10px]">
+                            receivable amount
+                          </option>
                         </select>
                       </div>
                     </div>
@@ -562,7 +563,7 @@ const Wallet = () => {
                     <div className="text-left mt-2 ml-3 text-[10px] font-weight-600  font-f font-color">
                       AMOUNT IN USD
                     </div>
-                    <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
+                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
                       <input
                         className="textbox  px-4 py-[6px] border-0 outline-none w-full bg-transparent font-f "
                         placeholder="amount"
@@ -574,7 +575,7 @@ const Wallet = () => {
                       <div className=" mt-2 ml-3 text-[10px] font-weight-600  font-f font-color">
                         2FA
                       </div>
-                      <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
+                      <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
                         <input
                           className="textbox font-f px-4 py-[6px] border-0 outline-none w-full bg-transparent text-secondary"
                           placeholder=" 2FA"
@@ -587,7 +588,7 @@ const Wallet = () => {
                     <div className="text-left mt-2 ml-3 text-[10px] font-weight-600  font-f font-color ">
                       ADDRESS
                     </div>
-                    <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
+                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
                       <input
                         className="textbox font-f px-4 py-[6px] border-0 outline-none w-full bg-transparent "
                         placeholder="address"
@@ -598,7 +599,7 @@ const Wallet = () => {
                       <div className=" mt-2 ml-3 text-[10px] font-weight-600  font-f font-color ">
                         OTP
                       </div>
-                      <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
+                      <div className="mt-2 bg-foreground rounded-full px-4 max-w-[300px] flex-auto flex items-center border border-gray-300">
                         <input
                           className="textbox  px-4 py-[6px] border-0 outline-none w-full bg-transparent  font-f"
                           placeholder=" enter OTP (check your email) "
@@ -611,7 +612,7 @@ const Wallet = () => {
                     <div className="text-left mt-2 ml-3 text-[10px] font-weight-600  font-f font-color ">
                       FEE IN USD (5%)
                     </div>
-                    <div className="mt-2 bg-foreground rounded-full border px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
                       <input
                         className="textbox font-f px-4 py-[6px] border-0 outline-none w-full bg-transparent text-secondary"
                         placeholder=" fee"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import '../common/navigation.css';
 import logoimg from "../../assets1/assets/svg/app_icon.svg";
 import dashboardlogo from "../../assets1/assets/side_nav_icon-black/speedometer.svg";
@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 
 
 function Navigation() {
-  const [show, setShow] = useState(true);
+ 
   return (
     <>
       <div className="   md:hidden lg:block  hidden">
