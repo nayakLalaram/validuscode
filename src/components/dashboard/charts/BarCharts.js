@@ -5,11 +5,11 @@ const BarCharts = () => {
     series: [
       {
         name: "Net Profit",
-        data: [44, 55, 57, 56, 61, 58, 63, 60, 66],
+        data: [20, 55, 40, 56, 55, 58, 63, 60, 66, 90, 53, 26,],
       },
       {
         name: "Revenue",
-        data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+        data: [10, 30, 50, 80, 50, 35, 45, 70, 24, 32, 78, 58,],
       },
       
     ],
@@ -25,6 +25,10 @@ const BarCharts = () => {
         horizontal: false,
         columnWidth: "55%",
         endingShape: "rounded",
+      },
+      fill: {
+        colors: ['#853fd5', '#48b4fb',],
+        opacity: 1,
       },
     },
     dataLabels: {
@@ -53,10 +57,7 @@ const BarCharts = () => {
         text: "$ (thousands)",
       },
     },
-    fill: {
-      colors: ['#1A73E8', '#B32824', '#000000'],
-      opacity: 1,
-    },
+   
     tooltip: {
       y: {
         formatter: function (val) {

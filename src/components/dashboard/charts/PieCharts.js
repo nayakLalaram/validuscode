@@ -5,7 +5,7 @@ const   PieCharts = () => {
   const [show, setShow] = useState(true);
   const state = {
     series: [87, 13],
-    colors: ["#ffffff", "#000000"],
+
     options: {
       chart: {
         type: "donut",
@@ -20,6 +20,9 @@ const   PieCharts = () => {
           },
         },
       ],
+      fill: {
+        colors: ['#e5e5e5', '#6b74e6',]
+      }
     },
   };
 
@@ -60,7 +63,7 @@ const   PieCharts = () => {
           type="donut"
           height={500}
           width={420}
-
+         
         />
       </div>
       }

@@ -5,8 +5,8 @@ import crown from "../../../assets1/assets/img/crown-diamond.png";
 const RankCards = () => {
   return (
     <div>
-      <div className="card mb-2 card1 group h1-card1 mt-20">
-        <div className=" flex relative">
+      <div className="card mb-2 card1 group h1-card1 sm:mt-20 mt-4 lg:w-full sm:w-[370px] w-full">
+        <div className="flex relative">
           <div className="pt-4 pl-4 text-primary-contrast flex-auto">
             <h2 className="font-size-14 m-0 w-5 font-f font-weight-600  text-white text-xs font-semibold">
               CURRENT RANK
@@ -14,7 +14,7 @@ const RankCards = () => {
           </div>
 
           <div className=" pr-4  flex-none self-center hidden sm:block -mt-14">
-            <img src={crown} className="w-[155px] h-[175px]" />
+            <img src={crown} alt='rank img' className="w-[155px] h-[175px]" />
           </div>
         </div>
 

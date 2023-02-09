@@ -49,7 +49,8 @@ const MemberShipCards = () => {
   ]
   return (
     <div className="dark:border-gray-700">
-      <div className="">
+    
+        <div className="flex lg:flex-col sm:flex-row flex-col">
         <div className="card">
           <div className=" py-1  items-center justify-center mt-2">
             <h2 className=" py-4 text-center text-[13px] border-b-[1px] border-[#707070] border-opacity-20  text-black font-semibold font-color uppercase ">
@@ -60,7 +61,7 @@ const MemberShipCards = () => {
           <div className="px-gutter py-2 grid grid-cols-1 sm:grid-cols-1 gap-4 ">
             <div className=" flex flex-col  ">
               <div cla color="#FFFFFF" size="1">
-                <div className="flex items-center  px-2 py-2 ">
+                <div className="flex items-center justify-center  px-2 py-2 ">
                   <ul>
                     {
                      activity.map((arr) =>{
@@ -80,7 +81,7 @@ const MemberShipCards = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="card   card1 h2-card1  mt-2 px-2 py-2">
           <div className=" flex items-center justify-center group mt-2">
             <div className=" text-primary-contrast ">
@@ -102,7 +103,8 @@ const MemberShipCards = () => {
             </button>
           </div>
         </div>
-
+        </div>
+        
         <div className="card">
           <div className="flex items-center justify-between px-8 pt-8 mb-6 border-b-[1px] border-[#707070] border-opacity-20 pb-4">
             <h2 className="font_f text-black  font-bold text-sm">
@@ -213,14 +215,14 @@ const MemberShipCards = () => {
 }
 
         </div>
-      </div>
+     
 
       <div className="card  card2  mt-2 py-4">
-        <div className="py-2 mt-1  items-center justify-center">
+        <div className="pt-1 mt-1  items-center justify-center">
           <div className=" flex flex-col gap-4">
-            <div className="flex items-center justify-between     ">
+            <div className="flex items-center justify-between">
               <div className="flex px-10 justify-between">
-                <h2 className="  text-left font_f text-[14px] font-weight-600 pr-0   text-white ">
+                <h2 className="text-left font-semibold  text-[14px] font-weight-600 pr-0 text-white ">
                   REFERRAL LINK
                 </h2>
                 <div>
@@ -251,13 +253,13 @@ const MemberShipCards = () => {
         <div className="flex px-4 py-2">
           <div className="bg-white h-8 rounded-full  px-4 max-w-[250px] flex-auto flex items-center border border-gray-300">
             <input
-              className="px-4 py-2 border-0 outline-none w-full bg-transparent font-f  font-color"
+              className="px-4 py-2 border-0 outline-none text-xs w-full bg-transparent font-f  font-color"
               value="https://app.teamvalidus.com/auth/signup/aus8"
               type="url"
             />
           </div>
 
-          <div className=" ml-2 rounded-full h-8 w-14 flex items-center justify-center text-primary my_bggradiant">
+          <div className=" ml-2 rounded-full h-8 w-12 flex items-center justify-center text-primary my_bggradiant">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -285,7 +287,7 @@ const MemberShipCards = () => {
             </svg>
           </div>
         </div>
-        <div className="px-4 mt-4">
+        <div className="px-4 mt-3">
           <h4 className=" ml-2 text-[14px]  m-0 font_f font-weight-600  text-white">
             New Member
           </h4>
