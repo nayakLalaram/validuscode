@@ -12,57 +12,54 @@ function NetworkTree() {
   let HEIGHT = 1000;
   let ELEMENT_WIDTH = 80;
   let ELEMENT_HEIGHT = 97;
-
   let x = 0;
   let y = 0;
   let viewBox = `${x} ${y} ${WIDTH} ${HEIGHT}`;
   let orgChartJson = {
-    name: "CEO",
+    name: "aus",
     children: [
       {
-        name: "Manager",
+        name: "aus",
         attributes: {},
         children: [
           {
-            name: "Foreman",
-            attributes: {},
+            name: "aus",
             children: [
               {
-                name: "Workers",
+                name: "aus",
+              },
+              {
+                name: "aus",
               },
             ],
           },
           {
-            name: "Foreman",
-            attributes: {},
+            name: "aus",
             children: [
-              {
-                name: "Workers",
-              },
+          
             ],
           },
         ],
       },
       {
-        name: "Manager",
-        attributes: {},
+        name:"aus",
         children: [
           {
-            name: "Sales Officer",
-            attributes: {},
+            name: "aus",
             children: [
-              {
-                name: "Salespeople",
-              },
             ],
           },
           {
-            name: "Sales Officer",
+            name: "aus",
             attributes: {},
             children: [
               {
-                name: "Salespeople",
+                name: "aus",
               },
+              {
+                name: "aus",
+              },
+             
             ],
           },
         ],
@@ -156,7 +153,7 @@ function NetworkTree() {
         {active_Tab === 0 && (
           <>
             <div>
-              <g className="flex justify-center items-center ">
+              <g className="flex flex-col justify-center items-center ">
                 <foreignObject
                   x={x - 35}
                   y={y - 72}

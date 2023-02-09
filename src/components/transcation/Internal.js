@@ -1,5 +1,6 @@
-import React  from "react";
+import React  , { useState } from "react";
 import "../transcation/membership.css";
+import Pagination from 'react-custom-pagination'
 function Internaltrans(){
    let tableheader =  [
     {
@@ -129,7 +130,17 @@ function Internaltrans(){
      
     
       ]
-    
+      // for Pagination 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = table_data.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (number) => {
+    setCurrentPage(number);
+  };
     
     return(
    <>
@@ -143,14 +154,11 @@ function Internaltrans(){
             </h2>
 
             <div className="bg-foreground rounded-full border px-4 max-w-[300px] ml-auto flex-auto flex items-center border justify-end border-gray-300">
-              <mat-icon className="icon-sm text-secondary" svgIcon="mat:search">
                 <i
                   className="fa fa-search text-[12px] text-gray-500"
                   aria-hidden="true"
                 ></i>
-              </mat-icon>
               <input
-                //  [formControl]="searchCtrl"
                 className="p-1 pl-4 py-2 border-0 outline-none w-full bg-transparent font-f text-[14px]   "
                 placeholder="Search..."
                 type="search"
@@ -160,10 +168,10 @@ function Internaltrans(){
           </div>
 
     
-              <div className="w-full max-w-full">
+              <div className="w-full max-w-full overflow-x-auto ">
   <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
     <div className="table-responsive"  >
-      <table className="table table-flush "style={{    width: '100%'}}
+      <table className="table table-flush "style={{    width: 'max-content'}}
        >
         <thead className="thead-light">
           <tr style={{ borderBottom :'4px  solid #941acb' }} className="  " >
@@ -177,7 +185,7 @@ function Internaltrans(){
         </thead>
         <tbody>
         {
-                table_data.map((table)=>(
+                currentPosts.map((table)=>(
                     <>
           <tr>
            
@@ -204,7 +212,7 @@ function Internaltrans(){
            
 
        </div>
-       <nav
+       {/* <nav
                   aria-label="Page navigation example  center mr-1 "
                   style={{ textAlign: "end", marginRight: "36px" }}
                   className='flex items-center justify-end'
@@ -256,7 +264,23 @@ function Internaltrans(){
                       </a>
                     </li>
                   </ul>
-                </nav>
+                </nav> */}
+                 <div className="mr-3">
+          <Pagination
+            totalPosts={table_data.length}
+            postsPerPage={postsPerPage}
+            paginate={paginate}
+            showIndex={true}
+            view={1}
+            showLast={false}
+            showFirst={false}
+            bgColor="white"
+            color="black"
+            indexbgColor="white"
+            selectColor="white"
+            justify="end"
+          />
+        </div>
    </div>
    </>
 
