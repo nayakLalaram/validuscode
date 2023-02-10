@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../Bonuses.css";
+import Pagination from "react-custom-pagination";
 function NetworkTable() {
   const table = [
     {
@@ -57,7 +58,59 @@ function NetworkTable() {
       released: "-",
       passive: "0.00",
     },
+    {
+      id: 5,
+      mamberid: "20/2/2023 16:32",
+      mamberdate: "0TV",
+      rate: "54300TV",
+      date: "0TV",
+      percent: "0%",
+      admin: "-",
+      released: "-",
+      passive: "0.00",
+    },
+    {
+      id: 5,
+      mamberid: "20/2/2023 16:32",
+      mamberdate: "0TV",
+      rate: "54300TV",
+      date: "0TV",
+      percent: "0%",
+      admin: "-",
+      released: "-",
+      passive: "0.00",
+    },
+    {
+      id: 4,
+      mamberid: "20/2/2023 16:32",
+      mamberdate: "0TV",
+      rate: "54300TV",
+      date: "0TV",
+      percent: "0%",
+      admin: "-",
+      released: "-",
+      passive: "0.00",
+    },
+    {
+      id: 4,
+      mamberid: "20/2/2023 16:32",
+      mamberdate: "0TV",
+      rate: "54300TV",
+      date: "0TV",
+      percent: "0%",
+      admin: "-",
+      released: "-",
+      passive: "0.00",
+    },
   ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = table.slice(indexOfFirstPost, indexOfLastPost);
+  const paginate = (number) => {
+    setCurrentPage(number);
+  };
   return (
     <>
       <div>
@@ -88,7 +141,7 @@ function NetworkTable() {
               </thead>
 
               <tbody>
-                {table.map((item) => {
+                {currentPosts.map((item) => {
                   return (
                     <tr
                       id={item.id}
@@ -127,59 +180,22 @@ function NetworkTable() {
               </tbody>
             </table>
           </div>
-          <nav
-            aria-label="Page navigation example  center mr-4 "
-            style={{ textAlign: "end", marginRight: "36px" }}
-            className="flex items-center justify-end py-3"
-          >
-            <span className="text-[12px] text-[#0000008a] font_f">
-              Items per page: 6 1 – <span className="px-4">6 of 7</span>
-            </span>
-            <ul className="inline-flex items-center -space-x-px">
-              <li>
-                <a
-                  href="/"
-                  className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white  rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  <span className="sr-only">Previous</span>
-                  <svg
-                    aria-hidden="true"
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/"
-                  className="block px-3 py-2 leading-tight text-gray-500 bg-white  rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                >
-                  <span className="sr-only">Next</span>
-                  <svg
-                    aria-hidden="true"
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <div className="mr-3 text-[15px] " > 
+         <Pagination 
+          totalPosts={table.length}
+          postsPerPage={postsPerPage}
+          paginate={paginate}
+          showIndex={true}
+          view={1}
+          showLast={false}
+          showFirst={false}
+          bgColor="white"
+          color = 'black'
+          indexbgColor = 'white'
+          selectColor = 'white'
+          justify='end'
+        />
+        </div>
         </div>
       </div>
     </>

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "../wallet/Wallet.css";
-
+import Pagination from "react-custom-pagination";
 const Wallet = () => {
+  const [show, setShow] = useState(false);
+  const [value, setValue] = useState("");
+  const onSearch = () => {
+    console.log("search", value);
+  };
   const blocks = [
     {
       id: 0,
@@ -46,7 +51,7 @@ const Wallet = () => {
     },
     {
       id: 1,
-      date: "18/08/2022",
+      date: "19/08/2022",
       Wallet: "21.00",
       passive: "	9.00",
       Total: "	30.00",
@@ -62,7 +67,7 @@ const Wallet = () => {
     },
     {
       id: 3,
-      date: "18/08/2022",
+      date: "21/08/2022",
       Wallet: "21.00",
       passive: "	9.00",
       Total: "	30.00",
@@ -71,7 +76,7 @@ const Wallet = () => {
     {
       id: 4,
       date: "18/08/2022",
-      Wallet: "21.00",
+      Wallet: "20.00",
       passive: "	9.00",
       Total: "	30.00",
       bonus: "	Network Bonus",
@@ -79,7 +84,7 @@ const Wallet = () => {
     {
       id: 5,
       date: "18/08/2022",
-      Wallet: "21.00",
+      Wallet: "19.00",
       passive: "	9.00",
       Total: "	30.00",
       bonus: "	Network Bonus",
@@ -106,7 +111,7 @@ const Wallet = () => {
     },
     {
       id: 1,
-      mamberid: "18/08/2022",
+      mamberid: "19/08/2022",
       mamberdate: "21.00",
       rate: "9.00",
       date: "30.00",
@@ -116,7 +121,7 @@ const Wallet = () => {
     },
     {
       id: 2,
-      mamberid: "18/08/2022",
+      mamberid: "20/08/2022",
       mamberdate: "21.00",
       rate: "9.00",
       date: "30.00",
@@ -125,6 +130,16 @@ const Wallet = () => {
       realease: "988",
     },
   ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(5);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = table.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (number) => {
+    setCurrentPage(number);
+  };
   return (
     <div>
       <Header />
@@ -134,7 +149,7 @@ const Wallet = () => {
           <TabList className="walletParent">
             {blocks.map((title) => {
               return (
-                <Tab id={title.id}>
+                <Tab id={title.id} onClick={() => setShow(!show)}>
                   <div className="">
                     <div className=" pt-3 group  bottom-2  hover:border-[#8633DA] border-[1px] pl-4 pb-2 h-[200px] rounded-lg  relative hover:shadow-lg  flex flex-col items-left ">
                       <div className="  mb-2">
@@ -206,111 +221,113 @@ const Wallet = () => {
           </TabList>
 
           <TabPanel>
-            <div className="card flex-auto pt-8">
-              <div className="px-6 py-4 border-b-black border-[1px] border-opacity-10 flex items-center">
-                <h2 className=" text-sm m-0 font-f-bold font-bold">
-                  Transfer Active Bonus Amount into Cash Wallet
-                </h2>
-              </div>
-
-              <div className="px-6 py-4 flex flex-col sm:flex-row sm:gap-6  pt-2 ">
-                <div className="flex flex-col sm:flex-row sm:gap-4  flex-auto">
-                  <div className="flex-auto">
-                    <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
-                      AMOUNT
-                    </div>
-                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
-                      <input
-                        className="textbox text-[14px] pl-4 pr-20 py-2 border-0 outline-none w-full font-f bg-transparent value:text-[4px]"
-                        value="100"
-                        placeholder="AMOUNT"
-                        type="text"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex-auto">
-                    <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
-                      FEE IN USD
-                    </div>
-                    <div className="mt-2 bg-foreground rounded-full px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
-                      <input
-                        className="textbox text-[14px] pr-20 px-4 py-2 border-0 outline-none w-full bg-transparent  font-f"
-                        value="0"
-                        placeholder=" Fee In USD"
-                        type="text"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-auto">
-                    <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
-                      RECEIVABLE AMOUNT
-                    </div>
-                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
-                      <input
-                        className="textbox text-[14px] px-4 pr-20 py-2 border-0 outline-none w-full bg-transparent font-f"
-                        value="receivable amount"
-                        placeholder=" Receivable Amount"
-                        type="text"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-auto">
-                    <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
-                      2FA
-                    </div>
-                    <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
-                      <input
-                        className="textbox text-[14px] pr-12 font-f px-4 py-2 border-0 outline-none w-full bg-transparent text-secondary"
-                        value="2FA"
-                        placeholder=" 2FA"
-                        type="text"
-                      />
-                    </div>
-                  </div>
+            {show && (
+              <div className="card flex-auto pt-4">
+                <div className="px-6 py-4 border-b-black border-[1px] border-opacity-10 flex items-center">
+                  <h2 className=" text-sm m-0 font-f-bold font-bold">
+                    Transfer Active Bonus Amount into Cash Wallet
+                  </h2>
                 </div>
 
-                <div className="  flex items-end pt-2">
-                  <button
-                    mat-raised-button
-                    className="bg-lenier-gradient  w-full flex items-center justify-center  rounded-full px-5 font-f text-[10px] font-weight-600"
-                    type="button"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      fill="#ffffff"
-                      viewBox="0 0 256 256"
+                <div className="px-6 py-4 flex flex-col sm:flex-row sm:gap-6  pt-2 ">
+                  <div className="flex flex-col sm:flex-row sm:gap-4  flex-auto">
+                    <div className="flex-auto">
+                      <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
+                        AMOUNT
+                      </div>
+                      <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                        <input
+                          className="textbox text-[14px] pl-4 pr-20 py-2 border-0 outline-none w-full font-f bg-transparent value:text-[4px]"
+                          value="100"
+                          placeholder="AMOUNT"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex-auto">
+                      <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
+                        FEE IN USD
+                      </div>
+                      <div className="mt-2 bg-foreground rounded-full px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                        <input
+                          className="textbox text-[14px] pr-20 px-4 py-2 border-0 outline-none w-full bg-transparent  font-f"
+                          value="0"
+                          placeholder=" Fee In USD"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-auto">
+                      <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
+                        RECEIVABLE AMOUNT
+                      </div>
+                      <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                        <input
+                          className="textbox text-[14px] px-4 pr-20 py-2 border-0 outline-none w-full bg-transparent font-f"
+                          value="receivable amount"
+                          placeholder=" Receivable Amount"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-auto">
+                      <div className="text-left mt-2 ml-3 font-weight-600 text-[10px]  font-f font-color">
+                        2FA
+                      </div>
+                      <div className="mt-2 bg-foreground rounded-full  px-4 max-w-[400px] flex-auto flex items-center border border-gray-300">
+                        <input
+                          className="textbox text-[14px] pr-12 font-f px-4 py-2 border-0 outline-none w-full bg-transparent text-secondary"
+                          value="2FA"
+                          placeholder=" 2FA"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="  flex items-end pt-2">
+                    <button
+                      mat-raised-button
+                      className="bg-lenier-gradient  w-full flex items-center justify-center  rounded-full px-5 font-f text-[10px] font-weight-600"
+                      type="button"
                     >
-                      <rect width="256" height="256" fill="none"></rect>
-                      <line
-                        x1="40"
-                        y1="128"
-                        x2="216"
-                        y2="128"
-                        fill="none"
-                        stroke="#ffffff"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></line>
-                      <polyline
-                        points="144 56 216 128 144 200"
-                        fill="none"
-                        stroke="#ffffff"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></polyline>
-                    </svg>
-                    <p className="text-white text-[10px] font-semibold">
-                      TRANSFER
-                    </p>
-                  </button>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        fill="#ffffff"
+                        viewBox="0 0 256 256"
+                      >
+                        <rect width="256" height="256" fill="none"></rect>
+                        <line
+                          x1="40"
+                          y1="128"
+                          x2="216"
+                          y2="128"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        ></line>
+                        <polyline
+                          points="144 56 216 128 144 200"
+                          fill="none"
+                          stroke="#ffffff"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="16"
+                        ></polyline>
+                      </svg>
+                      <p className="text-white text-[10px] font-semibold">
+                        TRANSFER
+                      </p>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </TabPanel>
           <TabPanel>
             <div>
@@ -658,7 +675,10 @@ const Wallet = () => {
                 <input
                   className="px-4  lg:py-[6px] py-1 border-0 outline-none w-full bg-transparent placeholder:text-xs placeholder:px-3"
                   placeholder="Search..."
-                  type="search"
+                  type="text"
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  onClick={onSearch}
                 />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -715,33 +735,53 @@ const Wallet = () => {
                     </th>
                   </tr>
                 </thead>
-                {table.map((tables) => {
-                  return (
-                    <tbody id={tables.id}>
-                      <tr
-                        className="border-[#00000033
+                {currentPosts
+                  .filter((tables) =>
+                    tables.Wallet.toLowerCase().includes(value)
+                  )
+                  .map((tables) => {
+                    return (
+                      <tbody id={tables.id}>
+                        <tr
+                          className="border-[#00000033
 ]   border-y-[1px] justify-between h-[52px] hover:bg-[#0000000a]"
-                      >
-                        <td className="text-start font_f font-normal text-sm lg:px-6 px-3">
-                          {tables.date}
-                        </td>
-                        <td className="font_f font-normal text-sm">
-                          {tables.Wallet}
-                        </td>
-                        <td className="font_f font-normal text-sm">
-                          {tables.passive}
-                        </td>
-                        <td className="font_f font-normal text-sm">
-                          {tables.Total}
-                        </td>
-                        <td className="font_f font-normal text-sm">
-                          {tables.bonus}
-                        </td>
-                      </tr>
-                    </tbody>
-                  );
-                })}
+                        >
+                          <td className="text-start font_f font-normal text-sm lg:px-6 px-3">
+                            {tables.date}
+                          </td>
+                          <td className="font_f font-normal text-sm">
+                            {tables.Wallet}
+                          </td>
+                          <td className="font_f font-normal text-sm">
+                            {tables.passive}
+                          </td>
+                          <td className="font_f font-normal text-sm">
+                            {tables.Total}
+                          </td>
+                          <td className="font_f font-normal text-sm">
+                            {tables.bonus}
+                          </td>
+                        </tr>
+                      </tbody>
+                    );
+                  })}
               </table>
+            </div>
+            <div className="mr-3 text-[15px] ">
+              <Pagination
+                totalPosts={table.length}
+                postsPerPage={postsPerPage}
+                paginate={paginate}
+                showIndex={true}
+                view={1}
+                showLast={false}
+                showFirst={false}
+                bgColor="white"
+                color="black"
+                indexbgColor="white"
+                selectColor="white"
+                justify="end"
+              />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Chart from "react-apexcharts";
 import RewardTable from "./RewardTable";
+
 const Reward = () => {
   var state = {
     series: [
@@ -168,7 +169,9 @@ const Reward = () => {
       },
     },
   };
- 
+
+
+
   return (
     <div>
       <div className="py-10 bg-white drop-shadow-md rounded-lg">

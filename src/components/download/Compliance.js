@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import cloud from "../../assets1/assets/svg/cloud-download.svg";
 import '../download/compliancs.css'
 import pdf_img from "../../assets1/assets/img/pdf.png";
-import { CiGlass } from "react-icons/ci";
 
 function Compliance() {
   

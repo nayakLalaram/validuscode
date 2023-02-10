@@ -41,7 +41,7 @@ const Blocks = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
         {
           griddata.map((item) =>(
-            <div id={item.id} className=" pt-3 group  bottom-2 border-[1px] hover:border-[#8633DA] pl-4 pb-2 h-[210px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
+            <div id={item.id} className="childhover pt-3 group  bottom-2 border-[1px] hover:border-[#8633DA] pl-4 pb-2 h-[210px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
             <div>
               <img className="h-[28px] w-auto" alt="block img" src={item.image} />
             </div>
@@ -59,7 +59,7 @@ const Blocks = () => {
             </h3>
             <div className="flex">
               <button
-                className="absolute bottom-3 right-3 h-[38px] w-[38px] group-hover:bg-[#8633DA] rounded-full flex justify-center items-center  shadow-xl btn_color"
+                className="absolute bottom-3 buttonhover right-3  h-[38px] w-[38px] group-hover:bg-[#8633DA] rounded-full flex justify-center items-center  shadow-xl btn_color"
                 color="primary"
                 type="button"
               >

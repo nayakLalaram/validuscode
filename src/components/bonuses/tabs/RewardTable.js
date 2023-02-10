@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../bonuses/Bonuses.css";
+import Pagination from "react-custom-pagination";
 function RewardTable() {
   const reward = [
     {
@@ -52,8 +53,25 @@ function RewardTable() {
       admin: "-014",
       released: "6.78",
     },
-   
+    {
+      id: 5,
+      mamberid: "62e23244c5474800e2947cd6",
+      mamberdate: "18/08/2022 09:32",
+      rate: "1000",
+      date: "293.00",
+      percent: "	18/08/2022 09:32",
+      admin: "-014",
+      released: "6.78",
+    },
   ];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(5);
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = reward.slice(indexOfFirstPost, indexOfLastPost);
+  const paginate = (number) => {
+    setCurrentPage(number);
+  };
   return (
     <>
       <div>
@@ -82,7 +100,7 @@ function RewardTable() {
 
               <tbody>
                 {
-                  reward.map((item) =>{
+                 currentPosts.map((item) =>{
                     return <tr id={item.id}
                     className="border-[#00000033] border-y-[1px] justify-between h-[48px] hover:bg-[#0000000a]"
                   >
@@ -114,7 +132,23 @@ function RewardTable() {
               </tbody>
             </table>
           </div>
-            <nav
+          <div className="mr-3 text-[15px] " > 
+         <Pagination 
+          totalPosts={reward.length}
+          postsPerPage={postsPerPage}
+          paginate={paginate}
+          showIndex={true}
+          view={1}
+          showLast={false}
+          showFirst={false}
+          bgColor="white"
+          color = 'black'
+          indexbgColor = 'white'
+          selectColor = 'white'
+          justify='end'
+        />
+        </div>
+            {/* <nav
           aria-label="Page navigation example  center mr-4 "
           style={{ textAlign: "end", marginRight: "36px" }}
           className="flex items-center justify-end py-3"
@@ -164,7 +198,7 @@ function RewardTable() {
               </a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
         </div>
       </div>
     </>

@@ -239,3 +239,6 @@ opacity: 1;
 .dotted-border:last-child{
  border: none;
 }
+.childhover:nth-child(3) button:hover{
+  background-color: #6679e2 !important;
+}

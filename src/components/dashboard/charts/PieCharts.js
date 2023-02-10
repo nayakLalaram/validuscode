@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Dashboard.css";
 import ReactApexChart from "react-apexcharts";
-const   PieCharts = () => {
+const PieCharts = () => {
   const [show, setShow] = useState(true);
   const state = {
     series: [87, 13],

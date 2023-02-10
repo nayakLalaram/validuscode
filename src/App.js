@@ -13,6 +13,7 @@ import Login from './components/login2/login'
 import BonuSes from "./components/bonuses/BonuSes";
 import Wallet from "./components/wallet/Wallet";
 import Support  from "./components/support/Support";
+
 function App() {
   return (
     <div>

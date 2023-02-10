@@ -95,7 +95,7 @@ const PasswordPage = () => {
                 />
               </div>
             </div>
-            <div className="flex-auto">
+            <div className="flex-auto mx-4">
               <div className="text-start  ml-3 font_f text-[10px] font-normal">
                 NEW PASSWORD
               </div>
@@ -123,7 +123,7 @@ const PasswordPage = () => {
             </div>
             <button
               mat-raised-button
-              className=" w-28 mt-6 bg-lenier-gradient text-white px-6 font_f text-[10px] font-normal rounded-full flex items-center justify-center"
+              className=" w-28 ml-4 mt-5 bg-lenier-gradient text-white px-6 font_f text-[10px] font-normal rounded-full flex items-center justify-center"
               type="button"
             >
               <svg
@@ -159,7 +159,7 @@ const PasswordPage = () => {
             </button>
           </div>
 
-          <div className="flex-auto sm:ml-[280px] py-2">
+          <div className="flex-auto sm:ml-[250px] py-2">
             <div className="text-start  ml-3 font_f text-[10px] font-normal">
               CONFIRM NEW PASSWORD
             </div>
