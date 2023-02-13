@@ -38,7 +38,7 @@ const Blocks = () => {
   ]
   return (
     <div className="sm:mt-[12px]">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-1">
         {
           griddata.map((item) =>(
             <div id={item.id} className="childhover pt-3 group  bottom-2 border-[1px] hover:border-[#8633DA] pl-4 pb-2 h-[210px] rounded-lg  relative hover:shadow-lg shadow-inner trans-shadow flex flex-col items-left  my_gb">
