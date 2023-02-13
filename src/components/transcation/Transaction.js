@@ -1,5 +1,7 @@
-import React from "react";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import React , { useState } from "react";
+// import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import { Tabs, Tab } from "react-tabs-scrollable";
+import "react-tabs-scrollable/dist/rts.css";
 import Deposit from "./Deposit";
 import Internaltrans from "./Internal";
 import Membership from "./Membership";
@@ -14,6 +16,8 @@ import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 
 function Transaction() {
+  const [activeTab, setActiveTab] = useState(4);
+
   let tabs = [
     " MEMBERSHIP ",
     " INTERNALTRANSATION",
@@ -21,55 +25,76 @@ function Transaction() {
     "WITHDRAWTRANSACTION",
     "OTHERTRANSACTION",
   ];
+
+  const onTabClick = (e, index) => {
+    setActiveTab(index);
+  };
+
+  const TabScreen = ({ activeTab, idx, ...props }) => {
+    return (
+      <div
+        className="animate__animated animate__fadeInLeft"
+        role="tabpanel"
+        {...props}
+      >
+        {activeTab === 0 && (
+          <div className="mx-4">
+            <Membership /> 
+          </div>
+        )}
+         {activeTab === 1 && (
+          <div className="mx-4">
+            
+            <Internaltrans />
+          </div>
+        )}
+        {activeTab === 2 && (
+          <div className="mx-4">
+            
+            <Deposit />
+          </div>
+        )}
+        {activeTab === 3 && (
+          <div className="mx-4">
+            
+            <Withdraw />
+          </div>
+        )}
+        {activeTab === 4 && (
+          <div className="mx-4">
+            
+            <OtherTrans />
+          </div>
+        )} 
+      
+      </div>
+    );
+  };
+
   return (
     <>
       <Header />
       <Navigation />
       <div className="lg:ml-[290px] mt-[90px] bg-white ">
-        <Tabs className="vex-tabs">
-          <ScrollMenu
-            style={{ marginRight: "30px" }}
-            LeftArrow={<FaChevronLeft className="h-3 text-gray-400" />}
-            RightArrow={
-              <FaChevronRight className="h-3 text-gray-400 drop-shadow-md " />
-            }
+      <div className="App">
+          <Tabs
+            activeTab={activeTab}
+            onTabClick={onTabClick}
+            hideNavBtnsOnMobile={false}
+            className='mx-4'
           >
-            <TabList className="flex gap-5 font-bold ">
-              {tabs.map((items) => (
-                <Tab className="ml-7 font-bold text-gray-500  ">
-                  {items} <br />
-                  <div className="mat-ink-bar mt-3 "></div>
-                </Tab>
-              ))}
-            </TabList>
-          </ScrollMenu>
-
-          <TabPanel>
-            <div>
-              <Membership />
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div>
-              <Internaltrans />
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div>
-              <Deposit />
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div>
-              <Withdraw />
-            </div>
-          </TabPanel>
-          <TabPanel>
-            <div>
-              <OtherTrans />
-            </div>
-          </TabPanel>
-        </Tabs>
+            {tabs.map((item) => (
+              <Tab key={item}> {item}
+                  <div className="mat-ink-bar px-3 rounded-sm "></div></Tab>
+            ))}
+          </Tabs>
+           
+           <TabScreen activeTab={activeTab}>
+            </TabScreen>
+       
+        
+        </div>
+        
       </div>
     </>
   );

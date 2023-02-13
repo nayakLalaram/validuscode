@@ -30,10 +30,7 @@
     
 }
 
-/* .margin_card{
 
-    margin-top: 0px;
-} */
 
 .font-small{
     font-size: 13px;
@@ -120,8 +117,7 @@
   position:relative;
   height:100%;
   width:calc(100% - 20px);
-  /* border-left:1px solid #B58C45; */
-  /* border-right:1px solid #B58C45; */
+ 
   background-repeat:no-repeat;
   background-size:
     100% 9px,
@@ -136,11 +132,7 @@
     60% center,
     80% center;
   background-image: linear-gradient(180deg, #706FEB 0%, #58B1FF 100%) ;
-     /* linear-gradient(rgb(239, 11, 11), rgb(240, 13, 13)), */
-     /* linear-gradient(gray, gray), */
-     /* linear-gradient(gray, gray), */
-     /* linear-gradient(gray, gray), */
-     /* linear-gradient(gray, gray); */
+  
 }
 .ruler-cell span{
   position:relative;
@@ -168,11 +160,9 @@
     font-family: commuter;
     src: url(../../assets1/assets/fonts/commuterssans-semibold.otf);
 
-    /* src: url(../../asset1/assets/fonts/commuterssans-semibold.otf); */
 }
 .font-f{
     font-family: 'Inter', sans-serif;
-    /* font-weight: 600; */
     
 
   }

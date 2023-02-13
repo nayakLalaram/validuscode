@@ -276,18 +276,16 @@ function RanksRewards() {
             { array_rank.map((items, i) => (
               <>
                 <div
-                //   [ngclassName]="i+1==selected_card?'seleted':i+1>selected_card?'blur':'' "
                 className={` card-all  height-2  h-full  mx-3  card    flex-col    overflow-hidden max-h-full w-full max-w-2xs flex-none flex flex-col 
-                ${i+1==selected_card?'selected_card' : '' ?'selected':i+1 > selected_card?'blur':''} ` }
+                ${i+1==selected_card?'selected_card seleted ' : '' ?'selected':i+1 > selected_card?'blur':''} ` }
                   style={array_height[i]}
                       
-                //   className="card-all  height-2  h-full  mx-3  card    flex-col    overflow-hidden max-h-full w-full max-w-2xs flex-none flex flex-col"
                 >
                   <div className="bg-card  w-full  justify-center pt-1  item-center">
                     <h2 className=" font-f text-[14px] m-3 font-bold text-center text-white   ">
                       {items.value}
                     </h2>
-                    <div className="height_in justify-center item-center px-10">
+                    <div className="height_in justify-center items-center px-10">
                       <div className="hv-wrapper">
                         <div className="hv-item">
                           <div className="hv-item-parent">
@@ -307,7 +305,7 @@ function RanksRewards() {
                                       <div className=" text-center items-center" >
                                         {res.img_ar.map((img, i) => (
                                           <>
-                                            <div className="m-2" >
+                                            <div className="mx-2 " >
                                               {img.img && (
                                                 <img
                                                   src={img.img}
@@ -321,8 +319,8 @@ function RanksRewards() {
                                                 {img.label}
                                               </p>
                                             </div>
-                                            <div className="m-2">
-                                              <p className=" text-[10px] font-color font-semibold fmailyf text-black ">
+                                            <div className="mx-2">
+                                              <p className=" text-[12px] font-color font-semibold  text-black ">
                                                 {img.heading}
                                               </p>
                                             </div>

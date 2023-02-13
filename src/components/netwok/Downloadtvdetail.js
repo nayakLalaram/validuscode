@@ -1,7 +1,13 @@
 import React , { useState } from "react";
 import '../netwok/downloadtv.css'
 import Pagination from "react-custom-pagination";
+
+
+
 function DounloadTV() {
+
+  const[search , setSearch]=useState('')
+
   let tableheader = [
     {
       label: "Transaction ID",
@@ -149,10 +155,11 @@ function DounloadTV() {
                   aria-hidden="true"
                 ></i>
               <input
-      
                 className=" py-2 border-0 outline-none w-full bg-transparent font-f text-[14px] p-1  pl-4   "
                 placeholder="Search..."
                 type="search"
+                value={search}
+                onChange={(e)=> setSearch(e.target.value)}
               />
             </div>
           </div>
@@ -161,7 +168,7 @@ function DounloadTV() {
             <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
               <div
                 className="table-responsive"
-                style={{ overflowX: "scroll", width: "max-content" }}
+                style={{ overflowX: "none", width: "max-content" }}
               >
                 <table className="table table-flush ">
                   <thead className="thead-light">
@@ -175,7 +182,7 @@ function DounloadTV() {
                     </tr>
                   </thead>
                   <tbody>
-                    {table_data.map((table) => (
+                    {currentPosts.filter((table)=> table.transaction_id.match(search)).map((table) => (
                       <>
                         <tr>
                           <td className=" td text-center  text-[16px]">
@@ -214,7 +221,7 @@ function DounloadTV() {
             </div>
           </div>
         </div>
-        <div className="mr-3" > 
+        <div className="mr-3 text-[12px] " > 
          <Pagination 
           totalPosts={table_data.length}
           postsPerPage={postsPerPage}

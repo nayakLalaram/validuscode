@@ -20,10 +20,7 @@ font-weight: 600;
 }
     
   
-/* //   .mermaid{
 
-//     background-image: url(./../../../../assets/img/user_crown.svg);
-//   } */
 
 
 *,
@@ -34,17 +31,7 @@ font-weight: 600;
   box-sizing: border-box;
 }
 
-/* * {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  
-  border: 0 none;
-  
-  -webkit-transition: all ease .4s;
-  -moz-transition: all ease .4s;
-    transition: all ease .4s; 
-} */
+
 
 html,
 body {
@@ -182,6 +169,10 @@ h1 {
   color: black !important;
   border: none;
   outline: none;
+}
+.rd3t-link {
+  fill: none;
+  stroke: #000 !important ;
 }
 
 

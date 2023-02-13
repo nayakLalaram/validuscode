@@ -135,11 +135,11 @@ function NetworkTree() {
 
                 <div className=" flex justify-center ml-2">
                   <button
-                    className="arrowbtn mt-2 px-2 text-white rounded-full text-[16px] font-bold  font-f"
+                    className="arrowbtn py-0 my-0  px-2 text-white rounded-full text-[16px] font-bold  font-f"
                     type="button"
                   >
                     <i
-                      className="fa fa-arrow-right px-2 text-[16px] text-white"
+                      className="fa fa-arrow-right px-2 py-0 my-0 text-[14px] text-white"
                       aria-hidden="true"
                     ></i>
                   </button>
@@ -203,7 +203,7 @@ function NetworkTree() {
             orientation="vertical"
             draggable={false}
             zoomable={false}
-            nodeSize={{ x: "110", y: "110" }}
+            nodeSize={{ x: "100", y: "150" }}
           />
         </div>
       )}

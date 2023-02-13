@@ -135,7 +135,7 @@ const Header = () => {
                   type="button"
                   style={{
                     width: "100%",
-                    minWidth: "100px",
+                    minWidth: "102px",
                   }}
                 >
                   TOP UP

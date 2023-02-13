@@ -1,94 +1,81 @@
-
-
-
-.-mt-30{
-
-     /* margin-top: 20%; */
+.-mt-30 {
 }
 
-.btn_sign_in{
-    background: linear-gradient(180deg, #950DD0 0%, #8633DA 100%);border-radius: 23px;
-   
+.btn_sign_in {
+  background: linear-gradient(180deg, #950dd0 0%, #8633da 100%);
+  border-radius: 23px;
 }
-.bg-image{
-    padding-top: 2.5%;
-    height: 48%;
-}
-
-
-
-
-.CaptchBox{
-    background:#cc9966;
-    /* // height: 60px; */
-   
-    
-    font-size: 39px;
-    /* font-family:shadow_font,sans-serif; */
-    font-family:myFirstFont, sans-serif;
-
-
-
+.bg-image {
+  padding-top: 2.5%;
+  height: 48%;
 }
 
-.mat-label{
-    font-size: 13px;font-weight: 600;
-}
-.textbox{
-    color: rgba(0, 0, 0, .7);
-}
-.text-header{
-   color: #000000;font-size :36px;
-    letter-spacing: 10.15px;
-    font: normal normal bolder 36px/45px commuters-sans-bold;
-    margin-top: 23px;
+.CaptchBox {
+  background: #cc9966;
+  /* // height: 60px; */
 
+  font-size: 39px;
+  font-family: myFirstFont, sans-serif;
 }
 
-.appicon{
-    height:50px !important ;
-    margin-top:42px !important;}
-.login-card{
-    border-radius: 37px; 
+.mat-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.textbox {
+  color: rgba(0, 0, 0, 0.7);
+}
+.text-header {
+  color: #000000;
+  font-size: 36px;
+  letter-spacing: 10.15px;
+  font: normal normal bolder 36px/45px commuters-sans-bold;
+  margin-top: 23px;
 }
 
-.screen-zoom{
-    zoom: 95%;
+.appicon {
+  height: 50px !important ;
+  margin-top: 42px !important;
+}
+.login-card {
+  border-radius: 37px;
 }
 
-.bgimg{
-    background-image: url(../../assets1/assets/img/backgroun_image.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 300px;
+.screen-zoom {
+  zoom: 95%;
 }
 
-.rgb{
-    color:  rgba(0, 0, 0, .6);
+.bgimg {
+  background-image: url(../../assets1/assets/img/backgroun_image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
 
+.rgb {
+  color: rgba(0, 0, 0, 0.6);
 }
 @font-face {
-    font-family: myFirstFont;
-    src: url('../../assets1/assets/fonts/Shadow-7WdR.ttf');
-  }
-  @font-face {
-    font-family: commuters-sans-bold;
-    src: url('../../assets1/assets/fonts/commuterssans-semibold.otf');
-  }
+  font-family: myFirstFont;
+  src: url("../../assets1/assets/fonts/Shadow-7WdR.ttf");
+}
+@font-face {
+  font-family: commuters-sans-bold;
+  src: url("../../assets1/assets/fonts/commuterssans-semibold.otf");
+}
 
-  .logincs{
-    font-family:commuters-sans-bold;
-    font-size: 10px;
-    font-weight: bolder !important;
-    cursor: pointer;
-    
-  }
-  .fmailyf{
-    font-family:commuters-sans-bold;
-
-  }
-  .color_underline{
-    color: #785AE6;
+.logincs {
+  font-family: commuters-sans-bold;
+  font-size: 10px;
+  font-weight: bolder !important;
+  cursor: pointer;
+}
+.fmailyf {
+  font-family: commuters-sans-bold;
+}
+.color_underline {
+    color: #785ae6;
     text-decoration: underline;
- }
+  }
+  

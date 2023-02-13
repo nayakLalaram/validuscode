@@ -4,8 +4,10 @@ import "../download/compliancs.css";
 import pdf_img from "../../assets1/assets/img/pdf.png";
 import { CiGlass } from "react-icons/ci";
 
-function MarketingMaterial() {
+function Training() {
   const [search, setSearch] = useState("");
+
+  // console.log(search.charAt(0).toUpperCase() + search.slice(1));
 
   const [mouse, setMouse] = useState(false);
 
@@ -57,6 +59,12 @@ function MarketingMaterial() {
       purchase_amount: "300",
       mouse_point: false,
     },
+    {
+      value: "V-400",
+      image: pdf_img,
+      purchase_amount: "400",
+      mouse_point: false,
+    },
   ];
 
   // let showButton = false;
@@ -77,6 +85,7 @@ function MarketingMaterial() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
+
             <i
               className="fa fa-search text-[12px] text-gray-500"
               aria-hidden="false"
@@ -84,62 +93,60 @@ function MarketingMaterial() {
           </div>
         </div>
         <div className=" p-gutter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-1 justify-center items-center">
-          {array_membership
-            .filter((items) => items.purchase_amount.match(search))
-            .map((items, i) => (
-              <>
-                <div>
-                  <div
-                    className={`${
-                      mouse ? "card bg-vilet text-white " : ""
-                    } +  cards py-8   bg-overall-height   relative hover:shadow-lg trans-shadow flex flex-col items-center border-t max-w-[295px] py-4 mt-8 `}
-                    style={{ borderRadius: "9px" }}
-                  >
-                    <img
-                      className="clr"
-                      src={items.image}
-                      style={{ width: "90.84px ", height: "100.77px" }}
-                    />
+          {array_membership.filter((items)=> items.purchase_amount.match(search) ).map((items, i) => (
+            <>
+              <div>
+                <div
+                  className={`${
+                    mouse ? "card bg-vilet text-white " : ""
+                  } +  cards py-8   bg-overall-height   relative hover:shadow-lg trans-shadow flex flex-col items-center border-t max-w-[295px] py-4 mt-8 `}
+                  style={{ borderRadius: "9px" }}
+                >
+                  <img
+                    className="clr"
+                    src={items.image}
+                    style={{ width: "90.84px ", height: "100.77px" }}
+                  />
 
-                    <div
-                      // @fadeInRight
-                      className="flex-auto mb-4 px-2"
-                    >
-                      <h4 className=" m-0 font-f-bold text-[14px] font-extrabold  mt-5">
-                        Document (PDF)
+                  <div
+                    // @fadeInRight
+                    className="flex-auto mb-4 px-2"
+                  >
+                    <h4 className=" m-0 font-f-bold text-[14px] font-extrabold  mt-5">
+                      Document (PDF)
+                    </h4>
+                  </div>
+
+                  <div
+                    //  @fadeInRight
+                    className="flex-auto mb-4 px-2"
+                  >
+                    <div>
+                      <h4 className=" font-f-regular text-[16px]  text-center  ">
+                        THE 7 HABITS OF HIGHLY EFFECTIVE PEOPLE
                       </h4>
                     </div>
+                  </div>
 
-                    <div
-                      //  @fadeInRight
-                      className="flex-auto mb-4 px-2"
-                    >
-                      <div>
-                        <h4 className=" font-f-regular text-[16px]  text-center  ">
-                          THE 7 HABITS OF HIGHLY EFFECTIVE PEOPLE
-                        </h4>
-                      </div>
-                    </div>
+                  <h4 className="font-f-bold text-[12px] font-weight-600  mt-5 pb-4">
+                    12MB
+                  </h4>
 
-                    <h4 className="font-f-bold text-[12px] font-weight-600  mt-5 pb-4">
-                      12MB
-                    </h4>
-
-                    <div
-                      //  @scaleInOut
-                      className="px-3   py-2 flex   download_btn  font-f-bold  font-bold text-[10px] mt-4"
-                      type="button"
-                    >
-                      <img className="clr mr-2 " src={cloud} />
-                      Download
-                    </div>
+                  <div
+                    //  @scaleInOut
+                    className="px-3   py-2 flex   download_btn  font-f-bold  font-bold text-[10px] mt-4"
+                    type="button"
+                  >
+                    <img className="clr mr-2 " src={cloud} />
+                    Download
                   </div>
                 </div>
-              </>
-            ))}
+              </div>
+            </>
+          ))}
         </div>
       </div>
     </>
   );
 }
-export default MarketingMaterial;
+export default Training;

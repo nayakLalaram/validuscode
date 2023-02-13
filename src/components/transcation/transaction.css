@@ -7,37 +7,62 @@
 .mat-ink-bar{
     display: none;
 }
-.react-tabs__tab--selected{
-    outline: none !important;
-}
-.react-horizontal-scrolling-menu--scroll-container {
-    display: flex;
-    height: max-content;
-    overflow-y: hidden;
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
+.rts___tab___selected .mat-ink-bar{
+    display: block;
 }
 
-.react-horizontal-scrolling-menu--inner-wrapper {
-    display: flex;
-    overflow-y: hidden;
-    align-items: center;
+
+ /* For Scrolling Tabs and Tabpanels */
+
+
+  .rts___btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s all linear;
+    color:  gray;
+  font-weight: bolder;
 }
-.react-horizontal-scrolling-menu--arrow-right {
-    display: flex;
-    margin-left: 10px;
-    /* box-shadow: 0px 0px 15px 0px gray; */
+.rts___btn {
+    border: none !important;
+}
+.rts___tab .rts___btn  {
+  color:  rgb(87, 86, 86) !important ;
+  font-weight: bolder !important;
+  border:  none !important;
+}
+.rts___tab___selected{
+    color:  black;
+}
+.rts___tab___selected {
+    background-color: white  !important;
+    color: black  !important;
+    box-shadow: NONE !important;
+    
 }
 
-/* .react-horizontal-scrolling-menu--inner-wrapper {
-    display: flex;
-    overflow-y: none !important;
-} */
+.rts___left___nav___btn {
+    background: white !important;
+    color: black !important;
+}
+.rts___right___nav___btn {
+    background: white !important;
+    color: black !important;
+}
 
+.rts___nav___btn:hover{
+    color:black !important;
+    background-color: #9322c6 !important;
+}
 
+.rts___tab .rts___btn:hover  {
+    color:  rgb(0, 0, 0) !important ;
+  }
 
-.react-horizontal-scrolling-menu--scroll-container {
-  
-    overflow-x:  hidden !important;
+  .rts___tab {
+    padding: 10px 30px;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 0px !important;
 }

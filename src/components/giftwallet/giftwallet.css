@@ -40,13 +40,10 @@
     outline: none !important;
   }
   .border-b{
-      /* width: 100%; */
-      /* max-width: 80%; */
-      /* margin-left: auto; */
+
       display: flex;
       align-items: center;
-      /* gap: 1rem; */
-      /* min-height: 4rem; */
+      
       border: none;
       margin-top: 20px;
       

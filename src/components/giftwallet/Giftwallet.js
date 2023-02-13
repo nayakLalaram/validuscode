@@ -1,9 +1,11 @@
-import React from "react";
+import React , { useState } from "react";
 import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
 import "../giftwallet/giftwallet.css";
+import Pagination from 'react-custom-pagination'
 
 function Giftwallet() {
+  const[search , setSearch]=useState("")
   let gift_wallet = [
     {
       label: "Date/Time",
@@ -116,17 +118,31 @@ function Giftwallet() {
       comments: "my transaction no hhq011a",
     },
   ];
+
+    // for Pagination 
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postsPerPage] = useState(6);
+  
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = aioTableData.slice(indexOfFirstPost, indexOfLastPost);
+  
+    const paginate = (number) => {
+      setCurrentPage(number);
+    };
+  
+
+
   return (
     <>
       <Header  />  
     <Navigation />
       <div className=" mt-[50px] lg:ml-[290px] ">
         <div className="pt-4">
-          {/* <vex-page-layout> */}
-          {/* <vex-page-layout-content> */}
+  
           <div className="  card   grid grid-cols-1 sm:grid-cols-2 md:grid-cols-7 gap-0">
             <div
-              // @fadeInUp
+           
               className="   sm:col-span-3 border-r "
             >
               <div className="px-6 py-4 border-b flex items-center">
@@ -156,7 +172,7 @@ function Giftwallet() {
             </div>
 
             <div
-              // @fadeInUp
+ 
               className="   sm:col-span-4 "
             >
               <div className="px-6 py-4 border-b flex items-center">
@@ -225,17 +241,17 @@ function Giftwallet() {
             </h2>
 
             <div className="bg-foreground rounded-full border px-4 max-w-[300px] ml-5 flex-auto flex items-center border border-gray-300">
-              <mat-icon className="icon-sm text-secondary" svgIcon="mat:search">
                 <i
                   className="fa fa-search text-[12px] text-gray-500"
                   aria-hidden="true"
                 ></i>
-              </mat-icon>
               <input
-                //  [formControl]="searchCtrl"
+              
                 className="px-4  border-0 outline-none w-full bg-transparent font-f py-2 text-[14px]  "
                 placeholder="Search..."
                 type="search"
+                value={search}
+                onChange={(e)=> setSearch(e.target.value)}
               />
             </div>
 
@@ -243,8 +259,7 @@ function Giftwallet() {
           </div>
     <div className="overflow-x-auto" >
     <table
-            // @stagger
-            //  [dataSource]="dataSource"
+         
             className="w-full ml-5"
             mat-table
             matSort
@@ -258,10 +273,7 @@ function Giftwallet() {
                       {items.label}
                     </td>
                     <td className="font-f text-[16px]  ">
-                      {/* *matCellDef="let row" [ngClass]="column.cssClasses"
-              mat-cell> */}
-                      {/* {{
-                row[column.property] }} */}
+                 
                     </td>
                   </>
                 ))}
@@ -269,7 +281,7 @@ function Giftwallet() {
             </thead>
 
             <tbody>
-              {aioTableData.map((items) => (
+              {currentPosts.filter((items)=> items.date_time.match(search)).map((items) => (
                 <tr className="tabletr  my-2 py-2">
                   <td className=" border-b  font-f text-[14px] py-2  font-color">
                     {" "}
@@ -318,12 +330,30 @@ function Giftwallet() {
             </tbody>
           </table>
     </div>
+    <div  className="text-[12px] mr-3 "   >
+    <Pagination
+  
+            totalPosts={aioTableData.length}
+            postsPerPage={postsPerPage}
+            paginate={paginate}
+            showIndex={true}
+            view={1}
+            showLast={false}
+            showFirst={false}
+            bgColor="white"
+            color="black"
+            indexbgColor="white"
+            selectColor="white"
+            justify="end"
+            
+          />
+          </div>
          
 
-          <mat-paginator
-            // [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize"
+          {/* <mat-paginator
+            [pageSizeOptions]="pageSizeOptions" [pageSize]="pageSize"
             className="sticky left-0"
-          ></mat-paginator>
+          ></mat-paginator> */}
         </div>
 
       </div>

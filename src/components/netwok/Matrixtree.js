@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import imgs from "../../assets1/assets/svg/person.svg";
 import Tree from "react-d3-tree";
+import '../netwok/Matreextree.css'
+
 function Matrixtree() {
   let ELEMENT_WIDTH = 180;
   let ELEMENT_HEIGHT = 70;
