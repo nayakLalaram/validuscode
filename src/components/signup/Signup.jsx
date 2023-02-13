@@ -11,12 +11,14 @@ function SIGNUP() {
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmPassword] = useState("");
 
+  const [capture , setCapture]=useState((Math.random() * 1e32).toString(36).substring(0, 7))
+
   function generatecapta() {
-    var capture = (Math.random() * 1e32).toString(36).substring(0, 7);
+    var newcapture = (Math.random() * 1e32).toString(36).substring(0, 7);
+    setCapture(newcapture)
   }
 
   function send() {}
-  var capture = (Math.random() * 1e32).toString(36).substring(0, 7);
 
   return (
     <>
@@ -103,16 +105,12 @@ function SIGNUP() {
                         id=""
                         className="textbox  px-4 py-2 border-0 outline-none w-full bg-transparent text-center rgb font-bold "
                       >
+                        <option value=""></option>
+
                         <option value="">UAE</option>
                         <option value="">India</option>
-                        <option value=""></option>
                       </select>
-                      {/* <input
-                        className="textbox  px-4 py-2 border-0 outline-none w-full bg-transparent text-center rgb"
-                        //   style={{color:rgba(0, 0, 0, .6) }}
-                        placeholder="Enter Password"
-                        type="text"
-                      /> */}
+                    
                     </div>
                   </div>
                   <div className="flex-auto justify-center item-center w-full px-6 mt-4">
@@ -180,7 +178,7 @@ function SIGNUP() {
                   >
                     Refresh The Captcha
                   </u>
-                  <div className="text-center mt-10 fmailyf  ">
+                  <div className="text-center mt-10 fmailyf flex items-center ">
                     <input
                       type="checkbox"
                       name=""
@@ -204,37 +202,11 @@ function SIGNUP() {
                       onClick={send}
                       className=" px-8 text-center text-white btn_sign_in font-f font-size-10  flex  items-center py-3 logincs   "
                     >
-                      <fa-icon className="text-white  ">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="mx-1"
-                          width="10"
-                          height="10"
-                          fill="#ffffff"
-                          viewBox="0 0 256 256"
-                        >
-                          <rect width="256" height="256" fill="none"></rect>
-                          <line
-                            x1="40"
-                            y1="128"
-                            x2="216"
-                            y2="128"
-                            fill="none"
-                            stroke="#ffffff"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
-                          ></line>
-                          <polyline
-                            points="144 56 216 128 144 200"
-                            fill="none"
-                            stroke="#ffffff"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="24"
-                          ></polyline>
-                        </svg>
-                      </fa-icon>
+                       <i
+                      className="fa fa-arrow-right   text-[11px] text-white"
+                      aria-hidden="true"
+                    ></i>
+                 
                       <span
                         style={{ letterSpacing: "1px" }}
                         className="pl-2 text-white font-f font-size-10"

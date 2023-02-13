@@ -2,6 +2,7 @@ import React , { useState } from "react";
 import Pagination from 'react-custom-pagination'
 import "../transcation/membership.css";
 function OtherTrans() {
+  const [search  , setSearch] = useState('');
   let tableheader = [
     {
       label: "Date",
@@ -169,11 +170,13 @@ function OtherTrans() {
                 className="p-1 pl-4 py-2  border-0 outline-none w-full bg-transparent font-f text-[14px]   "
                 placeholder="Search..."
                 type="search"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
               />
             </div>
           </div>
 
-          <div className="w-full max-w-full">
+          <div className="w-full max-w-full  overflow-x-auto ">
             <div className="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
               <div
                 className="table-responsive"
@@ -193,7 +196,7 @@ function OtherTrans() {
                     </tr>
                   </thead>
                   <tbody>
-                    {currentPosts.map((table) => (
+                    {currentPosts.filter((table)=> table.date.match(search)).map((table) => (
                       <>
                         <tr>
                           <td className=" td text-center  text-[16px]">
@@ -229,57 +232,8 @@ function OtherTrans() {
             </div>
           </div>
         </div>
-        {/* <nav
-          aria-label="Page navigation example  center mr-1 "
-          style={{ textAlign: "end", marginRight: "36px" }}
-          className="flex items-center justify-end"
-        >
-          <span className="text-[12px]">Items per page: 6 &nbsp;  &nbsp; &nbsp; 1 – 6 of 7</span>
-          <ul className="inline-flex items-center -space-x-px">
-            <li>
-              <a
-                href="/"
-                className="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white  rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-              >
-                <span className="sr-only">Previous</span>
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                className="block px-3 py-2 leading-tight text-gray-500 bg-white  rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-              >
-                <span className="sr-only">Next</span>
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </nav> */}
+       
+        <div className="mr-3 text-[12px]" > 
         <Pagination
             totalPosts={table_data.length}
             postsPerPage={postsPerPage}
@@ -294,6 +248,7 @@ function OtherTrans() {
             selectColor="white"
             justify="end"
           />
+          </div>
       </div>
     </>
   );

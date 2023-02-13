@@ -1,20 +1,4 @@
-/* $bottom-margin: 50px;
-$line-width: 2px;
-$line-color: rgba(rgb(0, 0, 0), 0.7);
-$bg-color: white; */
 
-/* .circle {
-  border-radius: 50%;
-  background: transparent linear-gradient(0deg, #DBA73E 0%, #D89D3A 16%, #A46B28 30%, #8E5723 46%, #F4F3B8 52%, #F7ED9A 55%, #D5B767 70%, #A76F29 75%, #D0AB5B 85%, #E0C77D 100%) 0% 0% no-repeat padding-box;
-} */
-/* 
-h2 {
-  text-align: center;
-  color: #de5454;
-  margin: 50px;
-
-
-} */
 i{
     display: block;
     font-size: 12px;
@@ -25,11 +9,9 @@ i{
   /* margin: 50px 0; */
   border: none;
   height: 1px;
-  /* background-color: red; */
 }
 
 :host {
-  /* background: $bg-color; */
   font-family: 'Poppins', sans-serif;
   display: block;
 }
@@ -40,9 +22,9 @@ i{
   width: 75px;
 }
 
-.hv-wrapper {
+/* .hv-wrapper {
   display: flex;
-}
+} */
 
   .hv-item {
     display: flex;
@@ -51,7 +33,6 @@ i{
   }
 
     .hv-item-parent {
-      /* margin-bottom: $bottom-margin; */
       position: relative;
       display: flex;
       justify-content: center;
@@ -59,7 +40,6 @@ i{
 
       p {
         font-weight: bold;
-        /* color: #de5454; */
       }
 
       /* &:after {
@@ -133,7 +113,6 @@ i{
     }
 
       .hv-item-parent {
-        /* margin-top: $bottom-margin; */
         margin-bottom: 0;
       }
         /* &:after {
@@ -209,7 +188,6 @@ width: 46px;
   top: 20px;
   width: 42px;
   opacity: .1;
-  /* transition: all .3s cubic-bezier(0.23, 1, 0.320, 1); */
 }
 .toolbox:hover {
   opacity: 1;
@@ -217,13 +195,7 @@ width: 46px;
 }
 .chart {
   position: relative;
-  /* width: 100%; */
   height:100%;
-  /* top: 0;
-  left: 20rem; */
-  /* 
-  right: 0;
-  bottom: 0; */
 }
 .item {
   fill: #9FA8DA;
@@ -279,13 +251,7 @@ width: 46px;
 
 
 
-/* 
-svg {
-  max-height: 100vh;
-  max-width: 100vw;
-  width: 100%;
-  height: 100%;
-} */
+
 
 
 @keyframes pulse {
@@ -302,4 +268,9 @@ svg {
 .arrowbtn{
     background: transparent linear-gradient(90deg, #9900CC 0%, #57B3FF 100%) 0% 0% !important;
   color: white;
+}
+
+.rd3t-link {
+  fill: none;
+  stroke: #000 !important ;
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../transcation/membership.css";
 import Pagination from "react-custom-pagination";
 function Deposit() {
+  const[search , setSearch]=useState('') ; 
   let tableheader = [
     {
       label: "Payment ID",
@@ -125,6 +126,8 @@ function Deposit() {
                 className="p-1 pl-4  py-2 border-0 outline-none w-full bg-transparent font-f text-[14px]   "
                 placeholder="Search..."
                 type="search"
+                value={search}
+                onChange={(e)=>setSearch(e.target.value)}
               />
             </div>
           </div>
@@ -134,7 +137,7 @@ function Deposit() {
               <div className="table-responsive ">
                 <table
                   className="table table-flush     "
-                  style={{ width: "100%" }}
+                  style={{ width: "max-content" }}
                 >
                   <thead className="thead-light">
                     <tr
@@ -147,7 +150,7 @@ function Deposit() {
                     </tr>
                   </thead>
                   <tbody>
-                    {currentPosts.map((table) => (
+                    {currentPosts.filter((table)=> table.payment_id.match(search)).map((table) => (
                       <>
                         <tr>
                           <td className=" td text-center  text-[16px]">
@@ -178,7 +181,7 @@ function Deposit() {
           </div>
         </div>
      
-        <div className="mr-3">
+        <div className="mr-3 text-[12px] ">
           <Pagination
             totalPosts={table_data.length}
             postsPerPage={postsPerPage}

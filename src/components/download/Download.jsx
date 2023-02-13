@@ -2,7 +2,10 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
+import BusinessTools from "./BusinessTools";
 import Compliance from "./Compliance";
+import MarketingMaterial from "./Marketingmaterial";
+import Training from "./Training";
 
 // import '../Downloads.Download.css'
 
@@ -40,13 +43,13 @@ function Download() {
       
     </TabPanel>
     <TabPanel>
-      <div><Compliance /></div>
+      <div><MarketingMaterial /></div>
     </TabPanel>
     <TabPanel>
-      <div><Compliance /></div>
+      <div><BusinessTools /></div>
     </TabPanel>
     <TabPanel>
-      <div><Compliance /></div>
+      <div><Training /></div>
     </TabPanel>
   </Tabs>
  

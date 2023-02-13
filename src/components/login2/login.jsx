@@ -7,15 +7,24 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setpassword] = useState("");
 
+  const[capture , setCapture]=useState((Math.random() * 1e32).toString(36).substring(0, 7)) ;
+
   const navigate = useNavigate();
-  function generatecapta() {
-    var capture = (Math.random() * 1e32).toString(36).substring(0, 7);
+
+
+   function generatecapta() {
+   let  newcapture = (Math.random() * 1e32).toString(36).substring(0, 7);
+    setCapture(newcapture)
   }
 
+
+
+
+
+    
   function send() {
     navigate("/dashboard");
   }
-  var capture = (Math.random() * 1e32).toString(36).substring(0, 7);
 
   return (
     <>
@@ -24,7 +33,6 @@ function Login() {
           <div className="mb-3 flex flex-col items-center justify-center px-2">
             <img src={logoicom} className="appicon" alt="" style={{height :'50px !important' }} />
             <div 
-              //    @fadeInUp
               className="py-6 login-card mt-4 card overflow-hidden w-full max-w-[470px] bg-white "
             >
               <div className="text-center ">
@@ -32,7 +40,6 @@ function Login() {
               </div>
 
               <div
-                //   [formGroup]="form"
                 className="  flex flex-col gap-4  mt-4"
               >
                 <div className="flex flex-col  ">
@@ -70,7 +77,7 @@ function Login() {
                   </div>
 
                   <div className="CaptchBox mx-20 mt-8 mb-2 py-2 px-2 text-black text-center   ">
-                    {capture}
+                     {capture}
                   </div>
 
                   <div className="flex-auto justify-center item-center w-full px-6">
@@ -84,7 +91,7 @@ function Login() {
                   </div>
 
                   <u
-                    onClick={generatecapta}
+                    onClick={()=> generatecapta()}
                     className="mt-2 text-center text-center font-size-10 font-color   logincs
                     "
                   >
@@ -95,7 +102,7 @@ function Login() {
                       onClick={send}
                       className=" px-8 text-center text-white btn_sign_in font-f font-size-10  flex  items-center py-3 logincs   "
                     >
-                      <fa-icon className="text-white  ">
+                      {/* <fa-icon className="text-white  ">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="mx-1"
@@ -125,7 +132,11 @@ function Login() {
                             strokeWidth="24"
                           ></polyline>
                         </svg>
-                      </fa-icon>
+                      </fa-icon> */}
+                       <i
+                      className="fa fa-arrow-right  text-[11px] text-white"
+                      aria-hidden="true"
+                    ></i>
                       <span
                         style={{ letterSpacing: "1px" }}
                         className="pl-2 text-white font-f font-size-10"

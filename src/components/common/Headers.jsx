@@ -88,7 +88,7 @@ const Header = () => {
               style={{ display: "none" }}
               onClick={() => setShow(!show)}
             >
-              <AiOutlineMenu className="ml-3" />
+              {/* <AiOutlineMenu className="ml-3" /> */}
             </button>
 
             <div className="ml-2 " style={{ width: "100%", maxWidth: "200px" }}>
