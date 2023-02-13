@@ -1,35 +1,116 @@
-import React from "react";
+import React, { useState } from "react";
 import "../netwok/Networktree.css";
-import avatar from '../../assets1/assets/svg/avatar.svg'
-import appicon_half from '../../assets1/assets/svg/appicon_half.svg'
-
+import avatar from "../../assets1/assets/svg/avatar.svg";
+import appicon_half from "../../assets1/assets/svg/appicon_half.svg";
+import Tree from "react-d3-tree";
+import { useCenteredTree } from "./helper";
 
 function NetworkTree() {
- 
+  const [active_Tab, setActive_tab] = useState(0);
 
-
- let colors = ['#9E9E9E', '#388E3C', '#4527A0', '#EF6C00'];
- let  OrgItem = {name: 'New Item', level: 1, description: ''};
-  // let  selected = this.newItem;
-  // let root = this.newItem;
-  // let list= OrgIte = [];
-  // let chartElementList = ChartElement = [];
   let WIDTH = 1000;
-   let HEIGHT = 1000;
- let ELEMENT_WIDTH = 80;
- let  ELEMENT_HEIGHT = 97;
- let PADDING = 100;
- let  zoom = 1;
- let  ZOOM_FACTOR = 1.2;
- let  dragMode = false;
- let moveMode = false;
-  let startX = 0;
-  let startY = 0;
-  let x0 = 0;
-  let y0 = 0;
+  let HEIGHT = 1000;
+  let ELEMENT_WIDTH = 80;
+  let ELEMENT_HEIGHT = 97;
   let x = 0;
   let y = 0;
- let viewBox = `${x} ${y} ${WIDTH} ${HEIGHT}`;
+  let viewBox = `${x} ${y} ${WIDTH} ${HEIGHT}`;
+  let orgChartJson = {
+    name: "aus",
+    children: [
+      {
+        name: "aus",
+        attributes: {},
+        children: [
+          {
+            name: "aus",
+            children: [
+              {
+                name: "aus",
+              },
+              {
+                name: "aus",
+              },
+            ],
+          },
+          {
+            name: "aus",
+            children: [
+          
+            ],
+          },
+        ],
+      },
+      {
+        name:"aus",
+        children: [
+          {
+            name: "aus",
+            children: [
+            ],
+          },
+          {
+            name: "aus",
+            attributes: {},
+            children: [
+              {
+                name: "aus",
+              },
+              {
+                name: "aus",
+              },
+             
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+  const [translate, containerRef] = useCenteredTree();
+  const containerStyles = {
+    height: "100vh",
+  };
+  console.log(active_Tab);
+  const renderRectSvgNode = ({ nodeDatum, toggleNode }) => (
+    <g className="flex justify-center items-center ">
+      <foreignObject
+        x={x - 35}
+        y={y - 73}
+        width={ELEMENT_WIDTH}
+        height={ELEMENT_HEIGHT}
+        onClick={toggleNode}
+      >
+        <div className=" relative  ">
+          <div className="absolute">
+            <img
+              style={{ marginTop: "40px", width: "22px" }}
+              src={appicon_half}
+            />{" "}
+          </div>
+          <img
+            //  className={`${ i==1?'border1':i==2?'border2':i==3?'border4':'border5'} + rounded border" `}
+            className="rounded border2 "
+            style={{ height: "63.09px", width: "65.09px" }}
+            src={avatar}
+          />
+        </div>
+      </foreignObject>
+
+      <text
+        x={x - 13}
+        y={y - 2}
+        style={{
+          fontWeight: "lighter !important ",
+          fontFamily: "none !important",
+        }}
+        className="text-[13px] font-f "
+      >
+        aus
+      </text>
+    </g>
+  );
+
   return (
     <>
       <div className="w-full">
@@ -68,58 +149,64 @@ function NetworkTree() {
           </div>
         </div>
         <hr className="hrrr" />
-        <div className=" w-full flex justify-center " >
-          <svg xmlns="http://www.w3.org/2000/svg" className="chart" 
-          //  height={HEIGHT}
-          //  width={WIDTH}
-            // viewBox={viewBox}
 
-           
-          >
-            
-               
-            {/* [attr.width]="WIDTH"
-        [attr.height]="HEIGHT"
-  [attr.viewBox]="viewBox"*/}
+        {active_Tab === 0 && (
+          <>
+            <div>
+              <g className="flex flex-col justify-center items-center ">
+                <foreignObject
+                  x={x - 35}
+                  y={y - 72}
+                  width={ELEMENT_WIDTH}
+                  height={ELEMENT_HEIGHT}
+                  onClick={() => setActive_tab(1)}
+                >
+                  <div className=" relative  ">
+                    <div className="absolute">
+                      <img
+                        style={{ marginTop: "40px", width: "22px" }}
+                        src={appicon_half}
+                      />{" "}
+                    </div>
+                    <img
+                      className="rounded border2 "
+                      style={{ height: "63.09px", width: "65.09px" }}
+                      src={avatar}
+                    />
+                  </div>
+                </foreignObject>
 
-            <g className="connection" >
-            {/* // *ngFor="let e of chartElementList let i= index" (click)="onClick(e.item)"> */}
-            {/* //     <path *ngIf="e.connection" [attr.d]="e.connection+24"  */}
-            <foreignObject 
-            // x={x - ELEMENT_WIDTH/2 }
-            // y={y - ELEMENT_HEIGHT/2}
-            width={ELEMENT_WIDTH}
-            height={ELEMENT_HEIGHT}
-            //  [attr.x]="e.x - ELEMENT_WIDTH/2"
-            //     [attr.y]="e.y - ELEMENT_HEIGHT/2"
-            //     [attr.width]="ELEMENT_WIDTH"
-            //     [attr.height]="ELEMENT_HEIGHT"
-            >
-                <div  className=" relative  ">
-                  <div className="absolute">
-                  <img style={{marginTop:'45px'}} 
-                  src={appicon_half}/> </div>
-                  <img 
-                  //  className={`${ i==1?'border1':i==2?'border2':i==3?'border4':'border5'} + rounded border" `} 
-                  className="rounded "
-                  style={{ height:'80.09px' , width:'80.09px'}} 
-                  src={avatar}/> 
-                 
-                 
-                </div>
-                  </foreignObject>
-            <text
-              // x={x}
-              // y={y+45}
-              //    [attr.x]="e.x" [attr.y]="e.y+45"
-              className="item-text font-f font-weight-600 font-color"
-            >
-              {/* {e.item.name} */} 
-            </text>
-            </g>   
-          </svg>
-        </div>
+                <text
+                  style={{
+                    fontWeight: "lighter !important ",
+                    fontFamily: "none !important",
+                  }}
+                  className="text-[13px] font-f "
+                >
+                  aus
+                </text>
+              </g>
+            </div>
+          </>
+        )}
       </div>
+      {active_Tab === 1 && (
+        <div
+          style={containerStyles}
+          ref={containerRef}
+          className="flex justify-center items-center "
+        >
+          <Tree
+            data={orgChartJson}
+            translate={translate}
+            renderCustomNodeElement={renderRectSvgNode}
+            orientation="vertical"
+            draggable={false}
+            zoomable={false}
+            nodeSize={{ x: "110", y: "110" }}
+          />
+        </div>
+      )}
     </>
   );
 }

@@ -7,7 +7,7 @@ import OtherTrans from "./Othertrans";
 import Withdraw from "./Withdraw";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
-import "../transcation/membership.css";
+import "../transcation/transaction.css";
 
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
 import Header from "../common/Headers";

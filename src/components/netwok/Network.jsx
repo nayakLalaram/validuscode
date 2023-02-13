@@ -2,10 +2,11 @@ import React from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import NetworkTree from "./Networktree";
 import '../netwok/network.css'
-// import DounloadTV from "./Downloadtvdetail";
+import DounloadTV from "./Downloadtvdetail";
 import TotalRank from "./Totalrank";
 import Header from "../common/Headers";
 import Navigation from "../common/Navigation";
+import Matrixtree from "./Matrixtree";
 
 function Newtork() {
   return <>
@@ -40,10 +41,10 @@ function Newtork() {
       
     </TabPanel>
     <TabPanel>
-      {/* <div><DounloadTV /></div> */}
+      <div><DounloadTV /></div>
     </TabPanel>
     <TabPanel>
-      <div>Any content 3</div>
+      <div><Matrixtree /></div>
     </TabPanel>
     <TabPanel>
       <div><TotalRank/></div>

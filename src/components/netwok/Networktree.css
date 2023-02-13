@@ -217,7 +217,7 @@ width: 46px;
 }
 .chart {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height:100%;
   /* top: 0;
   left: 20rem; */
@@ -269,7 +269,12 @@ width: 46px;
 
 
 
-
+.rd3t-node {
+  cursor: pointer;
+  fill:unset !important;
+  stroke:unset !important;
+  stroke-width: 2;
+}
 
 
 

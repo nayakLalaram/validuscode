@@ -178,7 +178,11 @@ h1 {
    display: block !important    ;
 }
 
-.react-tabs__tab--selected{
-  border: none !important;
+.react-tabs__tab--selected {
+  color: black !important;
+  border: none;
+  outline: none;
 }
+
+
 

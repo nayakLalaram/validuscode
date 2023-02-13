@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { MdOutlineNotificationsOff } from "react-icons/md";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { BiCheckShield } from "react-icons/bi";
-import { AiOutlineMenu } from "react-icons/ai"
 import { CiLock } from "react-icons/ci";
 import right from "../../assets1/assets/svg/right.svg";
 import userimg from "../../assets1/assets/img/user.png";
@@ -170,7 +169,7 @@ const Header = () => {
                       src={userimg}
                       alt=""
                       className=" rounded-full  h-7 "
-                      style={{ minWidth: "3rem" }}
+                      style={{ minWidth: "2rem" }}
                     />
                   </div>
                   <div className=" body-1 ltr\:mr-3 rtl\:ml-3 hidden.sm\:block font-bold font-f text-[16px]">
