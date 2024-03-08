@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../dashboard/Dashboard.css";
 import Blocks from "./cards/Blocks";
 import RankCards from "./cards/RankCards";
@@ -11,10 +11,11 @@ import Navigation from "../common/Navigation";
 import Header from "../common/Headers";
 
 const Dashboard = () => {
+ 
   return (
     <>
       <Header />
-      <Navigation />
+      <Navigation  />
       <div className="pt-3 lg:ml-[294px] mt-16 mx-1 lg:mx-0 sm:mx-4  sm:mt-[80px]">
         <div className="lg:flex justify-between">
           <div className="lg:w-[70%] md:w-[100%] w-[100%]">

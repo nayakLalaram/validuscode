@@ -8,7 +8,7 @@ import userimg from "../../assets1/assets/img/user.png";
 import "./headerr.css";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
-import '../common/navigation.css';
+import "../common/navigation.css";
 import logoimg from "../../assets1/assets/svg/app_icon.svg";
 import dashboardlogo from "../../assets1/assets/side_nav_icon-black/speedometer.svg";
 import Membership from "../../assets1/assets/side_nav_icon-black/membership_b.svg";
@@ -27,7 +27,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const [openprofile, setOpenprofile] = useState(false);
   const [hidesetting, setHidesetting] = useState(false);
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
   const opens = () => {
     setOpen(true);
   };
@@ -63,10 +63,8 @@ const Header = () => {
 
   return (
     <>
-
       <div>
         <div className="">
-      
           <div
             //   [classNameName.container]="isVerticalLayout$ | async"
             className=" drop-shadow-md hheadersss shadow-toolbar toolbar w-full  flex items-center border-b"
@@ -79,7 +77,6 @@ const Header = () => {
               zIndex: "9999",
             }}
           >
-           
             <button
               className="menu_btn"
               // onClick={openSidenav}
@@ -90,7 +87,6 @@ const Header = () => {
             >
               {/* <AiOutlineMenu className="ml-3" /> */}
             </button>
-
             <div className="ml-2 " style={{ width: "100%", maxWidth: "200px" }}>
               <div className=" ">
                 <span className="text-[12px] font-f font-color">
@@ -164,7 +160,7 @@ const Header = () => {
                   className="userimg mat-ripple flex items-center rounded cursor-pointer relative trans-ease-out select-none py-1 pr-1 pl-1 hover\:bg-hover "
                   onClick={handleclose}
                 >
-                  <div className="bg-[#fff]" >
+                  <div className="bg-[#fff]">
                     <img
                       src={userimg}
                       alt=""
@@ -226,8 +222,6 @@ const Header = () => {
                         data-tooltip-target="tooltip-left"
                         data-tooltip-placement="left"
                       >
-                    
-
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="25"
@@ -266,16 +260,22 @@ const Header = () => {
                       </button>
                     </div>
 
-                    <Tooltip anchorId="my_status"  place="top" className="flex items-center justify-center  " 
-                    style={{ backgroundColor: "white", color: "#000" }} >
-                    <img src={right} alt="" style={{ width: "16px" }} />
-                      <button className="text-black font-f  text-[14px] mx-2 py-2 ">online</button>
+                    <Tooltip
+                      anchorId="my_status"
+                      place="top"
+                      className="flex items-center justify-center  "
+                      style={{ backgroundColor: "white", color: "#000" }}
+                    >
+                      <img src={right} alt="" style={{ width: "16px" }} />
+                      <button className="text-black font-f  text-[14px] mx-2 py-2 ">
+                        online
+                      </button>
                     </Tooltip>
                     <div className="dropdown-footer flex items-center justify-between p-3 ">
                       <button
                         className="dropdown-footer-select flex items-center justify-center px-6 py-4 rounded-full"
-                        mat-button
                         type="button"
+                        mat-button
                         style={{ paddingLeft: "1.5rem" }}
                         id="my_status"
                       >
@@ -347,154 +347,165 @@ const Header = () => {
             </div>
           </div>
         </div>
-        {
-          show &&  <div className="lg:hidden">
-          <div className="shadow navigation_img drop-shadow-md  py-[10px]  ">
-            <img src={logoimg} alt="" className="  select-none " />
-          </div>
-  
-          {/* toggle button of sidebar navigation commented */}
-          {/* 
+        {show && (
+          <div className="lg:hidden">
+            <div className="shadow navigation_img drop-shadow-md  py-[10px]  ">
+              <img src={logoimg} alt="" className="  select-none " />
+            </div>
+
+            {/* toggle button of sidebar navigation commented */}
+            {/* 
   <div className="text-center">
      <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 pl-3 .5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation" aria-controls="drawer-navigation">
      Show navigation
      </button>
   </div> */}
-  
-          <div
-            id="drawer-navigation"
-            className="fixed sidebar left-0 z-40 h-screen    transition-transform bg-white w-120  "
-          >
-            {/* // sidebar hide and show class Commented
+
+            <div
+              id="drawer-navigation"
+              className="fixed sidebar left-0 z-40 h-screen    transition-transform bg-white w-120  "
+            >
+              {/* // sidebar hide and show class Commented
   // tabIndex="-1" aria-labelledby="drawer-navigation-label"  aria-modal="true"
   // className="-translate-x-full " */}
-  
-            <div className=" overflow-y-auto">
-              <ul className="space-y-2">
-                <li className="li">
-                <Link to='/dashboard'    className="a flex items-center py-4 pl-3 pt-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                <img src={dashboardlogo} alt="" />
-                <span className="ml-5">DASHBOARD</span>
-                </Link>
-     </li>
-     <li className="li">
-                <Link to="/membership"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={Membership} alt="" />
-                    <span className="flex-1 ml-5 text-left whitespace-nowrap">
-                      MEMBERSHIP
-                    </span>
+
+              <div className=" overflow-y-auto">
+                <ul className="space-y-2">
+                  <li className="li">
+                    <Link
+                      to="/dashboard"
+                      className="a flex items-center py-4 pl-3 pt-4 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={dashboardlogo} alt="" />
+                      <span className="ml-5">DASHBOARD</span>
                     </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/wallet"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={wallet} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">
-                      WALLET
-                    </span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/giftwallet"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={giftwaleetlogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">
-                      GIFT WALLET
-                    </span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/bonuses"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={bonuseslogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">BONUSES</span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                  to="/network"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={networklogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">NETWORK</span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/transaction"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={transation} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">
-                      TRANSACTION
-                    </span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/ranks&rewards"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={ranks} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">
-                      RANK & REWARDS
-                    </span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                     to="/profile"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={profilelogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">PROFILE</span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/support"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={supportlogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">SUPPORT</span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/download"
-                    className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={downloadlogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap font-extrabold ">
-                      DOWNLOAD
-                    </span>
-                  </Link>
-                </li>
-                <li className="li">
-                  <Link
-                    to="/"
-                    className=" a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-                  >
-                    <img src={bonuseslogo} alt="" />
-                    <span className="flex-1 ml-5 whitespace-nowrap">
-                      V-MASTERY
-                    </span>
-                  </Link>
-                </li>
-              </ul>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/membership"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={Membership} alt="" />
+                      <span className="flex-1 ml-5 text-left whitespace-nowrap">
+                        MEMBERSHIP
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/wallet"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={wallet} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        WALLET
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/giftwallet"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={giftwaleetlogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        GIFT WALLET
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/bonuses"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={bonuseslogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        BONUSES
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/network"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={networklogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        NETWORK
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/transaction"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={transation} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        TRANSACTION
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/ranks&rewards"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={ranks} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        RANK & REWARDS
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/profile"
+                      className="a  dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={profilelogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        PROFILE
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/support"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={supportlogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        SUPPORT
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/download"
+                      className="a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={downloadlogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap font-extrabold ">
+                        DOWNLOAD
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="li">
+                    <Link
+                      to="/"
+                      className=" a flex items-center py-3 pl-3  text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                      <img src={bonuseslogo} alt="" />
+                      <span className="flex-1 ml-5 whitespace-nowrap">
+                        V-MASTERY
+                      </span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        }
-       
+        )}
       </div>
     </>
   );
